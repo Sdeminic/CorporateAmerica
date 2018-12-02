@@ -19,8 +19,8 @@ void EmptyLinkFunctionForGeneratedCodeCorporate_America_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/Corporate_America",
 				PKG_CompiledIn | 0x00000000,
-				0x6C5FDB6B,
-				0x0EF5740A,
+				0x1939218C,
+				0xAD187074,
 				nullptr, 0,
 				METADATA_PARAMS(nullptr, 0)
 			};

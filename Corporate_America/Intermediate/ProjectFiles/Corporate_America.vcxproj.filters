@@ -1,70 +1,109 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<None Include="..\..\Corporate_America.uproject" />
-		<Filter Include="Source">
-			<UniqueIdentifier>{00149E63-3DC4-4D09-9F0C-AAB19BB8D8DE}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\Corporate_America.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<None Include="..\..\Source\Corporate_AmericaEditor.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<Filter Include="Config">
-			<UniqueIdentifier>{7E66E409-B49F-47DA-BA5E-EA79E700803E}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Config\DefaultEditor.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEngine.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultGame.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultInput.ini">
-			<Filter>Config</Filter>
-		</None >
-		<Filter Include="Source\Corporate_America">
-			<UniqueIdentifier>{1CFD989B-AB98-4A94-9755-FC96B966AEE5}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\Corporate_America\Corporate_America.Build.cs">
-			<Filter>Source\Corporate_America</Filter>
-		</None >
-		<ClCompile Include="..\..\Source\Corporate_America\Corporate_America.cpp">
-			<Filter>Source\Corporate_America</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\Corporate_America\Corporate_America.h">
-			<Filter>Source\Corporate_America</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\Corporate_America\Corporate_AmericaCharacter.cpp">
-			<Filter>Source\Corporate_America</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\Corporate_America\Corporate_AmericaCharacter.h">
-			<Filter>Source\Corporate_America</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\Corporate_America\Corporate_AmericaGameMode.cpp">
-			<Filter>Source\Corporate_America</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\Corporate_America\Corporate_AmericaGameMode.h">
-			<Filter>Source\Corporate_America</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\Corporate_America\Corporate_AmericaHUD.cpp">
-			<Filter>Source\Corporate_America</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\Corporate_America\Corporate_AmericaHUD.h">
-			<Filter>Source\Corporate_America</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\Corporate_America\Corporate_AmericaProjectile.cpp">
-			<Filter>Source\Corporate_America</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\Corporate_America\Corporate_AmericaProjectile.h">
-			<Filter>Source\Corporate_America</Filter>
-		</ClInclude >
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Corporate_America.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{11A46429-3F57-45A8-9925-9CB52D1DB8A3}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Corporate_America.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\Corporate_AmericaEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{D2E4ED22-C69F-478F-87D6-46CF394B19CA}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Corporate_America">
+      <UniqueIdentifier>{4A97E40F-D4B6-45AB-A90A-6BF5BEA08E9E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Corporate_America\Corporate_America.Build.cs">
+      <Filter>Source\Corporate_America</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Corporate_America\Corporate_America.cpp">
+      <Filter>Source\Corporate_America</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Corporate_America\Corporate_America.h">
+      <Filter>Source\Corporate_America</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Corporate_America\Corporate_AmericaCharacter.cpp">
+      <Filter>Source\Corporate_America</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Corporate_America\Corporate_AmericaCharacter.h">
+      <Filter>Source\Corporate_America</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Corporate_America\Corporate_AmericaGameMode.cpp">
+      <Filter>Source\Corporate_America</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Corporate_America\Corporate_AmericaGameMode.h">
+      <Filter>Source\Corporate_America</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Corporate_America\Corporate_AmericaHUD.cpp">
+      <Filter>Source\Corporate_America</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Corporate_America\Corporate_AmericaHUD.h">
+      <Filter>Source\Corporate_America</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Corporate_America\Corporate_AmericaProjectile.cpp">
+      <Filter>Source\Corporate_America</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Corporate_America\Corporate_AmericaProjectile.h">
+      <Filter>Source\Corporate_America</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Corporate_America\Employee.cpp">
+      <Filter>Source\Corporate_America</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Corporate_America\Employee.h">
+      <Filter>Source\Corporate_America</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Corporate_America\Weapon.cpp">
+      <Filter>Source\Corporate_America</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Corporate_America\Weapon.h">
+      <Filter>Source\Corporate_America</Filter>
+    </ClInclude>
+    <Filter Include="Source\Corporate_America\TP_ThirdPerson">
+      <UniqueIdentifier>{67FAC529-8F4B-4B21-8757-E4B47A575B93}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Corporate_America\TP_ThirdPerson\TP_ThirdPerson.h">
+      <Filter>Source\Corporate_America\TP_ThirdPerson</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Corporate_America\TP_ThirdPerson\TP_ThirdPersonCharacter.cpp">
+      <Filter>Source\Corporate_America\TP_ThirdPerson</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Corporate_America\TP_ThirdPerson\TP_ThirdPersonCharacter.h">
+      <Filter>Source\Corporate_America\TP_ThirdPerson</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Corporate_America\TP_ThirdPerson\TP_ThirdPersonGameMode.cpp">
+      <Filter>Source\Corporate_America\TP_ThirdPerson</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Corporate_America\TP_ThirdPerson\TP_ThirdPersonGameMode.h">
+      <Filter>Source\Corporate_America\TP_ThirdPerson</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\Corporate_America\EmployeeMovement.h">
+      <Filter>Source\Corporate_America</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Corporate_America\EmployeeMovement.cpp">
+      <Filter>Source\Corporate_America</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
