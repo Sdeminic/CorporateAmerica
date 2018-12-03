@@ -16,14 +16,22 @@ public:
 	// Sets default values for this component's properties
 	UEmployeeMovement();
 
+	// Called every frame
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+	void AddMovementInputFwd(float InputVal);
+	void AddMovementInputRight(float InputVal);
+
+	UPROPERTY(EditAnywhere)
+		float MaxWalkSpeed = 10.f;
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-public:	
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+private:	
 
-	void AddMovementInput();
-		
+	FVector Velocity;
+	float MovementInputFwd;
+	float MovementInputRight;
 };

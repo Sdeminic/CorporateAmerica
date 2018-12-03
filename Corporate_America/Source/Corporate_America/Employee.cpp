@@ -17,7 +17,9 @@ AEmployee::AEmployee()
 	
 	CapsuleComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule"));
 	CapsuleComponent->InitCapsuleSize(34.0f, 88.0f);
-	CapsuleComponent->SetCollisionProfileName(UCollisionProfile::Pawn_ProfileName);
+	CapsuleComponent->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
+	CapsuleComponent->SetCollisionObjectType(ECollisionChannel::ECC_Pawn);
+
 
 	CapsuleComponent->CanCharacterStepUpOn = ECB_No;
 	CapsuleComponent->bShouldUpdatePhysicsVolume = true;
@@ -48,7 +50,7 @@ AEmployee::AEmployee()
 	Mesh3P->bCastDynamicShadow = false;
 	Mesh3P->CastShadow = false;
 
-	MovementComponent = CreateDefaultSubobject<UEmployeeMovement>(TEXT("MovementComponent"));
+	MovementComponent = CreateDefaultSubobject<UEmployeeMovement>(TEXT("EmployeeMovementComponent"));
 
 }
 
@@ -69,7 +71,7 @@ void AEmployee::Tick(float DeltaTime)
 // Called to bind functionality to input
 void AEmployee::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
+	//Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 	// Bind jump events
 	//PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
@@ -106,8 +108,16 @@ void AEmployee::LookUpAtRate(float Rate)
 
 void AEmployee::MoveForward(float Val)
 {
+	if (Val != 0.f) {
+		if (!MovementComponent) return;
+		MovementComponent->AddMovementInputFwd(Val);
+	}
 }
 
 void AEmployee::MoveRight(float Val)
 {
+	if (Val != 0.f) {
+		if (!MovementComponent) return;
+		MovementComponent->AddMovementInputRight(Val);
+	}
 }

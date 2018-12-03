@@ -42,6 +42,16 @@ void EmptyLinkFunctionForGeneratedCodeEmployeeMovement() {}
 				{ "ModuleRelativePath", "EmployeeMovement.h" },
 			};
 #endif
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxWalkSpeed_MetaData[] = {
+				{ "Category", "EmployeeMovement" },
+				{ "ModuleRelativePath", "EmployeeMovement.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxWalkSpeed = { UE4CodeGen_Private::EPropertyClass::Float, "MaxWalkSpeed", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000001, 1, nullptr, STRUCT_OFFSET(UEmployeeMovement, MaxWalkSpeed), METADATA_PARAMS(NewProp_MaxWalkSpeed_MetaData, ARRAY_COUNT(NewProp_MaxWalkSpeed_MetaData)) };
+			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_MaxWalkSpeed,
+			};
 			static const FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 				TCppClassTypeTraits<UEmployeeMovement>::IsAbstract,
 			};
@@ -50,7 +60,7 @@ void EmptyLinkFunctionForGeneratedCodeEmployeeMovement() {}
 				DependentSingletons, ARRAY_COUNT(DependentSingletons),
 				0x00B00080u,
 				nullptr, 0,
-				nullptr, 0,
+				PropPointers, ARRAY_COUNT(PropPointers),
 				nullptr,
 				&StaticCppClassTypeInfo,
 				nullptr, 0,
@@ -60,7 +70,7 @@ void EmptyLinkFunctionForGeneratedCodeEmployeeMovement() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UEmployeeMovement, 833204029);
+	IMPLEMENT_CLASS(UEmployeeMovement, 3464849916);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UEmployeeMovement(Z_Construct_UClass_UEmployeeMovement, &UEmployeeMovement::StaticClass, TEXT("/Script/Corporate_America"), TEXT("UEmployeeMovement"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UEmployeeMovement);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
