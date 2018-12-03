@@ -32,9 +32,9 @@ void UEmployeeMovement::TickComponent(float DeltaTime, ELevelTick TickType, FAct
 	FVector NewLocation;
 	FHitResult HitResult;
 	NewLocation = MaxWalkSpeed * MovementInputFwd * Owner->GetActorForwardVector();
-	Owner->AddActorWorldOffset(NewLocation, true, &HitResult, ETeleportType::None);
-	NewLocation += MaxWalkSpeed * MovementInputRight * Owner->GetActorRightVector();
-	Owner->AddActorWorldOffset(NewLocation, true, &HitResult, ETeleportType::None);
+	Owner->SetActorLocation(Owner->GetActorLocation() + NewLocation, true, &HitResult, ETeleportType::None);
+	NewLocation = MaxWalkSpeed * MovementInputRight * Owner->GetActorRightVector();
+	Owner->SetActorLocation(Owner->GetActorLocation() + NewLocation, true, &HitResult, ETeleportType::None);
 
 	MovementInputFwd = 0.f;
 	MovementInputRight = 0.f;

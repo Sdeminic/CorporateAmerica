@@ -22,7 +22,7 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
-	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
+	UPROPERTY(EditAnywhere, Category = Mesh)
 		class UCapsuleComponent* CapsuleComponent;
 
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)

@@ -17,9 +17,9 @@ AEmployee::AEmployee()
 	
 	CapsuleComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule"));
 	CapsuleComponent->InitCapsuleSize(34.0f, 88.0f);
-	CapsuleComponent->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
-	CapsuleComponent->SetCollisionObjectType(ECollisionChannel::ECC_Pawn);
 
+	CapsuleComponent->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	CapsuleComponent->SetCollisionObjectType(ECollisionChannel::ECC_Pawn);
 
 	CapsuleComponent->CanCharacterStepUpOn = ECB_No;
 	CapsuleComponent->bShouldUpdatePhysicsVolume = true;
@@ -58,7 +58,7 @@ AEmployee::AEmployee()
 void AEmployee::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 }
 
 // Called every frame
