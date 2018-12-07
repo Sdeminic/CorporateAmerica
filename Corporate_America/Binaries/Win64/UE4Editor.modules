@@ -2,10 +2,6 @@
 	"BuildId": "3944462",
 	"Modules": 
 	{
-<<<<<<< HEAD
 		"Corporate_America": "UE4Editor-Corporate_America.dll"
-=======
-		"Corporate_America": "UE4Editor-Corporate_America-25.dll"
->>>>>>> parent of a4ac5a9... Movement Collides
 	}
 }

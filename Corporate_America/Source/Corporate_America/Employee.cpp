@@ -6,30 +6,20 @@
 #include "Animation/AnimInstance.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
-#include "HeadMountedDisplayFunctionLibrary.h"
+#include "Components/InputComponent.h"
+#include "GameFramework/InputSettings.h"
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values
 AEmployee::AEmployee()
 {
-	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-<<<<<<< HEAD
-=======
-	
-	CapsuleComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule"));
-	CapsuleComponent->InitCapsuleSize(34.0f, 88.0f);
-	CapsuleComponent->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
-	CapsuleComponent->SetCollisionObjectType(ECollisionChannel::ECC_Pawn);
+	// Set size for collision capsule
+	GetCapsuleComponent()->InitCapsuleSize(55.f, 96.0f);
 
-
-	CapsuleComponent->CanCharacterStepUpOn = ECB_No;
-	CapsuleComponent->bShouldUpdatePhysicsVolume = true;
-	CapsuleComponent->bCheckAsyncSceneOnMove = false;
-	CapsuleComponent->SetCanEverAffectNavigation(false);
-	CapsuleComponent->bDynamicObstacle = true;
-	SetRootComponent(CapsuleComponent);
->>>>>>> parent of a4ac5a9... Movement Collides
+	// set our turn rates for input
+	BaseTurnRate = 45.f;
+	BaseLookUpRate = 45.f;
 
 	// Create a CameraComponent	
 	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
@@ -51,7 +41,7 @@ AEmployee::AEmployee()
 void AEmployee::BeginPlay()
 {
 	Super::BeginPlay();
-<<<<<<< HEAD
+
 	//if (GunBlueprint == NULL) {
 		//UE_LOG(LogTemp, Warning, TEXT("Gun blueprint missing."));
 		//return;
@@ -67,15 +57,6 @@ void AEmployee::BeginPlay()
 	//	Gun->AttachToComponent(GetMesh(), FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
 	//}
 	//Gun->AnimInstanceTP = GetMesh()->GetAnimInstance();
-
-	if (InputComponent != NULL) {
-		InputComponent->BindAction("Fire", IE_Pressed, this, &AEmployee::PullTrigger);
-	}
-
-	LastShot = FPlatformTime::Seconds();
-=======
-	
->>>>>>> parent of a4ac5a9... Movement Collides
 }
 
 // Called every frame
@@ -85,34 +66,49 @@ void AEmployee::Tick(float DeltaTime)
 
 }
 
-// Called to bind functionality to input
-void AEmployee::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+void AEmployee::MoveForward(float Value)
 {
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
+	if (Value != 0.0f)
+	{
+		// add movement in that direction
+		AddMovementInput(GetActorForwardVector(), Value);
+	}
 }
 
-void AEmployee::PullTrigger()
+void AEmployee::MoveRight(float Value)
 {
-	//if (Ammo >= 1 && FPlatformTime::Seconds() - LastShot > ShotCooldown) {
-//		Gun->OnFire();
-	//	--Ammo;
-	//	LastShot = FPlatformTime::Seconds();
-	//}
+	if (Value != 0.0f)
+	{
+		// add movement in that direction
+		AddMovementInput(GetActorRightVector(), Value);
+	}
 }
 
-int32 AEmployee::GetAmmo()
+void AEmployee::TurnAtRate(float Rate)
 {
-	return Ammo;
+	// calculate delta for this frame from the rate information
+	AddControllerYawInput(Rate * BaseTurnRate * GetWorld()->GetDeltaSeconds());
 }
 
-void AEmployee::SetAmmo(int32 AmmoToSet)
+void AEmployee::LookUpAtRate(float Rate)
 {
-	Ammo = AmmoToSet;
+	// calculate delta for this frame from the rate information
+	AddControllerPitchInput(Rate * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
 }
 
-void AEmployee::UnPossessed()
+void AEmployee::SetupPlayerInputComponent(UInputComponent * InputComponent)
 {
-//	Super::UnPossessed();
-//	if (!Gun) { return; }
-//	Gun->AttachToComponent(GetMesh(), FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
+	Super::SetupPlayerInputComponent(InputComponent);
+
+	// Bind movement events
+	InputComponent->BindAxis("MoveForward", this, &AEmployee::MoveForward);
+	InputComponent->BindAxis("MoveRight", this, &AEmployee::MoveRight);
+
+	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
+	// "turn" handles devices that provide an absolute delta, such as a mouse.
+	// "turnrate" is for devices that we choose to treat as a rate of change, such as an analog joystick
+	InputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
+	InputComponent->BindAxis("TurnRate", this, &AEmployee::TurnAtRate);
+	InputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
+	InputComponent->BindAxis("LookUpRate", this, &AEmployee::LookUpAtRate);
 }

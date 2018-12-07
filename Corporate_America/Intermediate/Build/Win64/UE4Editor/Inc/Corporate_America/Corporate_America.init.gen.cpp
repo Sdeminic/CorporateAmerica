@@ -19,13 +19,8 @@ void EmptyLinkFunctionForGeneratedCodeCorporate_America_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/Corporate_America",
 				PKG_CompiledIn | 0x00000000,
-<<<<<<< HEAD
-				0xBD6358AC,
-				0x529FCBDF,
-=======
-				0x397FBBC1,
-				0xAD187074,
->>>>>>> parent of a4ac5a9... Movement Collides
+				0x2998618A,
+				0x73852F52,
 				nullptr, 0,
 				METADATA_PARAMS(nullptr, 0)
 			};
