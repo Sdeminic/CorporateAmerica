@@ -24,8 +24,14 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+<<<<<<< HEAD
 	//UPROPERTY(EditDefaultsOnly, Category = "Setup")
 		//TSubclassOf<class AGun> GunBlueprint;
+=======
+	/** Pawn mesh: 1st person view (arms; seen only by self) */
+	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
+		class UCapsuleComponent* CapsuleComponent;
+>>>>>>> parent of a4ac5a9... Movement Collides
 
 	UFUNCTION(BlueprintCallable, Category = "Weapon")
 		void PullTrigger();

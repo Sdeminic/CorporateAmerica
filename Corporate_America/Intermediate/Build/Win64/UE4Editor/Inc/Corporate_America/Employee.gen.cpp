@@ -156,7 +156,28 @@ void EmptyLinkFunctionForGeneratedCodeEmployee() {}
 				{ "ToolTip", "Pawn mesh: 1st person view (arms; seen only by self)" },
 			};
 #endif
+<<<<<<< HEAD
 			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Mesh1P = { UE4CodeGen_Private::EPropertyClass::Object, "Mesh1P", RF_Public|RF_Transient|RF_MarkAsNative, 0x00400000000b0009, 1, nullptr, STRUCT_OFFSET(AEmployee, Mesh1P), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(NewProp_Mesh1P_MetaData, ARRAY_COUNT(NewProp_Mesh1P_MetaData)) };
+=======
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Mesh1P = { UE4CodeGen_Private::EPropertyClass::Object, "Mesh1P", RF_Public|RF_Transient|RF_MarkAsNative, 0x00100000000b0009, 1, nullptr, STRUCT_OFFSET(AEmployee, Mesh1P), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(NewProp_Mesh1P_MetaData, ARRAY_COUNT(NewProp_Mesh1P_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MovementComponent_MetaData[] = {
+				{ "Category", "Mesh" },
+				{ "EditInline", "true" },
+				{ "ModuleRelativePath", "Employee.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MovementComponent = { UE4CodeGen_Private::EPropertyClass::Object, "MovementComponent", RF_Public|RF_Transient|RF_MarkAsNative, 0x00100000000b0009, 1, nullptr, STRUCT_OFFSET(AEmployee, MovementComponent), Z_Construct_UClass_UEmployeeMovement_NoRegister, METADATA_PARAMS(NewProp_MovementComponent_MetaData, ARRAY_COUNT(NewProp_MovementComponent_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CapsuleComponent_MetaData[] = {
+				{ "Category", "Mesh" },
+				{ "EditInline", "true" },
+				{ "ModuleRelativePath", "Employee.h" },
+				{ "ToolTip", "Pawn mesh: 1st person view (arms; seen only by self)" },
+			};
+#endif
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CapsuleComponent = { UE4CodeGen_Private::EPropertyClass::Object, "CapsuleComponent", RF_Public|RF_Transient|RF_MarkAsNative, 0x00100000000b0009, 1, nullptr, STRUCT_OFFSET(AEmployee, CapsuleComponent), Z_Construct_UClass_UCapsuleComponent_NoRegister, METADATA_PARAMS(NewProp_CapsuleComponent_MetaData, ARRAY_COUNT(NewProp_CapsuleComponent_MetaData)) };
+>>>>>>> parent of a4ac5a9... Movement Collides
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ShotCooldown,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Ammo,
@@ -181,7 +202,11 @@ void EmptyLinkFunctionForGeneratedCodeEmployee() {}
 		}
 		return OuterClass;
 	}
+<<<<<<< HEAD
 	IMPLEMENT_CLASS(AEmployee, 3418711111);
+=======
+	IMPLEMENT_CLASS(AEmployee, 2076368557);
+>>>>>>> parent of a4ac5a9... Movement Collides
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AEmployee(Z_Construct_UClass_AEmployee, &AEmployee::StaticClass, TEXT("/Script/Corporate_America"), TEXT("AEmployee"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AEmployee);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

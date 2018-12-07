@@ -14,6 +14,22 @@ AEmployee::AEmployee()
 {
 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+<<<<<<< HEAD
+=======
+	
+	CapsuleComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule"));
+	CapsuleComponent->InitCapsuleSize(34.0f, 88.0f);
+	CapsuleComponent->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
+	CapsuleComponent->SetCollisionObjectType(ECollisionChannel::ECC_Pawn);
+
+
+	CapsuleComponent->CanCharacterStepUpOn = ECB_No;
+	CapsuleComponent->bShouldUpdatePhysicsVolume = true;
+	CapsuleComponent->bCheckAsyncSceneOnMove = false;
+	CapsuleComponent->SetCanEverAffectNavigation(false);
+	CapsuleComponent->bDynamicObstacle = true;
+	SetRootComponent(CapsuleComponent);
+>>>>>>> parent of a4ac5a9... Movement Collides
 
 	// Create a CameraComponent	
 	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
@@ -35,6 +51,7 @@ AEmployee::AEmployee()
 void AEmployee::BeginPlay()
 {
 	Super::BeginPlay();
+<<<<<<< HEAD
 	//if (GunBlueprint == NULL) {
 		//UE_LOG(LogTemp, Warning, TEXT("Gun blueprint missing."));
 		//return;
@@ -56,6 +73,9 @@ void AEmployee::BeginPlay()
 	}
 
 	LastShot = FPlatformTime::Seconds();
+=======
+	
+>>>>>>> parent of a4ac5a9... Movement Collides
 }
 
 // Called every frame
