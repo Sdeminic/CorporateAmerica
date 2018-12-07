@@ -13,14 +13,68 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define CORPORATE_AMERICA_Employee_generated_h
 
-#define Corporate_America_Source_Corporate_America_Employee_h_12_RPC_WRAPPERS
-#define Corporate_America_Source_Corporate_America_Employee_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define Corporate_America_Source_Corporate_America_Employee_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execSetAmmo) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_AmmoToSet); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetAmmo(Z_Param_AmmoToSet); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetAmmo) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(int32*)Z_Param__Result=P_THIS->GetAmmo(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execPullTrigger) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->PullTrigger(); \
+		P_NATIVE_END; \
+	}
+
+
+#define Corporate_America_Source_Corporate_America_Employee_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execSetAmmo) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_AmmoToSet); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetAmmo(Z_Param_AmmoToSet); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetAmmo) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(int32*)Z_Param__Result=P_THIS->GetAmmo(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execPullTrigger) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->PullTrigger(); \
+		P_NATIVE_END; \
+	}
+
+
 #define Corporate_America_Source_Corporate_America_Employee_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAEmployee(); \
 	friend CORPORATE_AMERICA_API class UClass* Z_Construct_UClass_AEmployee(); \
 public: \
-	DECLARE_CLASS(AEmployee, APawn, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/Corporate_America"), NO_API) \
+	DECLARE_CLASS(AEmployee, ACharacter, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/Corporate_America"), NO_API) \
 	DECLARE_SERIALIZER(AEmployee) \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
@@ -30,7 +84,7 @@ private: \
 	static void StaticRegisterNativesAEmployee(); \
 	friend CORPORATE_AMERICA_API class UClass* Z_Construct_UClass_AEmployee(); \
 public: \
-	DECLARE_CLASS(AEmployee, APawn, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/Corporate_America"), NO_API) \
+	DECLARE_CLASS(AEmployee, ACharacter, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/Corporate_America"), NO_API) \
 	DECLARE_SERIALIZER(AEmployee) \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
@@ -59,7 +113,13 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AEmployee); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AEmployee)
 
 
-#define Corporate_America_Source_Corporate_America_Employee_h_12_PRIVATE_PROPERTY_OFFSET
+#define Corporate_America_Source_Corporate_America_Employee_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__Mesh1P() { return STRUCT_OFFSET(AEmployee, Mesh1P); } \
+	FORCEINLINE static uint32 __PPO__FirstPersonCameraComponent() { return STRUCT_OFFSET(AEmployee, FirstPersonCameraComponent); } \
+	FORCEINLINE static uint32 __PPO__Ammo() { return STRUCT_OFFSET(AEmployee, Ammo); } \
+	FORCEINLINE static uint32 __PPO__ShotCooldown() { return STRUCT_OFFSET(AEmployee, ShotCooldown); }
+
+
 #define Corporate_America_Source_Corporate_America_Employee_h_9_PROLOG
 #define Corporate_America_Source_Corporate_America_Employee_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

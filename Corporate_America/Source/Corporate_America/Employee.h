@@ -3,63 +3,54 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Pawn.h"
+#include "GameFramework/Character.h"
 #include "Employee.generated.h"
 
 UCLASS()
-class CORPORATE_AMERICA_API AEmployee : public APawn
+class AEmployee : public ACharacter
 {
 	GENERATED_BODY()
+		// Sets default values for this character's properties
+		AEmployee();
+
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
 
 public:
-	// Sets default values for this pawn's properties
-	AEmployee();
-
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	//UPROPERTY(EditDefaultsOnly, Category = "Setup")
+		//TSubclassOf<class AGun> GunBlueprint;
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		void PullTrigger();
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		int32 GetAmmo();
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		void SetAmmo(int32 AmmoToSet);
+
+	virtual void UnPossessed() override;
+private:
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
-	UPROPERTY(EditAnywhere, Category = Mesh)
-		class UCapsuleComponent* CapsuleComponent;
-
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
-		class UEmployeeMovement* MovementComponent;
-
-	/** Pawn mesh: 1st person view (arms; seen only by self) */
-	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
-	class USkeletalMeshComponent* Mesh1P;
-
-	/** Pawn mesh: Other players view */
-	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
-	class USkeletalMeshComponent* Mesh3P;
+		class USkeletalMeshComponent* Mesh1P;
 
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
-	class UCameraComponent* FirstPersonCameraComponent;
+		class UCameraComponent* FirstPersonCameraComponent;
 
-	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
-		float BaseTurnRate =45.0f;
+	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+		//AGun* Gun;
 
-	/** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
-		float BaseLookUpRate = 45.0f;
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+	UPROPERTY(EditAnywhere)
+		int32 Ammo = 10;
+	UPROPERTY(EditAnywhere)
+		float ShotCooldown = 1.0;
 
-private:	
-
-	void TurnAtRate(float Rate);
-
-	void LookUpAtRate(float Rate);
-
-	/** Handles moving forward/backward */
-	void MoveForward(float Val);
-
-	/** Handles stafing movement, left and right */
-	void MoveRight(float Val);
+	float LastShot;
 };
