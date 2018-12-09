@@ -1,4 +1,4 @@
-﻿Log file open, 12/07/18 00:02:09
+﻿Log file open, 12/09/18 15:54:36
 LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
 LogWindows: File 'aqProf.dll' does not exist
 LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
@@ -7,12 +7,12 @@ LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
 LogWindows: File 'VtuneApi32e.dll' does not exist
 LogInit: Display: Running engine for game: Corporate_America
 LogPlatformFile: Not using cached read wrapper
-LogInit: Display: RandInit(1918072634) SRandInit(1918072634).
+LogInit: Display: RandInit(-1568558791) SRandInit(-1568558791).
 LogInit: Read version file with build ID '3944462'
 LogInit: Overriding engine version to CL 4033788, compatible CL 3944462
 LogInit: Registered custom module enumerator with build ID '3944462'
 LogTaskGraph: Started task graph with 5 named threads and 23 total threads with 3 sets of task threads.
-LogStats: Stats thread started at 0.285982
+LogStats: Stats thread started at 0.280574
 LogD3D11RHI: Aftermath initialized
 LogICUInternationalization: Display: ICU TimeZone Detection - Raw Offset: -5:00, Platform Override: ''
 LogPluginManager: Mounting plugin Paper2D
@@ -85,8 +85,8 @@ LogPluginManager: Mounting plugin ProceduralMeshComponent
 LogPluginManager: Mounting plugin RuntimePhysXCooking
 LogPluginManager: Mounting plugin SteamVR
 LogPluginManager: Mounting plugin WindowsMoviePlayer
-LogStreaming: Display: Took  0.112s to configure plugins.
-LogModuleManager: Display: Found up-to-date module file D:/Corporate America/CorporateAmerica/Corporate_America/Binaries/Win64/UE4Editor-Corporate_America.dll (API version 3944462).
+LogStreaming: Display: Took  0.126s to configure plugins.
+LogModuleManager: Display: Found up-to-date module file D:/Corporate America/CorporateAmerica/Corporate_America/Binaries/Win64/UE4Editor-Corporate_America-839.dll (API version 3944462).
 LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-Paper2D.dll (API version 3944462).
 LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-Paper2DEditor.dll (API version 3944462).
 LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-PaperSpriteSheetImporter.dll (API version 3944462).
@@ -222,546 +222,794 @@ LogInit: Branch Name: ++UE4+Release-4.19
 LogInit: Command Line:  
 LogInit: Base Directory: C:/Program Files/Epic Games/UE_4.19/Engine/Binaries/Win64/
 LogInit: Installed Engine Build: 1
-LogStreaming: Display: Took  0.001s to delete old logs.
+LogStreaming: Display: Took  0.002s to delete old logs.
 LogInit: Presizing for max 8388607 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
 LogInit: Object subsystem initialized
-[2018.12.07-05.02.12:411][  0]LogInit: Selected Device Profile: [Windows]
-[2018.12.07-05.02.12:411][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
-[2018.12.07-05.02.12:449][  0]LogInit: Computer: DESKTOP-G1UAKUU
-[2018.12.07-05.02.12:449][  0]LogInit: User: samde
-[2018.12.07-05.02.12:449][  0]LogInit: CPU Page size=4096, Cores=4
-[2018.12.07-05.02.12:449][  0]LogInit: High frequency timer resolution =2.742194 MHz
-[2018.12.07-05.02.12:449][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
-[2018.12.07-05.02.12:449][  0]LogMemory: Platform Memory Stats for Windows
-[2018.12.07-05.02.12:449][  0]LogMemory: Process Physical Memory: 275.50 MB used, 275.50 MB peak
-[2018.12.07-05.02.12:449][  0]LogMemory: Process Virtual Memory: 272.87 MB used, 272.87 MB peak
-[2018.12.07-05.02.12:449][  0]LogMemory: Physical Memory: 7497.97 MB used,  8752.30 MB free, 16250.27 MB total
-[2018.12.07-05.02.12:449][  0]LogMemory: Virtual Memory: 4803.80 MB used,  8752.30 MB free, 134217728.00 MB total
-[2018.12.07-05.02.12:491][  0]LogInit: Using OS detected language (en-US).
-[2018.12.07-05.02.12:491][  0]LogInit: Using OS detected locale (en-US).
-[2018.12.07-05.02.12:495][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
-[2018.12.07-05.02.12:903][  0]LogStreaming: Display: Took  0.412s to EndInitTextLocalization.
-[2018.12.07-05.02.12:903][  0]LogInit: Setting process to per monitor DPI aware
-[2018.12.07-05.02.12:933][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
-[2018.12.07-05.02.12:933][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
-[2018.12.07-05.02.13:160][  0]LogD3D11RHI: D3D11 adapters:
-[2018.12.07-05.02.13:232][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 1050 Ti' (Feature Level 11_0)
-[2018.12.07-05.02.13:232][  0]LogD3D11RHI:       4018/0/8125 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:1, VendorId:0x10de
-[2018.12.07-05.02.13:241][  0]LogD3D11RHI:    1. 'Intel(R) HD Graphics 630' (Feature Level 11_0)
-[2018.12.07-05.02.13:241][  0]LogD3D11RHI:       128/0/8125 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x8086
-[2018.12.07-05.02.13:243][  0]LogD3D11RHI:    2. 'Microsoft Basic Render Driver' (Feature Level 11_0)
-[2018.12.07-05.02.13:243][  0]LogD3D11RHI:       0/0/8125 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
-[2018.12.07-05.02.13:243][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
-[2018.12.07-05.02.13:268][  0]LogD3D11RHI: Creating new Direct3DDevice
-[2018.12.07-05.02.13:268][  0]LogD3D11RHI:     GPU DeviceId: 0x1c8c (for the marketing name, search the web for "GPU Device Id")
-[2018.12.07-05.02.13:268][  0]LogWindows: EnumDisplayDevices:
-[2018.12.07-05.02.13:268][  0]LogWindows:    0. 'Intel(R) HD Graphics 630' (P:1 D:1)
-[2018.12.07-05.02.13:268][  0]LogWindows:    1. 'Intel(R) HD Graphics 630' (P:0 D:0)
-[2018.12.07-05.02.13:268][  0]LogWindows:    2. 'Intel(R) HD Graphics 630' (P:0 D:0)
-[2018.12.07-05.02.13:268][  0]LogWindows:    3. 'NVIDIA GeForce GTX 1050 Ti' (P:0 D:0)
-[2018.12.07-05.02.13:268][  0]LogWindows: DebugString: GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter FoundDriverCount:0 
-[2018.12.07-05.02.13:268][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 1050 Ti
-[2018.12.07-05.02.13:268][  0]LogD3D11RHI:   Driver Version: Unknown (internal:Unknown, unified:Unknown)
-[2018.12.07-05.02.13:268][  0]LogD3D11RHI:      Driver Date: Unknown
-[2018.12.07-05.02.13:269][  0]LogRHI: Texture pool is 2812 MB (70% of 4018 MB)
-[2018.12.07-05.02.13:311][  0]LogD3D11RHI: [Aftermath] Aftermath enabled and primed
-[2018.12.07-05.02.13:311][  0]LogD3D11RHI: [Aftermath] Aftermath enabled and primed
-[2018.12.07-05.02.13:311][  0]LogD3D11RHI: Async texture creation enabled
-[2018.12.07-05.02.13:353][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 2)
-[2018.12.07-05.02.13:353][  0]LogShaderCompilers: Guid format shader working directory is -10 characters bigger than the processId version (D:/Corporate America/CorporateAmerica/Corporate_America/Intermediate/Shaders/WorkingDirectory/19036/).
-[2018.12.07-05.02.13:354][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/samde/AppData/Local/Temp/UnrealShaderWorkingDir/D763C0D245CAA6DBF391DFAFA17DEC58/'.
-[2018.12.07-05.02.13:567][  0]LogTemp: Display: Loaded TP AllDesktopTargetPlatform
-[2018.12.07-05.02.13:581][  0]LogTemp: Display: Loaded TP MacClientTargetPlatform
-[2018.12.07-05.02.13:594][  0]LogTemp: Display: Loaded TP MacNoEditorTargetPlatform
-[2018.12.07-05.02.13:608][  0]LogTemp: Display: Loaded TP MacServerTargetPlatform
-[2018.12.07-05.02.13:622][  0]LogTemp: Display: Loaded TP MacTargetPlatform
-[2018.12.07-05.02.13:637][  0]LogTemp: Display: Loaded TP WindowsClientTargetPlatform
-[2018.12.07-05.02.13:650][  0]LogTemp: Display: Loaded TP WindowsNoEditorTargetPlatform
-[2018.12.07-05.02.13:666][  0]LogTemp: Display: Loaded TP WindowsServerTargetPlatform
-[2018.12.07-05.02.13:673][  0]LogTemp: Display: Loaded TP WindowsTargetPlatform
-[2018.12.07-05.02.13:684][  0]LogTemp: Display: Loaded TP Android_ASTCTargetPlatform
-[2018.12.07-05.02.13:696][  0]LogTemp: Display: Loaded TP Android_ATCTargetPlatform
-[2018.12.07-05.02.13:707][  0]LogTemp: Display: Loaded TP Android_DXTTargetPlatform
-[2018.12.07-05.02.13:718][  0]LogTemp: Display: Loaded TP Android_ETC1aTargetPlatform
-[2018.12.07-05.02.13:730][  0]LogTemp: Display: Loaded TP Android_ETC1TargetPlatform
-[2018.12.07-05.02.13:741][  0]LogTemp: Display: Loaded TP Android_ETC2TargetPlatform
-[2018.12.07-05.02.13:763][  0]LogTemp: Display: Loaded TP Android_MultiTargetPlatform
-[2018.12.07-05.02.13:763][  0]LogTemp: Display: Loaded TP Android_PVRTCTargetPlatform
-[2018.12.07-05.02.13:775][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2018.12.07-05.02.13:776][  0]LogTemp: Display: Loaded TP HTML5TargetPlatform
-[2018.12.07-05.02.13:814][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
-[2018.12.07-05.02.13:824][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
-[2018.12.07-05.02.13:836][  0]LogTemp: Display: Loaded TP LinuxClientTargetPlatform
-[2018.12.07-05.02.13:849][  0]LogTemp: Display: Loaded TP LinuxNoEditorTargetPlatform
-[2018.12.07-05.02.13:862][  0]LogTemp: Display: Loaded TP LinuxServerTargetPlatform
-[2018.12.07-05.02.13:875][  0]LogTemp: Display: Loaded TP LinuxTargetPlatform
-[2018.12.07-05.02.13:876][  0]LogTargetPlatformManager: Display: Building Assets For Windows
-[2018.12.07-05.02.14:011][  0]LogXGEController: Cleaning working directory: C:/Users/samde/AppData/Local/Temp/UnrealXGEWorkingDir/
-[2018.12.07-05.02.14:012][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
-[2018.12.07-05.02.14:012][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
-[2018.12.07-05.02.14:012][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
-[2018.12.07-05.02.14:743][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
-[2018.12.07-05.02.14:817][  0]LogDerivedDataCache: Loaded boot cache 0.07s 78MB C:/Users/samde/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc.
-[2018.12.07-05.02.14:817][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/samde/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc
-[2018.12.07-05.02.14:817][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file D:/Corporate America/CorporateAmerica/Corporate_America/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
-[2018.12.07-05.02.14:817][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
-[2018.12.07-05.02.14:817][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file D:/Corporate America/CorporateAmerica/Corporate_America/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
-[2018.12.07-05.02.14:817][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
-[2018.12.07-05.02.14:832][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
-[2018.12.07-05.02.14:845][  0]LogDerivedDataCache: Using Local data cache path C:/Users/samde/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
-[2018.12.07-05.02.14:845][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
-[2018.12.07-05.02.14:845][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
-[2018.12.07-05.02.14:855][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
-[2018.12.07-05.02.14:855][  0]LogSlate: Using Freetype 2.6.0
-[2018.12.07-05.02.14:856][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
-[2018.12.07-05.02.14:856][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
-[2018.12.07-05.02.14:988][  0]LogAssetRegistry: FAssetRegistry took 0.0265 seconds to start up
-[2018.12.07-05.02.15:314][  0]LogInit: Selected Device Profile: [Windows]
-[2018.12.07-05.02.15:471][  0]LogSimplygon: Simplygon DLL not present - disabling.
-[2018.12.07-05.02.15:475][  0]LogMeshReduction: Using SimplygonSwarm for distributed automatic mesh merging
-[2018.12.07-05.02.15:475][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
-[2018.12.07-05.02.15:475][  0]LogMeshReduction: No automatic skeletal mesh reduction module available
-[2018.12.07-05.02.15:475][  0]LogMeshReduction: No automatic mesh merging module available
-[2018.12.07-05.02.15:475][  0]LogMeshMerging: No automatic mesh merging module available
-[2018.12.07-05.02.15:513][  0]LogNetVersion: Corporate_America , NetCL: 3944462, EngineNetVer: 2, GameNetVer: 0 (Checksum: 3226822143)
-[2018.12.07-05.02.16:019][  0]LogPackageLocalizationCache: Processed 9 localized package path(s) for 2 prioritized culture(s) in 0.106253 seconds
-[2018.12.07-05.02.16:026][  0]LogUObjectArray: 36728 objects as part of root set at end of initial load.
-[2018.12.07-05.02.16:026][  0]LogUObjectAllocator: 7314312 out of 0 bytes used by permanent object pool.
-[2018.12.07-05.02.16:026][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
-[2018.12.07-05.02.17:875][  0]LogTcpMessaging: Initializing TcpMessaging bridge
-[2018.12.07-05.02.17:913][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
-[2018.12.07-05.02.18:308][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf4e3be700, Size=72, Default__FirstPerson_AnimBP_C Function /Game/FirstPerson/Animations/FirstPerson_AnimBP.FirstPerson_AnimBP_C:ExecuteUbergraph_FirstPerson_AnimBP
-[2018.12.07-05.02.18:316][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf4e3be700, Size=72
-[2018.12.07-05.02.18:316][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf4dfd7790, Size=72, Default__FirstPerson_AnimBP_C Function /Engine/Transient.REINST_FirstPerson_AnimBP_C_0:ExecuteUbergraph_FirstPerson_AnimBP
-[2018.12.07-05.02.18:327][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf4ecf9850, Size=72, Default__FirstPerson_AnimBP_C Function /Game/FirstPerson/Animations/FirstPerson_AnimBP.FirstPerson_AnimBP_C:ExecuteUbergraph_FirstPerson_AnimBP
-[2018.12.07-05.02.18:352][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf4ecca880, Size=64, Default__ThirdPerson_AnimBP_C Function /Game/Mannequin/Animations/ThirdPerson_AnimBP.ThirdPerson_AnimBP_C:ExecuteUbergraph_ThirdPerson_AnimBP
-[2018.12.07-05.02.18:361][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf4ecca880, Size=64
-[2018.12.07-05.02.18:361][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf4ecca880, Size=64, Default__ThirdPerson_AnimBP_C Function /Engine/Transient.REINST_ThirdPerson_AnimBP_C_1:ExecuteUbergraph_ThirdPerson_AnimBP
-[2018.12.07-05.02.18:368][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf4f8ac4a0, Size=72, Default__ThirdPerson_AnimBP_C Function /Game/Mannequin/Animations/ThirdPerson_AnimBP.ThirdPerson_AnimBP_C:ExecuteUbergraph_ThirdPerson_AnimBP
-[2018.12.07-05.02.18:499][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [2.322593ms] /Game/Mannequin/Character/Mesh/SK_Mannequin.SK_Mannequin
-[2018.12.07-05.02.18:513][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [0.978778ms] /Game/FirstPerson/Character/Mesh/SK_Mannequin_Arms.SK_Mannequin_Arms
-[2018.12.07-05.02.18:724][  0]SourceControl: Source control is disabled
-[2018.12.07-05.02.18:724][  0]SourceControl: Source control is disabled
-[2018.12.07-05.02.18:755][  0]SourceControl: Source control is disabled
-[2018.12.07-05.02.18:786][  0]SourceControl: Source control is disabled
-[2018.12.07-05.02.19:440][  0]LogOnline: Display: STEAM: Loading Steam SDK 1.39
-[2018.12.07-05.02.19:465][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
-[2018.12.07-05.02.19:650][  0]LogOcInput: OculusInput pre-init called
-[2018.12.07-05.02.19:771][  0]LogEngine: Initializing Engine...
-[2018.12.07-05.02.19:772][  0]LogHMD: Failed to initialize OpenVR with code 110
-[2018.12.07-05.02.19:773][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
-[2018.12.07-05.02.19:773][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
-[2018.12.07-05.02.20:109][  0]LogAIModule: Creating AISystem for world Untitled
-[2018.12.07-05.02.20:115][  0]LogInit: XAudio2 using 'Speakers / Headphones (Realtek Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
-[2018.12.07-05.02.21:686][  0]LogInit: FAudioDevice initialized.
-[2018.12.07-05.02.21:801][  0]LogDerivedDataCache: Saved boot cache 0.11s 78MB C:/Users/samde/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc.
-[2018.12.07-05.02.21:813][  0]LogInit: Texture streaming: Enabled
-[2018.12.07-05.02.21:837][  0]LogEngineSessionManager: EngineSessionManager initialized
-[2018.12.07-05.02.21:837][  0]LogEngineSessionManager: EngineSessionManager sent abnormal shutdown report. Type=Crashed, SessionId={7737FFBA-40DE-5C43-D88E-D4A170C3C409}
-[2018.12.07-05.02.21:876][  0]LogInit: Transaction tracking system initialized
-[2018.12.07-05.02.21:911][  0]BlueprintLog: New page: Editor Load
-[2018.12.07-05.02.22:059][  0]LocalizationService: Localization service is disabled
-[2018.12.07-05.02.22:168][  0]LogLinker: Warning: Can't find file '/Game/VehicleCPP/VehicleOverview'
-[2018.12.07-05.02.22:168][  0]LogLinker: Warning: Can't find file '/Game/VehicleCPP/VehicleOverview'
-[2018.12.07-05.02.22:168][  0]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/VehicleCPP/VehicleOverview.VehicleOverview_C'
-[2018.12.07-05.02.22:196][  0]LogConsoleResponse: Display: 
-[2018.12.07-05.02.22:376][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
-[2018.12.07-05.02.22:376][  0]LogCook: Display: Mobile HDR setting 1
-[2018.12.07-05.02.22:376][  0]LogGameplayTags: Display: UGameplayTagsManager::DoneAddingNativeTags. DelegateIsBound: 0
-[2018.12.07-05.02.22:376][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
-[2018.12.07-05.02.22:376][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
-[2018.12.07-05.02.22:936][  0]LogFileCache: Scanning file cache for directory 'D:/Corporate America/CorporateAmerica/Corporate_America/Content/' took 0.02s
-[2018.12.07-05.02.22:936][  0]SourceControl: Source control is disabled
-[2018.12.07-05.02.22:936][  0]Cmd: MAP LOAD FILE="D:/Corporate America/CorporateAmerica/Corporate_America/Content/Levels/Test_Level00.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
-[2018.12.07-05.02.22:937][  0]LightingResults: New page: Lighting Build
-[2018.12.07-05.02.22:941][  0]MapCheck: New page: Map Check
-[2018.12.07-05.02.22:941][  0]LightingResults: New page: Lighting Build
-[2018.12.07-05.02.22:954][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf4dfd7790, Size=72
-[2018.12.07-05.02.22:955][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf4ecca880, Size=64
-[2018.12.07-05.02.23:106][  0]LogAIModule: Creating AISystem for world Test_Level00
-[2018.12.07-05.02.23:117][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
-[2018.12.07-05.02.23:131][  0]Cmd: MAP CHECKDEP NOCLEARLOG
-[2018.12.07-05.02.23:206][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 75.088ms to complete.
-[2018.12.07-05.02.23:206][  0]LogFileHelpers: Loading map 'Test_Level00' took 0.270
-[2018.12.07-05.02.23:336][  0]LogCollectionManager: Loaded 0 collections in 0.003389 seconds
-[2018.12.07-05.02.23:387][  0]LogFileCache: Scanning file cache for directory 'D:/Corporate America/CorporateAmerica/Corporate_America/Saved/Collections/' took 0.01s
-[2018.12.07-05.02.23:387][  0]LogFileCache: Scanning file cache for directory 'D:/Corporate America/CorporateAmerica/Corporate_America/Content/Developers/samde/Collections/' took 0.01s
-[2018.12.07-05.02.23:387][  0]LogFileCache: Scanning file cache for directory 'D:/Corporate America/CorporateAmerica/Corporate_America/Content/Collections/' took 0.01s
-[2018.12.07-05.02.23:387][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000001 seconds
-[2018.12.07-05.02.23:398][  0]LogContentBrowser: Native class hierarchy populated in 0.0108 seconds. Added 2463 classes and 566 folders.
-[2018.12.07-05.02.23:412][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0012 seconds. Added 0 classes and 0 folders.
-[2018.12.07-05.02.23:480][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0012 seconds. Added 0 classes and 0 folders.
-[2018.12.07-05.02.23:544][  0]LogSlate: Took 0.000302 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
-[2018.12.07-05.02.23:553][  0]LogSlate: Took 0.000871 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
-[2018.12.07-05.02.23:553][  0]LogSlate: Took 0.000297 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
-[2018.12.07-05.02.23:559][  0]LogSlate: Took 0.000220 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansMono.ttf' (77K)
-[2018.12.07-05.02.23:701][  0]LogRenderer: Reallocating scene render targets to support 1216x428 Format 10 NumSamples 1 (Frame:1).
-[2018.12.07-05.02.23:904][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0014 seconds. Added 0 classes and 0 folders.
-[2018.12.07-05.02.23:904][  0]LogLoad: (Engine Initialization) Total time: 15.40 seconds
-[2018.12.07-05.02.23:904][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
-[2018.12.07-05.02.24:270][  0]LogContentStreaming: Texture pool size now 3000 MB
-[2018.12.07-05.02.24:282][  0]LogSlate: Took 0.000426 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
-[2018.12.07-05.02.24:919][  2]LogAssetRegistry: Asset discovery search completed in 9.9542 seconds
-[2018.12.07-05.02.24:921][  2]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000000 seconds (found 0 objects)
-[2018.12.07-05.02.24:921][  2]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000199 seconds (updated 0 objects)
-[2018.12.07-05.02.27:702][131]LogSlate: FSceneViewport::OnFocusLost() reason 0
-[2018.12.07-05.02.28:579][183]LogSlate: Took 0.000269 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
-[2018.12.07-05.02.28:886][183]LogContentBrowser: Native class hierarchy updated for 'BlueprintGraph' in 0.0017 seconds. Added 116 classes and 0 folders.
-[2018.12.07-05.02.29:179][183]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7fa3c768, Size=4, Default__SKEL_PROTO_BP_AnimBlueprint_0_C Function /Engine/Transient.SKEL_PROTO_BP_AnimBlueprint_0_C:ExecuteUbergraph_PROTO_BP_AnimBlueprint_0
-[2018.12.07-05.02.29:180][183]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7fa3c760, Size=4, Default__PROTO_BP_AnimBlueprint_0_C Function /Engine/Transient.PROTO_BP_AnimBlueprint_0_C:ExecuteUbergraph_PROTO_BP_AnimBlueprint_0
-[2018.12.07-05.02.36:057][560]BlueprintLog: New page: Compile NewGameModeTest
-[2018.12.07-05.02.37:073][611]LogSlate: Window 'NewGameModeTest*' being destroyed
-[2018.12.07-05.02.37:078][611]LogSlate: Window 'NewGameModeTest*' being destroyed
-[2018.12.07-05.02.37:882][655]LogTemp: Repeating last play command: Selected Viewport
-[2018.12.07-05.02.37:896][655]LogPlayLevel: PlayLevel: No blueprints needed recompiling
-[2018.12.07-05.02.37:896][655]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
-[2018.12.07-05.02.37:896][655]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
-[2018.12.07-05.02.37:909][655]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
-[2018.12.07-05.02.37:909][655]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
-[2018.12.07-05.02.37:909][655]PIE: New page: PIE session: Test_Level00 (Dec 6, 2018, 7:02:37 PM)
-[2018.12.07-05.02.37:910][655]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Test_Level00
-[2018.12.07-05.02.37:913][655]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003073s)
-[2018.12.07-05.02.37:913][655]LogAIModule: Creating AISystem for world Test_Level00
-[2018.12.07-05.02.37:914][655]LogPlayLevel: PIE: World Init took: (0.000872s)
-[2018.12.07-05.02.37:914][655]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Test_Level00.Test_Level00 to /Game/Levels/UEDPIE_0_Test_Level00.Test_Level00 (0.004541s)
-[2018.12.07-05.02.37:936][655]LogInit: XAudio2 using 'Speakers / Headphones (Realtek Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
-[2018.12.07-05.02.38:047][655]LogInit: FAudioDevice initialized.
-[2018.12.07-05.02.38:101][655]LogLoad: Game class is 'NewGameModeTest_C'
-[2018.12.07-05.02.38:104][655]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Test_Level00.Test_Level00 up for play (max tick rate 60) at 2018.12.07-00.02.38
-[2018.12.07-05.02.38:104][655]LogWorld: Bringing up level for play took: 0.001516
-[2018.12.07-05.02.38:123][655]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0012 seconds. Added 11 classes and 0 folders.
-[2018.12.07-05.02.38:124][655]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_Test_Level00 -0.364
-[2018.12.07-05.02.40:229][778]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
-[2018.12.07-05.02.40:229][778]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
-[2018.12.07-05.02.40:230][778]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
-[2018.12.07-05.02.40:230][778]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
-[2018.12.07-05.02.40:230][778]LogPlayLevel: Display: Shutting down PIE online subsystems
-[2018.12.07-05.02.40:297][780]LogPlayLevel: Display: Destroying online subsystem :Context_2
-[2018.12.07-05.02.40:297][780]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
-[2018.12.07-05.02.42:048][885]LogSlate: FSceneViewport::OnFocusLost() reason 0
-[2018.12.07-05.02.46:218][107]LogSlate: Window 'BP_Employee' being destroyed
-[2018.12.07-05.02.46:222][107]LogSlate: Window 'BP_Employee' being destroyed
-[2018.12.07-05.02.52:253][210]LogSlate: Window 'Delete Assets' being destroyed
-[2018.12.07-05.02.56:545][446]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/NewGameModeTest" FILE="D:/Corporate America/CorporateAmerica/Corporate_America/Content/Levels/NewGameModeTest.uasset" SILENT=true
-[2018.12.07-05.02.56:562][446]LogSavePackage: Save=11.59ms
-[2018.12.07-05.02.56:562][446]LogSavePackage: Moving 'D:/Corporate America/CorporateAmerica/Corporate_America/Saved/NewGameModeTestBFCA53B840F21AE54951248B18EC9954.tmp' to 'D:/Corporate America/CorporateAmerica/Corporate_America/Content/Levels/NewGameModeTest.uasset'
-[2018.12.07-05.02.56:566][446]LogSavePackage: Display: Finished SavePackage D:/Corporate America/CorporateAmerica/Corporate_America/Content/Levels/NewGameModeTest.uasset
-[2018.12.07-05.02.58:947][589]LogSlate: Window 'NewGameModeTest' being destroyed
-[2018.12.07-05.02.58:953][589]LogSlate: Window 'NewGameModeTest' being destroyed
-[2018.12.07-05.03.05:830][892]LogSlate: Window 'Delete Assets' being destroyed
-[2018.12.07-05.03.16:085][  6]LogSlate: Window 'Pick Parent Class' being destroyed
-[2018.12.07-05.03.24:775][504]LogRenderer: Reallocating scene render targets to support 1216x508 Format 10 NumSamples 1 (Frame:1).
-[2018.12.07-05.03.25:835][566]LogSlate: Took 0.001178 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
-[2018.12.07-05.03.43:526][597]LogSlate: FSceneViewport::OnFocusLost() reason 2
-[2018.12.07-05.03.43:536][597]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
-[2018.12.07-05.03.50:505][  5]LogSlate: FSceneViewport::OnFocusLost() reason 0
-[2018.12.07-05.04.17:331][584]BlueprintLog: New page: Compile BP_Employee
-[2018.12.07-05.04.18:157][610]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Employee/Character/BP_Employee" FILE="D:/Corporate America/CorporateAmerica/Corporate_America/Content/Employee/Character/BP_Employee.uasset" SILENT=true
-[2018.12.07-05.04.18:191][610]LogSavePackage: Save=28.20ms
-[2018.12.07-05.04.18:191][610]LogSavePackage: Moving 'D:/Corporate America/CorporateAmerica/Corporate_America/Saved/BP_Employee5395BE414841B4F159A2A884363773CC.tmp' to 'D:/Corporate America/CorporateAmerica/Corporate_America/Content/Employee/Character/BP_Employee.uasset'
-[2018.12.07-05.04.18:196][610]LogSavePackage: Display: Finished SavePackage D:/Corporate America/CorporateAmerica/Corporate_America/Content/Employee/Character/BP_Employee.uasset
-[2018.12.07-05.04.25:021][ 19]LogSlate: Window 'BP_Employee' being destroyed
-[2018.12.07-05.04.25:029][ 19]LogSlate: Window 'BP_Employee' being destroyed
-[2018.12.07-05.04.28:107][196]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
-[2018.12.07-05.04.32:928][478]LogTemp: Repeating last play command: Selected Viewport
-[2018.12.07-05.04.32:962][478]LogPlayLevel: PlayLevel: No blueprints needed recompiling
-[2018.12.07-05.04.32:962][478]PIE: New page: PIE session: Test_Level00 (Dec 6, 2018, 7:04:32 PM)
-[2018.12.07-05.04.32:963][478]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Test_Level00
-[2018.12.07-05.04.32:967][478]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003845s)
-[2018.12.07-05.04.32:967][478]LogAIModule: Creating AISystem for world Test_Level00
-[2018.12.07-05.04.32:968][478]LogPlayLevel: PIE: World Init took: (0.000897s)
-[2018.12.07-05.04.32:968][478]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Test_Level00.Test_Level00 to /Game/Levels/UEDPIE_0_Test_Level00.Test_Level00 (0.005344s)
-[2018.12.07-05.04.32:990][478]LogInit: XAudio2 using 'Speakers / Headphones (Realtek Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
-[2018.12.07-05.04.33:070][478]LogInit: FAudioDevice initialized.
-[2018.12.07-05.04.33:102][478]LogLoad: Game class is 'NewGameModeTest_C'
-[2018.12.07-05.04.33:104][478]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Test_Level00.Test_Level00 up for play (max tick rate 60) at 2018.12.07-00.04.33
-[2018.12.07-05.04.33:105][478]LogWorld: Bringing up level for play took: 0.001642
-[2018.12.07-05.04.33:119][478]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_Test_Level00 0.631
-[2018.12.07-05.04.38:110][774]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
-[2018.12.07-05.04.38:110][774]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
-[2018.12.07-05.04.38:112][774]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
-[2018.12.07-05.04.38:112][774]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
-[2018.12.07-05.04.38:112][774]LogPlayLevel: Display: Shutting down PIE online subsystems
-[2018.12.07-05.04.38:173][776]LogPlayLevel: Display: Destroying online subsystem :Context_10
-[2018.12.07-05.04.38:173][776]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
-[2018.12.07-05.04.42:723][ 49]LogSlate: FSceneViewport::OnFocusLost() reason 0
-[2018.12.07-05.04.51:068][544]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf62534580, Size=184, Default__CharacterTest_C Function /Game/FirstPersonCPP/Blueprints/CharacterTest.CharacterTest_C:ExecuteUbergraph_CharacterTest
-[2018.12.07-05.04.51:072][544]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf62534580, Size=184
-[2018.12.07-05.04.51:072][544]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf62534580, Size=184, Default__CharacterTest_C Function /Engine/Transient.REINST_CharacterTest_C_33:ExecuteUbergraph_CharacterTest
-[2018.12.07-05.04.51:075][544]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bfa5242a40, Size=184, Default__CharacterTest_C Function /Game/FirstPersonCPP/Blueprints/CharacterTest.CharacterTest_C:ExecuteUbergraph_CharacterTest
-[2018.12.07-05.04.51:408][544]LogSlate: Took 0.000223 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
-[2018.12.07-05.04.56:727][851]LogSlate: Window 'CharacterTest' being destroyed
-[2018.12.07-05.04.56:738][851]LogSlate: Window 'CharacterTest' being destroyed
-[2018.12.07-05.05.02:770][183]LogSlate: Window 'BP_Employee' being destroyed
-[2018.12.07-05.05.04:717][268]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7b31a678, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.08:235][476]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf7b31a678, Size=4
-[2018.12.07-05.05.08:236][476]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf017854d0, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_37:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.08:239][476]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01785f28, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.11:587][672]BlueprintLog: New page: Compile BP_Employee
-[2018.12.07-05.05.11:597][672]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf01785f28, Size=4
-[2018.12.07-05.05.11:597][672]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7b319f38, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_39:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.11:605][672]LogBlueprint: Error: [Compiler BP_Employee] In use pin  Input  no longer exists on node  Call ServerJump . Please refresh node or break links to remove pin.
-[2018.12.07-05.05.11:606][672]LogBlueprint: Error: [Compiler BP_Employee] ServerJump_Event  : unable to determine expected signature - is the delegate pin connected?
-[2018.12.07-05.05.11:607][672]LogBlueprint: Error: [Compiler BP_Employee] Could not find an event-dispatcher named "ServerJump" in 'BP_Employee_C'.
-Make sure 'BP_Employee_C' has been compiled for  Bind Event to ServerJump
-[2018.12.07-05.05.11:607][672]LogBlueprint: Error: [Compiler BP_Employee] ServerEndJump_Event  : unable to determine expected signature - is the delegate pin connected?
-[2018.12.07-05.05.11:607][672]LogBlueprint: Error: [Compiler BP_Employee] Could not find an event-dispatcher named "ServerEndJump" in 'BP_Employee_C'.
-Make sure 'BP_Employee_C' has been compiled for  Bind Event to ServerEndJump
-[2018.12.07-05.05.11:608][672]LogBlueprint: Error: [Compiler BP_Employee] Could not find an event-dispatcher named "ServerEndJump" in 'BP_Employee_C'.
-Make sure 'BP_Employee_C' has been compiled for  Call ServerEndJump
-[2018.12.07-05.05.11:609][672]LogBlueprint: Error: [Compiler BP_Employee] Could not find an event-dispatcher named "ServerJump" in 'BP_Employee_C'.
-Make sure 'BP_Employee_C' has been compiled for  Call ServerJump
-[2018.12.07-05.05.11:610][672]LogBlueprint: Error: [Compiler BP_Employee] Failed to create property K2Node_CreateDelegate_OutputDelegate from  <None>  due to a bad or unknown type (Delegate)
-[2018.12.07-05.05.11:610][672]LogBlueprint: Error: [Compiler BP_Employee] Failed to create property K2Node_CreateDelegate_OutputDelegate1 from  <None>  due to a bad or unknown type (Delegate)
-[2018.12.07-05.05.11:611][672]LogBlueprint: Error: [Compiler BP_Employee] ServerEndJump_Event  Signature Error: Unable to determine expected signature - is the delegate pin connected?
-[2018.12.07-05.05.11:611][672]LogBlueprint: Error: [Compiler BP_Employee] ServerJump_Event  Signature Error: Unable to determine expected signature - is the delegate pin connected?
-[2018.12.07-05.05.11:611][672]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf77b09260, Size=144, Default__BP_Employee_C Function /Game/Employee/Character/BP_Employee.BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.11:918][672]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf7b319f38, Size=4
-[2018.12.07-05.05.11:921][672]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf62534580, Size=184
-[2018.12.07-05.05.11:934][672]LogBlueprint: Warning: [Compiler BP_Employee] [0183.43] Compile of BP_Employee failed. 11 Fatal Issue(s) 0 Warning(s) [in 345 ms] (/Game/Employee/Character/BP_Employee.BP_Employee)
-[2018.12.07-05.05.12:393][695]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Employee/Character/BP_Employee" FILE="D:/Corporate America/CorporateAmerica/Corporate_America/Content/Employee/Character/BP_Employee.uasset" SILENT=true
-[2018.12.07-05.05.12:467][695]LogSavePackage: Save=63.22ms
-[2018.12.07-05.05.12:467][695]LogSavePackage: Moving 'D:/Corporate America/CorporateAmerica/Corporate_America/Saved/BP_Employee26DED1174FDB977C7E965AA8C9A8EFC5.tmp' to 'D:/Corporate America/CorporateAmerica/Corporate_America/Content/Employee/Character/BP_Employee.uasset'
-[2018.12.07-05.05.12:472][695]LogSavePackage: Display: Finished SavePackage D:/Corporate America/CorporateAmerica/Corporate_America/Content/Employee/Character/BP_Employee.uasset
-[2018.12.07-05.05.16:718][948]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7b31aa18, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.16:728][948]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf7b31aa18, Size=4
-[2018.12.07-05.05.16:728][948]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7b31aa18, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_45:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.16:730][948]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7b3181e0, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.20:593][176]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf7b3181e0, Size=4
-[2018.12.07-05.05.20:594][176]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7b3181e0, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_47:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.20:596][176]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7b319158, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.20:604][176]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf7b319158, Size=4
-[2018.12.07-05.05.20:605][176]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7b319158, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_49:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.20:607][176]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7b31a100, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.23:312][336]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf7b31a100, Size=4
-[2018.12.07-05.05.23:312][336]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7b31a100, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_51:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.23:315][336]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7b318de8, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.23:330][336]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf7b318de8, Size=4
-[2018.12.07-05.05.23:330][336]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7b318de8, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_53:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.23:332][336]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7b31a740, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.27:446][580]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf7b31a740, Size=4
-[2018.12.07-05.05.27:447][580]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7b31a740, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_55:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.27:452][580]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7b31a668, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.27:461][580]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf7b31a668, Size=4
-[2018.12.07-05.05.27:461][580]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7b31a668, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_57:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.27:463][580]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7b31a0a0, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.36:142][ 94]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf7b31a0a0, Size=4
-[2018.12.07-05.05.36:142][ 94]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01784d50, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_59:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.36:144][ 94]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01786788, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.38:229][214]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf01786788, Size=4
-[2018.12.07-05.05.38:229][214]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01786788, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_61:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.38:231][214]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7b319860, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.42:074][440]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf7b319860, Size=4
-[2018.12.07-05.05.42:074][440]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01787298, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_63:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.42:076][440]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01787130, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.43:487][522]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf01787130, Size=4
-[2018.12.07-05.05.43:487][522]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7b319c98, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_65:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.43:490][522]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7b3180c8, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.57:019][326]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf7b3180c8, Size=4
-[2018.12.07-05.05.57:019][326]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01786ef0, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_67:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.05.57:022][326]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01786ed8, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.06.02:512][649]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf01786ed8, Size=4
-[2018.12.07-05.06.02:513][649]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01786ed8, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_69:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.06.02:515][649]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01785608, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.06.04:489][764]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf01785608, Size=4
-[2018.12.07-05.06.04:490][764]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01785608, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_71:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.06.04:493][764]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01784a10, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.06.07:656][950]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf01784a10, Size=4
-[2018.12.07-05.06.07:657][950]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01784a10, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_73:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.06.07:659][950]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01785158, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.06.16:809][493]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf01785158, Size=4
-[2018.12.07-05.06.16:809][493]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01785158, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_75:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.06.16:812][493]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf017874c0, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.08.13:699][444]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf017874c0, Size=4
-[2018.12.07-05.08.13:699][444]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf017874c0, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_77:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.08.13:703][444]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf017844b8, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.08.14:460][487]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf017844b8, Size=4
-[2018.12.07-05.08.14:460][487]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf017844b8, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_79:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.08.14:464][487]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf017863d0, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.08.24:160][ 59]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf017863d0, Size=4
-[2018.12.07-05.08.24:160][ 59]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf017863d0, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_81:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.08.24:162][ 59]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01785330, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.08.25:212][119]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf01785330, Size=4
-[2018.12.07-05.08.25:212][119]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01785330, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_83:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.08.25:214][119]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01785940, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.08.28:855][334]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf01785940, Size=4
-[2018.12.07-05.08.28:855][334]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01785940, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_85:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.08.28:858][334]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf017856a8, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.08.32:069][524]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf017856a8, Size=4
-[2018.12.07-05.08.32:069][524]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf017856a8, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_87:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.08.32:075][524]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf017844e0, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.08.36:247][767]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf017844e0, Size=4
-[2018.12.07-05.08.36:247][767]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf017844e0, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_89:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.08.36:249][767]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01785918, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.08.37:590][844]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf01785918, Size=4
-[2018.12.07-05.08.37:591][844]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01785918, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_91:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.08.37:593][844]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01786768, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.09.05:053][484]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf01786768, Size=4
-[2018.12.07-05.09.05:053][484]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01786768, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_93:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.09.05:055][484]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf017874e0, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.09.06:070][541]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf017874e0, Size=4
-[2018.12.07-05.09.06:070][541]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf017874e0, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_95:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.09.06:072][541]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf017861d0, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.09.18:299][268]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf017861d0, Size=4
-[2018.12.07-05.09.18:299][268]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf017861d0, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_97:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.09.18:304][268]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01787ed8, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.09.21:811][471]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf01787ed8, Size=4
-[2018.12.07-05.09.21:811][471]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01787ed8, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_99:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.09.21:813][471]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01786258, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.09.22:981][538]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf01786258, Size=4
-[2018.12.07-05.09.22:981][538]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01786258, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_101:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.09.22:983][538]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01786b40, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.09.27:824][818]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf01786b40, Size=4
-[2018.12.07-05.09.27:825][818]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01786b40, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_103:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.09.27:828][818]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01786a70, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.09.31:752][ 50]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf01786a70, Size=4
-[2018.12.07-05.09.31:753][ 50]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01786a70, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_105:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.09.31:758][ 50]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01787b70, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.09.33:361][144]BlueprintLog: New page: Compile BP_Employee
-[2018.12.07-05.09.33:368][144]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf01787b70, Size=4
-[2018.12.07-05.09.33:368][144]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01787b70, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_107:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.09.33:374][144]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf77b09260, Size=144
-[2018.12.07-05.09.33:374][144]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bfa66d0400, Size=144, BP_Employee_C_9 Function /Engine/Transient.REINST_BP_Employee_C_109:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.09.33:377][144]LogBlueprint: Error: [Compiler BP_Employee] Event Dispatcher pin is not connected  Bind Event to ServerEndJump
-[2018.12.07-05.09.33:377][144]LogBlueprint: Error: [Compiler BP_Employee] Event Dispatcher pin is not connected  Bind Event to ServerJump
-[2018.12.07-05.09.33:377][144]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf5020f880, Size=144, Default__BP_Employee_C Function /Game/Employee/Character/BP_Employee.BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.09.33:806][144]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf7b319c98, Size=4
-[2018.12.07-05.09.33:806][144]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf01787b70, Size=4
-[2018.12.07-05.09.33:821][144]LogBlueprint: Warning: [Compiler BP_Employee] [0445.31] Compile of BP_Employee failed. 2 Fatal Issue(s) 0 Warning(s) [in 460 ms] (/Game/Employee/Character/BP_Employee.BP_Employee)
-[2018.12.07-05.09.59:298][645]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf017857d8, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.10.00:570][718]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf017857d8, Size=4
-[2018.12.07-05.10.00:570][718]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf017857d8, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_113:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.10.00:572][718]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf017854a0, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.10.04:615][956]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf017854a0, Size=4
-[2018.12.07-05.10.04:615][956]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf017854a0, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_115:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.10.04:617][956]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01787ed0, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.10.23:574][ 83]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf01787ed0, Size=4
-[2018.12.07-05.10.23:574][ 83]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01787ed0, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_117:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.10.23:576][ 83]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf017840b0, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.10.25:708][207]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf017840b0, Size=4
-[2018.12.07-05.10.25:708][207]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf017840b0, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_119:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.10.25:710][207]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01785180, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.10.29:111][405]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf01785180, Size=4
-[2018.12.07-05.10.29:112][405]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01785180, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_121:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.10.29:115][405]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01784a40, Size=4, Default__SKEL_BP_Employee_C Function /Game/Employee/Character/BP_Employee.SKEL_BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.10.47:150][480]BlueprintLog: New page: Compile BP_Employee
-[2018.12.07-05.10.47:159][480]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf01784a40, Size=4
-[2018.12.07-05.10.47:159][480]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf01784a40, Size=4, Default__SKEL_BP_Employee_C Function /Engine/Transient.REINST_SKEL_BP_Employee_C_123:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.10.47:165][480]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf5020f880, Size=144
-[2018.12.07-05.10.47:166][480]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf7bbb04a0, Size=144, BP_Employee_C_11 Function /Engine/Transient.REINST_BP_Employee_C_125:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.10.47:169][480]LogUObjectGlobals: Created PersistentFrame Addr=0x000001bf42186840, Size=152, Default__BP_Employee_C Function /Game/Employee/Character/BP_Employee.BP_Employee_C:ExecuteUbergraph_BP_Employee
-[2018.12.07-05.10.47:669][480]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001bf01784a40, Size=4
-[2018.12.07-05.10.48:288][512]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Employee/Character/BP_Employee" FILE="D:/Corporate America/CorporateAmerica/Corporate_America/Content/Employee/Character/BP_Employee.uasset" SILENT=true
-[2018.12.07-05.10.48:350][512]LogSavePackage: Save=48.22ms
-[2018.12.07-05.10.48:350][512]LogSavePackage: Moving 'D:/Corporate America/CorporateAmerica/Corporate_America/Saved/BP_Employee60A4485D4F98321530A3B5BB318F5ABE.tmp' to 'D:/Corporate America/CorporateAmerica/Corporate_America/Content/Employee/Character/BP_Employee.uasset'
-[2018.12.07-05.10.48:354][512]LogSavePackage: Display: Finished SavePackage D:/Corporate America/CorporateAmerica/Corporate_America/Content/Employee/Character/BP_Employee.uasset
-[2018.12.07-05.10.49:333][569]LogSlate: Window 'BP_Employee' being destroyed
-[2018.12.07-05.10.49:341][569]LogSlate: Window 'BP_Employee' being destroyed
-[2018.12.07-05.10.50:423][629]LogTemp: Repeating last play command: Selected Viewport
-[2018.12.07-05.10.50:445][629]LogPlayLevel: PlayLevel: No blueprints needed recompiling
-[2018.12.07-05.10.50:446][629]PIE: New page: PIE session: Test_Level00 (Dec 6, 2018, 7:10:50 PM)
-[2018.12.07-05.10.50:446][629]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Test_Level00
-[2018.12.07-05.10.50:449][629]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002593s)
-[2018.12.07-05.10.50:449][629]LogAIModule: Creating AISystem for world Test_Level00
-[2018.12.07-05.10.50:450][629]LogPlayLevel: PIE: World Init took: (0.000964s)
-[2018.12.07-05.10.50:450][629]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Test_Level00.Test_Level00 to /Game/Levels/UEDPIE_0_Test_Level00.Test_Level00 (0.004085s)
-[2018.12.07-05.10.50:472][629]LogInit: XAudio2 using 'Speakers / Headphones (Realtek Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
-[2018.12.07-05.10.50:579][629]LogInit: FAudioDevice initialized.
-[2018.12.07-05.10.50:615][629]LogLoad: Game class is 'NewGameModeTest_C'
-[2018.12.07-05.10.50:619][629]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Test_Level00.Test_Level00 up for play (max tick rate 60) at 2018.12.07-00.10.50
-[2018.12.07-05.10.50:619][629]LogWorld: Bringing up level for play took: 0.001491
-[2018.12.07-05.10.50:640][629]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_Test_Level00 0.152
-[2018.12.07-05.10.55:344][908]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
-[2018.12.07-05.10.55:344][908]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
-[2018.12.07-05.10.55:345][908]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
-[2018.12.07-05.10.55:345][908]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
-[2018.12.07-05.10.55:345][908]LogPlayLevel: Display: Shutting down PIE online subsystems
-[2018.12.07-05.10.55:419][911]LogPlayLevel: Display: Destroying online subsystem :Context_15
-[2018.12.07-05.10.55:419][911]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
-[2018.12.07-05.10.56:700][987]LogSlate: FSceneViewport::OnFocusLost() reason 2
-[2018.12.07-05.11.00:886][237]LogPlayLevel: PlayLevel: No blueprints needed recompiling
-[2018.12.07-05.11.00:887][237]PIE: New page: PIE session: Test_Level00 (Dec 6, 2018, 7:11:00 PM)
-[2018.12.07-05.11.00:887][237]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_1_Test_Level00
-[2018.12.07-05.11.00:891][237]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003447s)
-[2018.12.07-05.11.00:891][237]LogAIModule: Creating AISystem for world Test_Level00
-[2018.12.07-05.11.00:892][237]LogPlayLevel: PIE: World Init took: (0.000749s)
-[2018.12.07-05.11.00:892][237]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Test_Level00.Test_Level00 to /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00 (0.004847s)
-[2018.12.07-05.11.00:914][237]LogInit: XAudio2 using 'Speakers / Headphones (Realtek Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
-[2018.12.07-05.11.01:007][237]LogInit: FAudioDevice initialized.
-[2018.12.07-05.11.01:013][237]LogSlate: FSceneViewport::OnFocusLost() reason 2
-[2018.12.07-05.11.01:161][237]LogLoad: Game class is 'NewGameModeTest_C'
-[2018.12.07-05.11.01:163][237]LogWorld: Bringing World /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00 up for play (max tick rate 60) at 2018.12.07-00.11.01
-[2018.12.07-05.11.01:170][237]LogWorld: Bringing up level for play took: 0.008181
-[2018.12.07-05.11.01:187][237]LogTemp: Display: ParseSettings for GameNetDriver
-[2018.12.07-05.11.01:188][237]LogTemp: Display: ParseSettings for IpNetDriver_0
-[2018.12.07-05.11.01:188][237]LogTemp: Display: ParseSettings for GameNetDriver
-[2018.12.07-05.11.01:190][237]LogInit: WinSock: Socket queue 131072 / 131072
-[2018.12.07-05.11.01:191][237]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
-[2018.12.07-05.11.01:192][237]LogNet: GameNetDriver IpNetDriver_0 IpNetDriver listening on port 17777
-[2018.12.07-05.11.01:196][237]PIE: Play in editor start time for /Game/Levels/UEDPIE_1_Test_Level00 0.708
-[2018.12.07-05.11.01:198][237]PIE: New page: PIE session: Test_Level00 (Dec 6, 2018, 7:11:01 PM)
-[2018.12.07-05.11.01:207][237]LogSlate: FSceneViewport::OnFocusLost() reason 2
-[2018.12.07-05.11.01:341][237]LogNet: Browse: 127.0.0.1:17777//Game/FirstPersonCPP/Maps/FirstPersonExampleMap
-[2018.12.07-05.11.01:341][237]LogTemp: Display: ParseSettings for GameNetDriver
-[2018.12.07-05.11.01:342][237]LogTemp: Display: ParseSettings for IpNetDriver_1
-[2018.12.07-05.11.01:342][237]LogTemp: Display: ParseSettings for PendingNetDriver
-[2018.12.07-05.11.01:342][237]LogInit: WinSock: Socket queue 32768 / 32768
-[2018.12.07-05.11.01:343][237]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
-[2018.12.07-05.11.01:344][237]LogNet: Game client on port 17777, rate 10000
-[2018.12.07-05.11.01:348][237]PIE: Play in editor start time for /Game/FirstPersonCPP/Maps/FirstPersonExampleMap 0.86
-[2018.12.07-05.11.01:360][237]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:60311
-[2018.12.07-05.11.01:361][237]LogHandshake: SendConnectChallenge. Timestamp: 0.016667, Cookie: 152140181159178232036036154053253015033095156134116096000194
-[2018.12.07-05.11.01:371][237]LogHandshake: SendChallengeResponse. Timestamp: 0.016667, Cookie: 152140181159178232036036154053253015033095156134116096000194
-[2018.12.07-05.11.01:393][237]LogRenderer: Reallocating scene render targets to support 1216x576 Format 10 NumSamples 1 (Frame:1).
-[2018.12.07-05.11.01:485][238]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:60311
-[2018.12.07-05.11.01:485][238]LogHandshake: SendChallengeAck. InCookie: 152140181159178232036036154053253015033095156134116096000194
-[2018.12.07-05.11.01:485][238]LogNet: Server accepting post-challenge connection from: 127.0.0.1:60311
-[2018.12.07-05.11.01:486][238]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
-[2018.12.07-05.11.01:493][238]LogNet: NotifyAcceptedConnection: Name: Test_Level00, TimeStamp: 12/07/18 00:11:01, [UNetConnection] RemoteAddr: 127.0.0.1:60311, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
-[2018.12.07-05.11.01:494][238]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:60311, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
-[2018.12.07-05.11.01:495][238]LogNetVersion: Corporate_America 1.0.0.0, NetCL: 3944462, EngineNetVer: 2, GameNetVer: 0 (Checksum: 3211145606)
-[2018.12.07-05.11.01:496][238]LogNet: UPendingNetGame::SendInitialJoin: Sending hello. [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_0, Driver: PendingNetDriver IpNetDriver_1, IsServer: NO, PC: NULL, Owner: NULL, UniqueId: INVALID
-[2018.12.07-05.11.01:509][239]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00: Accepted
-[2018.12.07-05.11.01:511][239]LogNet: Remote platform little endian=1
-[2018.12.07-05.11.01:511][239]LogNet: This platform little endian=1
-[2018.12.07-05.11.01:535][240]LogNet: Login request: /Game/FirstPersonCPP/Maps/FirstPersonExampleMap?Name=DESKTOP-G1UAKUU-F4DA6CF94BE64F89B86DACA03E25CAD9 userId: DESKTOP-G1UAKUU-F4DA6CF94BE64F89B86DACA03E25CAD9
-[2018.12.07-05.11.01:537][240]LogNet: Welcomed by server (Level: /Game/Levels/UEDPIE_1_Test_Level00, Game: /Game/Levels/NewGameModeTest.NewGameModeTest_C)
-[2018.12.07-05.11.01:538][240]LogLoad: LoadMap: 127.0.0.1:17777//Game/Levels/UEDPIE_1_Test_Level00?game=/Game/Levels/NewGameModeTest.NewGameModeTest_C
-[2018.12.07-05.11.01:569][240]LogAIModule: Creating AISystem for world Test_Level00
-[2018.12.07-05.11.01:570][240]LogTemp: Display: ParseSettings for GameNetDriver
-[2018.12.07-05.11.01:573][240]LogWorld: Bringing World /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00 up for play (max tick rate 60) at 2018.12.07-00.11.01
-[2018.12.07-05.11.01:574][240]LogWorld: Bringing up level for play took: 0.003081
-[2018.12.07-05.11.01:575][240]LogLoad: Took 0.037445 seconds to LoadMap(/Game/Levels/UEDPIE_1_Test_Level00)
-[2018.12.07-05.11.01:583][241]LogNet: Client netspeed is 10000
-[2018.12.07-05.11.01:583][241]LogNet: Join request: /Game/FirstPersonCPP/Maps/FirstPersonExampleMap?Name=DESKTOP-G1UAKUU-F4DA6CF94BE64F89B86DACA03E25CAD9?SplitscreenCount=1
-[2018.12.07-05.11.01:584][241]LogOnline: Warning: OSS: No game present to join for session (GameSession)
-[2018.12.07-05.11.01:597][241]LogNet: Join succeeded: DESKTOP-G1UAKUU-F4DA
-[2018.12.07-05.11.01:660][244]LogOnline: Warning: OSS: No game present to join for session (GameSession)
-[2018.12.07-05.11.01:675][245]LogOnline: Warning: OSS: No game present to join for session (GameSession)
-[2018.12.07-05.11.02:812][313]LogSlate: FSceneViewport::OnFocusLost() reason 2
-[2018.12.07-05.11.03:993][357]LogRenderer: Reallocating scene render targets to support 1216x792 Format 10 NumSamples 1 (Frame:122).
-[2018.12.07-05.11.12:077][781]LogSlate: FSceneViewport::OnFocusLost() reason 2
-[2018.12.07-05.11.15:919][ 10]LogSlate: Window 'Corporate_America Game Preview Client 1 (64-bit/PCD3D_SM5)' being destroyed
-[2018.12.07-05.11.15:961][ 10]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
-[2018.12.07-05.11.15:961][ 10]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
-[2018.12.07-05.11.15:963][ 10]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
-[2018.12.07-05.11.15:963][ 10]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
-[2018.12.07-05.11.15:964][ 10]LogOnline: Warning: OSS: No game present to leave for session (GameSession)
-[2018.12.07-05.11.15:978][ 10]LogSlate: Window 'Corporate_America Game Preview Server (64-bit/PCD3D_SM5)' being destroyed
-[2018.12.07-05.11.16:037][ 10]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
-[2018.12.07-05.11.16:037][ 10]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
-[2018.12.07-05.11.16:038][ 10]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
-[2018.12.07-05.11.16:038][ 10]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
-[2018.12.07-05.11.16:038][ 10]LogPlayLevel: Display: Shutting down PIE online subsystems
-[2018.12.07-05.11.16:062][ 10]LogNet: UChannel::CleanUp: ChIndex == 0. Closing connection. [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_0, Driver: GameNetDriver IpNetDriver_1, IsServer: NO, PC: PlayerController_1, Owner: PlayerController_1, UniqueId: DESKTOP-G1UAKUU-F4DA6CF94BE64F89B86DACA03E25CAD9
-[2018.12.07-05.11.16:062][ 10]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_0, Driver: GameNetDriver IpNetDriver_1, IsServer: NO, PC: PlayerController_1, Owner: PlayerController_1, UniqueId: DESKTOP-G1UAKUU-F4DA6CF94BE64F89B86DACA03E25CAD9, Channels: 10, Time: 2018.12.07-05.11.16
-[2018.12.07-05.11.16:063][ 10]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_0, Driver: GameNetDriver IpNetDriver_1, IsServer: NO, PC: PlayerController_1, Owner: PlayerController_1, UniqueId: DESKTOP-G1UAKUU-F4DA6CF94BE64F89B86DACA03E25CAD9
-[2018.12.07-05.11.16:064][ 10]LogNet: UChannel::CleanUp: ChIndex == 0. Closing connection. [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:60311, Name: IpConnection_1, Driver: GameNetDriver None, IsServer: YES, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-F4DA6CF94BE64F89B86DACA03E25CAD9
-[2018.12.07-05.11.16:065][ 10]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:60311, Name: IpConnection_1, Driver: GameNetDriver None, IsServer: YES, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-F4DA6CF94BE64F89B86DACA03E25CAD9, Channels: 2, Time: 2018.12.07-05.11.16
-[2018.12.07-05.11.16:065][ 10]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:60311, Name: IpConnection_1, Driver: GameNetDriver None, IsServer: YES, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-F4DA6CF94BE64F89B86DACA03E25CAD9
-[2018.12.07-05.11.16:074][ 10]LogExit: GameNetDriver None shut down
-[2018.12.07-05.11.16:074][ 10]LogExit: GameNetDriver None shut down
-[2018.12.07-05.11.16:087][ 11]LogPlayLevel: Display: Destroying online subsystem :Context_17
-[2018.12.07-05.11.16:088][ 11]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
-[2018.12.07-05.11.16:088][ 11]LogPlayLevel: Display: Destroying online subsystem :Context_16
-[2018.12.07-05.11.16:088][ 11]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-20.54.38:981][  0]LogInit: Selected Device Profile: [Windows]
+[2018.12.09-20.54.38:981][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2018.12.09-20.54.39:002][  0]LogInit: Computer: DESKTOP-G1UAKUU
+[2018.12.09-20.54.39:002][  0]LogInit: User: samde
+[2018.12.09-20.54.39:002][  0]LogInit: CPU Page size=4096, Cores=4
+[2018.12.09-20.54.39:002][  0]LogInit: High frequency timer resolution =2.742188 MHz
+[2018.12.09-20.54.39:003][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
+[2018.12.09-20.54.39:003][  0]LogMemory: Platform Memory Stats for Windows
+[2018.12.09-20.54.39:003][  0]LogMemory: Process Physical Memory: 275.03 MB used, 275.03 MB peak
+[2018.12.09-20.54.39:003][  0]LogMemory: Process Virtual Memory: 264.86 MB used, 264.86 MB peak
+[2018.12.09-20.54.39:003][  0]LogMemory: Physical Memory: 8220.30 MB used,  8029.96 MB free, 16250.27 MB total
+[2018.12.09-20.54.39:003][  0]LogMemory: Virtual Memory: 4795.80 MB used,  8029.96 MB free, 134217728.00 MB total
+[2018.12.09-20.54.39:058][  0]LogInit: Using OS detected language (en-US).
+[2018.12.09-20.54.39:058][  0]LogInit: Using OS detected locale (en-US).
+[2018.12.09-20.54.39:135][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2018.12.09-20.54.39:611][  0]LogStreaming: Display: Took  0.552s to EndInitTextLocalization.
+[2018.12.09-20.54.39:611][  0]LogInit: Setting process to per monitor DPI aware
+[2018.12.09-20.54.39:712][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2018.12.09-20.54.39:712][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2018.12.09-20.54.42:411][  0]LogD3D11RHI: D3D11 adapters:
+[2018.12.09-20.54.42:485][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 1050 Ti' (Feature Level 11_0)
+[2018.12.09-20.54.42:485][  0]LogD3D11RHI:       4018/0/8125 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:1, VendorId:0x10de
+[2018.12.09-20.54.42:496][  0]LogD3D11RHI:    1. 'Intel(R) HD Graphics 630' (Feature Level 11_0)
+[2018.12.09-20.54.42:496][  0]LogD3D11RHI:       128/0/8125 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x8086
+[2018.12.09-20.54.42:498][  0]LogD3D11RHI:    2. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2018.12.09-20.54.42:498][  0]LogD3D11RHI:       0/0/8125 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2018.12.09-20.54.42:498][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2018.12.09-20.54.42:524][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2018.12.09-20.54.42:525][  0]LogD3D11RHI:     GPU DeviceId: 0x1c8c (for the marketing name, search the web for "GPU Device Id")
+[2018.12.09-20.54.42:525][  0]LogWindows: EnumDisplayDevices:
+[2018.12.09-20.54.42:525][  0]LogWindows:    0. 'Intel(R) HD Graphics 630' (P:1 D:1)
+[2018.12.09-20.54.42:525][  0]LogWindows:    1. 'Intel(R) HD Graphics 630' (P:0 D:0)
+[2018.12.09-20.54.42:525][  0]LogWindows:    2. 'Intel(R) HD Graphics 630' (P:0 D:0)
+[2018.12.09-20.54.42:525][  0]LogWindows:    3. 'NVIDIA GeForce GTX 1050 Ti' (P:0 D:0)
+[2018.12.09-20.54.42:525][  0]LogWindows: DebugString: GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter FoundDriverCount:0 
+[2018.12.09-20.54.42:525][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 1050 Ti
+[2018.12.09-20.54.42:525][  0]LogD3D11RHI:   Driver Version: Unknown (internal:Unknown, unified:Unknown)
+[2018.12.09-20.54.42:525][  0]LogD3D11RHI:      Driver Date: Unknown
+[2018.12.09-20.54.42:525][  0]LogRHI: Texture pool is 2812 MB (70% of 4018 MB)
+[2018.12.09-20.54.42:568][  0]LogD3D11RHI: [Aftermath] Aftermath enabled and primed
+[2018.12.09-20.54.42:568][  0]LogD3D11RHI: [Aftermath] Aftermath enabled and primed
+[2018.12.09-20.54.42:568][  0]LogD3D11RHI: Async texture creation enabled
+[2018.12.09-20.54.42:616][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 2)
+[2018.12.09-20.54.42:617][  0]LogShaderCompilers: Guid format shader working directory is -10 characters bigger than the processId version (D:/Corporate America/CorporateAmerica/Corporate_America/Intermediate/Shaders/WorkingDirectory/16672/).
+[2018.12.09-20.54.42:617][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/samde/AppData/Local/Temp/UnrealShaderWorkingDir/214471934D358D97899C5187B7595E6F/'.
+[2018.12.09-20.54.42:832][  0]LogTemp: Display: Loaded TP AllDesktopTargetPlatform
+[2018.12.09-20.54.42:846][  0]LogTemp: Display: Loaded TP MacClientTargetPlatform
+[2018.12.09-20.54.42:861][  0]LogTemp: Display: Loaded TP MacNoEditorTargetPlatform
+[2018.12.09-20.54.42:876][  0]LogTemp: Display: Loaded TP MacServerTargetPlatform
+[2018.12.09-20.54.42:896][  0]LogTemp: Display: Loaded TP MacTargetPlatform
+[2018.12.09-20.54.42:910][  0]LogTemp: Display: Loaded TP WindowsClientTargetPlatform
+[2018.12.09-20.54.42:924][  0]LogTemp: Display: Loaded TP WindowsNoEditorTargetPlatform
+[2018.12.09-20.54.42:939][  0]LogTemp: Display: Loaded TP WindowsServerTargetPlatform
+[2018.12.09-20.54.42:947][  0]LogTemp: Display: Loaded TP WindowsTargetPlatform
+[2018.12.09-20.54.42:960][  0]LogTemp: Display: Loaded TP Android_ASTCTargetPlatform
+[2018.12.09-20.54.42:973][  0]LogTemp: Display: Loaded TP Android_ATCTargetPlatform
+[2018.12.09-20.54.42:985][  0]LogTemp: Display: Loaded TP Android_DXTTargetPlatform
+[2018.12.09-20.54.42:998][  0]LogTemp: Display: Loaded TP Android_ETC1aTargetPlatform
+[2018.12.09-20.54.43:011][  0]LogTemp: Display: Loaded TP Android_ETC1TargetPlatform
+[2018.12.09-20.54.43:022][  0]LogTemp: Display: Loaded TP Android_ETC2TargetPlatform
+[2018.12.09-20.54.43:047][  0]LogTemp: Display: Loaded TP Android_MultiTargetPlatform
+[2018.12.09-20.54.43:047][  0]LogTemp: Display: Loaded TP Android_PVRTCTargetPlatform
+[2018.12.09-20.54.43:064][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2018.12.09-20.54.43:065][  0]LogTemp: Display: Loaded TP HTML5TargetPlatform
+[2018.12.09-20.54.43:109][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
+[2018.12.09-20.54.43:122][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
+[2018.12.09-20.54.43:133][  0]LogTemp: Display: Loaded TP LinuxClientTargetPlatform
+[2018.12.09-20.54.43:146][  0]LogTemp: Display: Loaded TP LinuxNoEditorTargetPlatform
+[2018.12.09-20.54.43:158][  0]LogTemp: Display: Loaded TP LinuxServerTargetPlatform
+[2018.12.09-20.54.43:176][  0]LogTemp: Display: Loaded TP LinuxTargetPlatform
+[2018.12.09-20.54.43:176][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2018.12.09-20.54.43:351][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2018.12.09-20.54.43:351][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2018.12.09-20.54.43:351][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2018.12.09-20.54.45:258][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2018.12.09-20.54.45:339][  0]LogDerivedDataCache: Loaded boot cache 0.08s 79MB C:/Users/samde/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc.
+[2018.12.09-20.54.45:339][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/samde/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc
+[2018.12.09-20.54.45:339][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file D:/Corporate America/CorporateAmerica/Corporate_America/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2018.12.09-20.54.45:339][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2018.12.09-20.54.45:339][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file D:/Corporate America/CorporateAmerica/Corporate_America/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2018.12.09-20.54.45:339][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2018.12.09-20.54.45:368][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2018.12.09-20.54.45:380][  0]LogDerivedDataCache: Using Local data cache path C:/Users/samde/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2018.12.09-20.54.45:380][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2018.12.09-20.54.45:380][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2018.12.09-20.54.45:392][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2018.12.09-20.54.45:392][  0]LogSlate: Using Freetype 2.6.0
+[2018.12.09-20.54.45:413][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2018.12.09-20.54.45:413][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2018.12.09-20.54.45:714][  0]LogAssetRegistry: FAssetRegistry took 0.0258 seconds to start up
+[2018.12.09-20.54.46:037][  0]LogInit: Selected Device Profile: [Windows]
+[2018.12.09-20.54.46:346][  0]LogSimplygon: Simplygon DLL not present - disabling.
+[2018.12.09-20.54.46:350][  0]LogMeshReduction: Using SimplygonSwarm for distributed automatic mesh merging
+[2018.12.09-20.54.46:350][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2018.12.09-20.54.46:350][  0]LogMeshReduction: No automatic skeletal mesh reduction module available
+[2018.12.09-20.54.46:350][  0]LogMeshReduction: No automatic mesh merging module available
+[2018.12.09-20.54.46:350][  0]LogMeshMerging: No automatic mesh merging module available
+[2018.12.09-20.54.46:426][  0]LogNetVersion: Corporate_America , NetCL: 3944462, EngineNetVer: 2, GameNetVer: 0 (Checksum: 3226822143)
+[2018.12.09-20.54.47:601][  0]LogPackageLocalizationCache: Processed 9 localized package path(s) for 2 prioritized culture(s) in 0.092149 seconds
+[2018.12.09-20.54.47:606][  0]LogUObjectArray: 36728 objects as part of root set at end of initial load.
+[2018.12.09-20.54.47:606][  0]LogUObjectAllocator: 7314312 out of 0 bytes used by permanent object pool.
+[2018.12.09-20.54.47:606][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2018.12.09-20.54.51:619][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2018.12.09-20.54.51:654][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2018.12.09-20.54.52:091][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x00000182257ea390, Size=72, Default__FirstPerson_AnimBP_C Function /Game/FirstPerson/Animations/FirstPerson_AnimBP.FirstPerson_AnimBP_C:ExecuteUbergraph_FirstPerson_AnimBP
+[2018.12.09-20.54.52:100][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x00000182257ea390, Size=72
+[2018.12.09-20.54.52:100][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000001822510b2e0, Size=72, Default__FirstPerson_AnimBP_C Function /Engine/Transient.REINST_FirstPerson_AnimBP_C_0:ExecuteUbergraph_FirstPerson_AnimBP
+[2018.12.09-20.54.52:109][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x00000182250b5620, Size=72, Default__FirstPerson_AnimBP_C Function /Game/FirstPerson/Animations/FirstPerson_AnimBP.FirstPerson_AnimBP_C:ExecuteUbergraph_FirstPerson_AnimBP
+[2018.12.09-20.54.52:189][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x0000018225096380, Size=64, Default__ThirdPerson_AnimBP_C Function /Game/Mannequin/Animations/ThirdPerson_AnimBP.ThirdPerson_AnimBP_C:ExecuteUbergraph_ThirdPerson_AnimBP
+[2018.12.09-20.54.52:198][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000018225096380, Size=64
+[2018.12.09-20.54.52:198][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x0000018225096380, Size=64, Default__ThirdPerson_AnimBP_C Function /Engine/Transient.REINST_ThirdPerson_AnimBP_C_1:ExecuteUbergraph_ThirdPerson_AnimBP
+[2018.12.09-20.54.52:205][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x0000018225c7b8d0, Size=72, Default__ThirdPerson_AnimBP_C Function /Game/Mannequin/Animations/ThirdPerson_AnimBP.ThirdPerson_AnimBP_C:ExecuteUbergraph_ThirdPerson_AnimBP
+[2018.12.09-20.54.52:771][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x0000018225c35ee0, Size=152, Default__BP_Employee_C Function /Game/Employee/Character/BP_Employee.BP_Employee_C:ExecuteUbergraph_BP_Employee
+[2018.12.09-20.54.52:775][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000018225c35ee0, Size=152
+[2018.12.09-20.54.52:775][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x0000018225c35ee0, Size=152, Default__BP_Employee_C Function /Engine/Transient.REINST_BP_Employee_C_7:ExecuteUbergraph_BP_Employee
+[2018.12.09-20.54.52:778][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x0000018226493c40, Size=152, Default__BP_Employee_C Function /Game/Employee/Character/BP_Employee.BP_Employee_C:ExecuteUbergraph_BP_Employee
+[2018.12.09-20.54.52:859][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [1.197948ms] /Game/FirstPerson/Character/Mesh/SK_Mannequin_Arms.SK_Mannequin_Arms
+[2018.12.09-20.54.52:869][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [0.822336ms] /Game/FirstPerson/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2018.12.09-20.54.52:889][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [1.719795ms] /Game/Mannequin/Character/Mesh/SK_Mannequin.SK_Mannequin
+[2018.12.09-20.54.53:120][  0]SourceControl: Source control is disabled
+[2018.12.09-20.54.53:120][  0]SourceControl: Source control is disabled
+[2018.12.09-20.54.53:144][  0]SourceControl: Source control is disabled
+[2018.12.09-20.54.53:168][  0]SourceControl: Source control is disabled
+[2018.12.09-20.54.53:820][  0]LogOnline: Display: STEAM: Loading Steam SDK 1.39
+[2018.12.09-20.54.53:847][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2018.12.09-20.54.54:036][  0]LogOcInput: OculusInput pre-init called
+[2018.12.09-20.54.54:190][  0]LogEngine: Initializing Engine...
+[2018.12.09-20.54.54:191][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2018.12.09-20.54.54:192][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2018.12.09-20.54.54:192][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2018.12.09-20.54.54:675][  0]LogAIModule: Creating AISystem for world Untitled
+[2018.12.09-20.54.54:682][  0]LogInit: XAudio2 using 'Speakers / Headphones (Realtek Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2018.12.09-20.54.56:151][  0]LogInit: FAudioDevice initialized.
+[2018.12.09-20.54.56:256][  0]LogDerivedDataCache: Saved boot cache 0.10s 79MB C:/Users/samde/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc.
+[2018.12.09-20.54.56:278][  0]LogInit: Texture streaming: Enabled
+[2018.12.09-20.54.56:298][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2018.12.09-20.54.56:321][  0]LogInit: Transaction tracking system initialized
+[2018.12.09-20.54.56:353][  0]BlueprintLog: New page: Editor Load
+[2018.12.09-20.54.56:509][  0]LocalizationService: Localization service is disabled
+[2018.12.09-20.54.56:629][  0]LogLinker: Warning: Can't find file '/Game/VehicleCPP/VehicleOverview'
+[2018.12.09-20.54.56:630][  0]LogLinker: Warning: Can't find file '/Game/VehicleCPP/VehicleOverview'
+[2018.12.09-20.54.56:630][  0]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/VehicleCPP/VehicleOverview.VehicleOverview_C'
+[2018.12.09-20.54.56:672][  0]LogConsoleResponse: Display: 
+[2018.12.09-20.54.57:123][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2018.12.09-20.54.57:123][  0]LogCook: Display: Mobile HDR setting 1
+[2018.12.09-20.54.57:123][  0]LogGameplayTags: Display: UGameplayTagsManager::DoneAddingNativeTags. DelegateIsBound: 0
+[2018.12.09-20.54.57:123][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2018.12.09-20.54.57:123][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2018.12.09-20.54.57:455][  0]LogFileCache: Scanning file cache for directory 'D:/Corporate America/CorporateAmerica/Corporate_America/Content/' took 0.02s
+[2018.12.09-20.54.57:699][  0]SourceControl: Source control is disabled
+[2018.12.09-20.54.57:699][  0]Cmd: MAP LOAD FILE="D:/Corporate America/CorporateAmerica/Corporate_America/Content/Levels/Test_Level00.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2018.12.09-20.54.57:705][  0]LightingResults: New page: Lighting Build
+[2018.12.09-20.54.57:709][  0]MapCheck: New page: Map Check
+[2018.12.09-20.54.57:709][  0]LightingResults: New page: Lighting Build
+[2018.12.09-20.54.57:721][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000001822510b2e0, Size=72
+[2018.12.09-20.54.57:721][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000018225096380, Size=64
+[2018.12.09-20.54.57:721][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x0000018225c35ee0, Size=152
+[2018.12.09-20.54.58:000][  0]LogAIModule: Creating AISystem for world Test_Level00
+[2018.12.09-20.54.58:014][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2018.12.09-20.54.58:027][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2018.12.09-20.54.58:104][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 76.68ms to complete.
+[2018.12.09-20.54.58:104][  0]LogFileHelpers: Loading map 'Test_Level00' took 0.405
+[2018.12.09-20.54.58:278][  0]LogCollectionManager: Loaded 0 collections in 0.002328 seconds
+[2018.12.09-20.54.58:321][  0]LogFileCache: Scanning file cache for directory 'D:/Corporate America/CorporateAmerica/Corporate_America/Saved/Collections/' took 0.01s
+[2018.12.09-20.54.58:321][  0]LogFileCache: Scanning file cache for directory 'D:/Corporate America/CorporateAmerica/Corporate_America/Content/Developers/samde/Collections/' took 0.01s
+[2018.12.09-20.54.58:321][  0]LogFileCache: Scanning file cache for directory 'D:/Corporate America/CorporateAmerica/Corporate_America/Content/Collections/' took 0.01s
+[2018.12.09-20.54.58:321][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000000 seconds
+[2018.12.09-20.54.58:331][  0]LogContentBrowser: Native class hierarchy populated in 0.0100 seconds. Added 2464 classes and 566 folders.
+[2018.12.09-20.54.58:342][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0011 seconds. Added 0 classes and 0 folders.
+[2018.12.09-20.54.58:812][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0011 seconds. Added 0 classes and 0 folders.
+[2018.12.09-20.54.58:891][  0]LogSlate: Took 0.013633 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2018.12.09-20.54.58:906][  0]LogSlate: Took 0.006989 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2018.12.09-20.54.58:913][  0]LogSlate: Took 0.005671 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2018.12.09-20.54.58:925][  0]LogSlate: Took 0.007752 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansMono.ttf' (77K)
+[2018.12.09-20.54.59:099][  0]LogRenderer: Reallocating scene render targets to support 1216x684 Format 10 NumSamples 1 (Frame:1).
+[2018.12.09-20.54.59:231][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0012 seconds. Added 0 classes and 0 folders.
+[2018.12.09-20.54.59:232][  0]LogLoad: (Engine Initialization) Total time: 24.53 seconds
+[2018.12.09-20.54.59:232][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2018.12.09-20.54.59:270][  0]LogContentStreaming: Texture pool size now 3000 MB
+[2018.12.09-20.54.59:290][  0]LogSlate: Took 0.005096 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2018.12.09-20.54.59:375][  1]LogActor: Warning: SmartPhoneBP_C /Engine/Transient.World_0:PersistentLevel.SmartPhoneBP_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.54.59:382][  1]LogAssetRegistry: Asset discovery search completed in 13.6903 seconds
+[2018.12.09-20.54.59:385][  1]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000000 seconds (found 0 objects)
+[2018.12.09-20.54.59:386][  1]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000366 seconds (updated 0 objects)
+[2018.12.09-20.55.01:908][149]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2018.12.09-20.55.02:007][155]LogTemp: Repeating last play command: New Editor Window (PIE)
+[2018.12.09-20.55.02:025][155]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2018.12.09-20.55.02:025][155]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-20.55.02:025][155]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
+[2018.12.09-20.55.02:041][155]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
+[2018.12.09-20.55.02:041][155]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
+[2018.12.09-20.55.02:041][155]PIE: New page: PIE session: Test_Level00 (Dec 9, 2018, 10:55:02 AM)
+[2018.12.09-20.55.02:041][155]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_1_Test_Level00
+[2018.12.09-20.55.02:044][155]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002486s)
+[2018.12.09-20.55.02:044][155]LogAIModule: Creating AISystem for world Test_Level00
+[2018.12.09-20.55.02:045][155]LogPlayLevel: PIE: World Init took: (0.000740s)
+[2018.12.09-20.55.02:045][155]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Test_Level00.Test_Level00 to /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00 (0.003701s)
+[2018.12.09-20.55.02:058][155]LogInit: XAudio2 using 'Speakers / Headphones (Realtek Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2018.12.09-20.55.02:136][155]LogInit: FAudioDevice initialized.
+[2018.12.09-20.55.02:246][155]LogLoad: Game class is 'NewGameModeTest_C'
+[2018.12.09-20.55.02:249][155]LogWorld: Bringing World /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00 up for play (max tick rate 60) at 2018.12.09-15.55.02
+[2018.12.09-20.55.02:249][155]LogWorld: Bringing up level for play took: 0.001756
+[2018.12.09-20.55.02:270][155]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0012 seconds. Added 11 classes and 0 folders.
+[2018.12.09-20.55.02:273][155]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-20.55.02:274][155]LogTemp: Display: ParseSettings for IpNetDriver_0
+[2018.12.09-20.55.02:274][155]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-20.55.02:274][155]LogInit: WinSock: Socket queue 131072 / 131072
+[2018.12.09-20.55.02:275][155]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2018.12.09-20.55.02:275][155]LogNet: GameNetDriver IpNetDriver_0 IpNetDriver listening on port 17777
+[2018.12.09-20.55.02:276][155]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.55.02:279][155]PIE: Play in editor start time for /Game/Levels/UEDPIE_1_Test_Level00 -0.398
+[2018.12.09-20.55.02:280][155]PIE: New page: PIE session: Test_Level00 (Dec 9, 2018, 10:55:02 AM)
+[2018.12.09-20.55.02:288][155]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.12.09-20.55.02:377][155]LogNet: Browse: 127.0.0.1:17777//Game/FirstPersonCPP/Maps/FirstPersonExampleMap
+[2018.12.09-20.55.02:378][155]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-20.55.02:378][155]LogTemp: Display: ParseSettings for IpNetDriver_1
+[2018.12.09-20.55.02:378][155]LogTemp: Display: ParseSettings for PendingNetDriver
+[2018.12.09-20.55.02:378][155]LogInit: WinSock: Socket queue 32768 / 32768
+[2018.12.09-20.55.02:379][155]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2018.12.09-20.55.02:379][155]LogNet: Game client on port 17777, rate 10000
+[2018.12.09-20.55.02:382][155]PIE: Play in editor start time for /Game/FirstPersonCPP/Maps/FirstPersonExampleMap -0.295
+[2018.12.09-20.55.02:391][155]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:58573
+[2018.12.09-20.55.02:392][155]LogHandshake: SendConnectChallenge. Timestamp: 0.016667, Cookie: 185095171010045119076108040072221219224032029202114206077089
+[2018.12.09-20.55.02:400][155]LogHandshake: SendChallengeResponse. Timestamp: 0.016667, Cookie: 185095171010045119076108040072221219224032029202114206077089
+[2018.12.09-20.55.02:500][156]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:58573
+[2018.12.09-20.55.02:500][156]LogHandshake: SendChallengeAck. InCookie: 185095171010045119076108040072221219224032029202114206077089
+[2018.12.09-20.55.02:501][156]LogNet: Server accepting post-challenge connection from: 127.0.0.1:58573
+[2018.12.09-20.55.02:501][156]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2018.12.09-20.55.02:501][156]LogNet: NotifyAcceptedConnection: Name: Test_Level00, TimeStamp: 12/09/18 15:55:02, [UNetConnection] RemoteAddr: 127.0.0.1:58573, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2018.12.09-20.55.02:501][156]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:58573, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2018.12.09-20.55.02:503][156]LogNetVersion: Corporate_America 1.0.0.0, NetCL: 3944462, EngineNetVer: 2, GameNetVer: 0 (Checksum: 3211145606)
+[2018.12.09-20.55.02:503][156]LogNet: UPendingNetGame::SendInitialJoin: Sending hello. [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_0, Driver: PendingNetDriver IpNetDriver_1, IsServer: NO, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2018.12.09-20.55.02:518][157]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00: Accepted
+[2018.12.09-20.55.02:519][157]LogNet: Remote platform little endian=1
+[2018.12.09-20.55.02:519][157]LogNet: This platform little endian=1
+[2018.12.09-20.55.02:537][158]LogNet: Login request: /Game/FirstPersonCPP/Maps/FirstPersonExampleMap?Name=DESKTOP-G1UAKUU-43DBB6DD4BDF6B7931A861B368BE405E userId: DESKTOP-G1UAKUU-43DBB6DD4BDF6B7931A861B368BE405E
+[2018.12.09-20.55.02:538][158]LogNet: Welcomed by server (Level: /Game/Levels/UEDPIE_1_Test_Level00, Game: /Game/Levels/NewGameModeTest.NewGameModeTest_C)
+[2018.12.09-20.55.02:547][158]LogLoad: LoadMap: 127.0.0.1:17777//Game/Levels/UEDPIE_1_Test_Level00?game=/Game/Levels/NewGameModeTest.NewGameModeTest_C
+[2018.12.09-20.55.02:564][158]LogAIModule: Creating AISystem for world Test_Level00
+[2018.12.09-20.55.02:565][158]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-20.55.02:568][158]LogWorld: Bringing World /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00 up for play (max tick rate 60) at 2018.12.09-15.55.02
+[2018.12.09-20.55.02:568][158]LogWorld: Bringing up level for play took: 0.001645
+[2018.12.09-20.55.02:568][158]LogLoad: Took 0.021043 seconds to LoadMap(/Game/Levels/UEDPIE_1_Test_Level00)
+[2018.12.09-20.55.02:579][159]LogNet: Client netspeed is 10000
+[2018.12.09-20.55.02:579][159]LogNet: Join request: /Game/FirstPersonCPP/Maps/FirstPersonExampleMap?Name=DESKTOP-G1UAKUU-43DBB6DD4BDF6B7931A861B368BE405E?SplitscreenCount=1
+[2018.12.09-20.55.02:580][159]LogOnline: Warning: OSS: No game present to join for session (GameSession)
+[2018.12.09-20.55.02:582][159]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.55.02:582][159]LogNet: Join succeeded: DESKTOP-G1UAKUU-43DB
+[2018.12.09-20.55.02:645][162]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.55.02:663][163]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.55.02:664][163]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.55.02:665][163]LogNet: Warning: UIpNetDriver::ProcessRemoteFunction: No owning connection for actor BP_Employee_C_1. Function Server_WeaponSetup will not be processed.
+[2018.12.09-20.55.02:682][164]LogOnline: Warning: OSS: No game present to join for session (GameSession)
+[2018.12.09-20.55.02:702][165]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.55.02:720][166]LogOnline: Warning: OSS: No game present to join for session (GameSession)
+[2018.12.09-20.55.04:972][295]LogSlate: Window 'Corporate_America Game Preview Client 1 (64-bit/PCD3D_SM5)' being destroyed
+[2018.12.09-20.55.05:003][295]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-20.55.05:003][295]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
+[2018.12.09-20.55.05:004][295]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
+[2018.12.09-20.55.05:004][295]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
+[2018.12.09-20.55.05:004][295]LogActor: Warning: SetReplicates called on actor 'BP_Employee_C_0' that is not valid for having its role modified.
+[2018.12.09-20.55.05:005][295]LogOnline: Warning: OSS: No game present to leave for session (GameSession)
+[2018.12.09-20.55.05:021][295]LogSlate: Window 'Corporate_America Game Preview Server (64-bit/PCD3D_SM5)' being destroyed
+[2018.12.09-20.55.05:058][295]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-20.55.05:058][295]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
+[2018.12.09-20.55.05:060][295]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
+[2018.12.09-20.55.05:060][295]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
+[2018.12.09-20.55.05:060][295]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2018.12.09-20.55.05:075][295]LogNet: UChannel::CleanUp: ChIndex == 0. Closing connection. [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:58573, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-43DBB6DD4BDF6B7931A861B368BE405E
+[2018.12.09-20.55.05:075][295]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:58573, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-43DBB6DD4BDF6B7931A861B368BE405E, Channels: 2, Time: 2018.12.09-20.55.05
+[2018.12.09-20.55.05:075][295]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:58573, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-43DBB6DD4BDF6B7931A861B368BE405E
+[2018.12.09-20.55.05:076][295]LogNet: UChannel::CleanUp: ChIndex == 0. Closing connection. [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_0, Driver: GameNetDriver IpNetDriver_1, IsServer: NO, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-43DBB6DD4BDF6B7931A861B368BE405E
+[2018.12.09-20.55.05:076][295]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_0, Driver: GameNetDriver IpNetDriver_1, IsServer: NO, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-43DBB6DD4BDF6B7931A861B368BE405E, Channels: 2, Time: 2018.12.09-20.55.05
+[2018.12.09-20.55.05:077][295]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_0, Driver: GameNetDriver IpNetDriver_1, IsServer: NO, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-43DBB6DD4BDF6B7931A861B368BE405E
+[2018.12.09-20.55.05:083][295]LogExit: GameNetDriver None shut down
+[2018.12.09-20.55.05:084][295]LogExit: GameNetDriver None shut down
+[2018.12.09-20.55.05:116][296]LogPlayLevel: Display: Destroying online subsystem :Context_3
+[2018.12.09-20.55.05:116][296]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-20.55.05:116][296]LogPlayLevel: Display: Destroying online subsystem :Context_2
+[2018.12.09-20.55.05:116][296]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-20.55.06:216][361]LogTemp: Repeating last play command: New Editor Window (PIE)
+[2018.12.09-20.55.06:234][361]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2018.12.09-20.55.06:236][361]PIE: New page: PIE session: Test_Level00 (Dec 9, 2018, 10:55:06 AM)
+[2018.12.09-20.55.06:236][361]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_1_Test_Level00
+[2018.12.09-20.55.06:239][361]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003053s)
+[2018.12.09-20.55.06:240][361]LogAIModule: Creating AISystem for world Test_Level00
+[2018.12.09-20.55.06:240][361]LogPlayLevel: PIE: World Init took: (0.000742s)
+[2018.12.09-20.55.06:240][361]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Test_Level00.Test_Level00 to /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00 (0.004297s)
+[2018.12.09-20.55.06:256][361]LogInit: XAudio2 using 'Speakers / Headphones (Realtek Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2018.12.09-20.55.06:336][361]LogInit: FAudioDevice initialized.
+[2018.12.09-20.55.06:440][361]LogLoad: Game class is 'NewGameModeTest_C'
+[2018.12.09-20.55.06:442][361]LogWorld: Bringing World /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00 up for play (max tick rate 60) at 2018.12.09-15.55.06
+[2018.12.09-20.55.06:443][361]LogWorld: Bringing up level for play took: 0.002185
+[2018.12.09-20.55.06:457][361]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-20.55.06:458][361]LogTemp: Display: ParseSettings for IpNetDriver_2
+[2018.12.09-20.55.06:458][361]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-20.55.06:458][361]LogInit: WinSock: Socket queue 131072 / 131072
+[2018.12.09-20.55.06:458][361]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2018.12.09-20.55.06:459][361]LogNet: GameNetDriver IpNetDriver_2 IpNetDriver listening on port 17777
+[2018.12.09-20.55.06:459][361]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.55.06:462][361]PIE: Play in editor start time for /Game/Levels/UEDPIE_1_Test_Level00 -0.214
+[2018.12.09-20.55.06:465][361]PIE: New page: PIE session: Test_Level00 (Dec 9, 2018, 10:55:06 AM)
+[2018.12.09-20.55.06:475][361]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.12.09-20.55.06:562][361]LogNet: Browse: 127.0.0.1:17777//Game/FirstPersonCPP/Maps/FirstPersonExampleMap
+[2018.12.09-20.55.06:562][361]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-20.55.06:562][361]LogTemp: Display: ParseSettings for IpNetDriver_3
+[2018.12.09-20.55.06:562][361]LogTemp: Display: ParseSettings for PendingNetDriver
+[2018.12.09-20.55.06:563][361]LogInit: WinSock: Socket queue 32768 / 32768
+[2018.12.09-20.55.06:563][361]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2018.12.09-20.55.06:563][361]LogNet: Game client on port 17777, rate 10000
+[2018.12.09-20.55.06:566][361]PIE: Play in editor start time for /Game/FirstPersonCPP/Maps/FirstPersonExampleMap -0.11
+[2018.12.09-20.55.06:578][361]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:58574
+[2018.12.09-20.55.06:578][361]LogHandshake: SendConnectChallenge. Timestamp: 0.016667, Cookie: 141105001104020099203135149171234172168237248119091167027170
+[2018.12.09-20.55.06:580][361]LogHandshake: SendChallengeResponse. Timestamp: 0.016667, Cookie: 141105001104020099203135149171234172168237248119091167027170
+[2018.12.09-20.55.06:670][362]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:58574
+[2018.12.09-20.55.06:670][362]LogHandshake: SendChallengeAck. InCookie: 141105001104020099203135149171234172168237248119091167027170
+[2018.12.09-20.55.06:671][362]LogNet: Server accepting post-challenge connection from: 127.0.0.1:58574
+[2018.12.09-20.55.06:671][362]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2018.12.09-20.55.06:672][362]LogNet: NotifyAcceptedConnection: Name: Test_Level00, TimeStamp: 12/09/18 15:55:06, [UNetConnection] RemoteAddr: 127.0.0.1:58574, Name: IpConnection_3, Driver: GameNetDriver IpNetDriver_2, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2018.12.09-20.55.06:673][362]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:58574, Name: IpConnection_3, Driver: GameNetDriver IpNetDriver_2, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2018.12.09-20.55.06:677][362]LogNet: UPendingNetGame::SendInitialJoin: Sending hello. [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_2, Driver: PendingNetDriver IpNetDriver_3, IsServer: NO, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2018.12.09-20.55.06:691][363]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00: Accepted
+[2018.12.09-20.55.06:692][363]LogNet: Remote platform little endian=1
+[2018.12.09-20.55.06:692][363]LogNet: This platform little endian=1
+[2018.12.09-20.55.06:711][364]LogNet: Login request: /Game/FirstPersonCPP/Maps/FirstPersonExampleMap?Name=DESKTOP-G1UAKUU-F0958BAC43B3DD11352DE591B2400D77 userId: DESKTOP-G1UAKUU-F0958BAC43B3DD11352DE591B2400D77
+[2018.12.09-20.55.06:712][364]LogNet: Welcomed by server (Level: /Game/Levels/UEDPIE_1_Test_Level00, Game: /Game/Levels/NewGameModeTest.NewGameModeTest_C)
+[2018.12.09-20.55.06:713][364]LogLoad: LoadMap: 127.0.0.1:17777//Game/Levels/UEDPIE_1_Test_Level00?game=/Game/Levels/NewGameModeTest.NewGameModeTest_C
+[2018.12.09-20.55.06:731][364]LogAIModule: Creating AISystem for world Test_Level00
+[2018.12.09-20.55.06:732][364]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-20.55.06:734][364]LogWorld: Bringing World /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00 up for play (max tick rate 60) at 2018.12.09-15.55.06
+[2018.12.09-20.55.06:734][364]LogWorld: Bringing up level for play took: 0.001268
+[2018.12.09-20.55.06:735][364]LogLoad: Took 0.021190 seconds to LoadMap(/Game/Levels/UEDPIE_1_Test_Level00)
+[2018.12.09-20.55.06:745][365]LogNet: Client netspeed is 10000
+[2018.12.09-20.55.06:745][365]LogNet: Join request: /Game/FirstPersonCPP/Maps/FirstPersonExampleMap?Name=DESKTOP-G1UAKUU-F0958BAC43B3DD11352DE591B2400D77?SplitscreenCount=1
+[2018.12.09-20.55.06:746][365]LogOnline: Warning: OSS: No game present to join for session (GameSession)
+[2018.12.09-20.55.06:747][365]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.55.06:748][365]LogNet: Join succeeded: DESKTOP-G1UAKUU-F095
+[2018.12.09-20.55.06:818][369]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.55.06:834][370]LogOnline: Warning: OSS: No game present to join for session (GameSession)
+[2018.12.09-20.55.06:853][371]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.55.06:873][372]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.55.06:875][372]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.55.06:876][372]LogNet: Warning: UIpNetDriver::ProcessRemoteFunction: No owning connection for actor BP_Employee_C_1. Function Server_WeaponSetup will not be processed.
+[2018.12.09-20.55.06:885][373]LogOnline: Warning: OSS: No game present to join for session (GameSession)
+[2018.12.09-20.55.19:545][131]LogSlate: Window 'Corporate_America Game Preview Client 1 (64-bit/PCD3D_SM5)' being destroyed
+[2018.12.09-20.55.19:578][131]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-20.55.19:578][131]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
+[2018.12.09-20.55.19:579][131]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
+[2018.12.09-20.55.19:579][131]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
+[2018.12.09-20.55.19:579][131]LogActor: Warning: SetReplicates called on actor 'BP_Employee_C_0' that is not valid for having its role modified.
+[2018.12.09-20.55.19:580][131]LogOnline: Warning: OSS: No game present to leave for session (GameSession)
+[2018.12.09-20.55.19:597][131]LogSlate: Window 'Corporate_America Game Preview Server (64-bit/PCD3D_SM5)' being destroyed
+[2018.12.09-20.55.19:632][131]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-20.55.19:632][131]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
+[2018.12.09-20.55.19:635][131]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
+[2018.12.09-20.55.19:635][131]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
+[2018.12.09-20.55.19:636][131]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2018.12.09-20.55.19:649][131]LogNet: UChannel::CleanUp: ChIndex == 0. Closing connection. [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:58574, Name: IpConnection_3, Driver: GameNetDriver IpNetDriver_2, IsServer: YES, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-F0958BAC43B3DD11352DE591B2400D77
+[2018.12.09-20.55.19:650][131]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:58574, Name: IpConnection_3, Driver: GameNetDriver IpNetDriver_2, IsServer: YES, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-F0958BAC43B3DD11352DE591B2400D77, Channels: 2, Time: 2018.12.09-20.55.19
+[2018.12.09-20.55.19:651][131]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:58574, Name: IpConnection_3, Driver: GameNetDriver IpNetDriver_2, IsServer: YES, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-F0958BAC43B3DD11352DE591B2400D77
+[2018.12.09-20.55.19:652][131]LogNet: UChannel::CleanUp: ChIndex == 0. Closing connection. [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_2, Driver: GameNetDriver IpNetDriver_3, IsServer: NO, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-F0958BAC43B3DD11352DE591B2400D77
+[2018.12.09-20.55.19:652][131]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_2, Driver: GameNetDriver IpNetDriver_3, IsServer: NO, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-F0958BAC43B3DD11352DE591B2400D77, Channels: 2, Time: 2018.12.09-20.55.19
+[2018.12.09-20.55.19:652][131]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_2, Driver: GameNetDriver IpNetDriver_3, IsServer: NO, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-F0958BAC43B3DD11352DE591B2400D77
+[2018.12.09-20.55.19:658][131]LogExit: GameNetDriver None shut down
+[2018.12.09-20.55.19:659][131]LogExit: GameNetDriver None shut down
+[2018.12.09-20.55.19:693][132]LogPlayLevel: Display: Destroying online subsystem :Context_5
+[2018.12.09-20.55.19:693][132]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-20.55.19:693][132]LogPlayLevel: Display: Destroying online subsystem :Context_4
+[2018.12.09-20.55.19:693][132]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-20.56.36:606][561]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2018.12.09-20.56.36:608][561]PIE: New page: PIE session: Test_Level00 (Dec 9, 2018, 10:56:36 AM)
+[2018.12.09-20.56.36:609][561]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_1_Test_Level00
+[2018.12.09-20.56.36:612][561]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002773s)
+[2018.12.09-20.56.36:612][561]LogAIModule: Creating AISystem for world Test_Level00
+[2018.12.09-20.56.36:612][561]LogPlayLevel: PIE: World Init took: (0.000658s)
+[2018.12.09-20.56.36:612][561]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Test_Level00.Test_Level00 to /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00 (0.003864s)
+[2018.12.09-20.56.36:629][561]LogInit: XAudio2 using 'Speakers / Headphones (Realtek Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2018.12.09-20.56.36:708][561]LogInit: FAudioDevice initialized.
+[2018.12.09-20.56.36:746][561]LogLoad: Game class is 'NewGameModeTest_C'
+[2018.12.09-20.56.36:750][561]LogWorld: Bringing World /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00 up for play (max tick rate 60) at 2018.12.09-15.56.36
+[2018.12.09-20.56.36:751][561]LogWorld: Bringing up level for play took: 0.003220
+[2018.12.09-20.56.36:765][561]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-20.56.36:765][561]LogTemp: Display: ParseSettings for IpNetDriver_4
+[2018.12.09-20.56.36:765][561]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-20.56.36:765][561]LogInit: WinSock: Socket queue 131072 / 131072
+[2018.12.09-20.56.36:766][561]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2018.12.09-20.56.36:766][561]LogNet: GameNetDriver IpNetDriver_4 IpNetDriver listening on port 17777
+[2018.12.09-20.56.36:767][561]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.56.36:767][561]PIE: Play in editor start time for /Game/Levels/UEDPIE_1_Test_Level00 0.091
+[2018.12.09-20.56.36:769][561]PIE: New page: PIE session: Test_Level00 (Dec 9, 2018, 10:56:36 AM)
+[2018.12.09-20.56.36:776][561]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.12.09-20.56.36:869][561]LogNet: Browse: 127.0.0.1:17777//Game/FirstPersonCPP/Maps/FirstPersonExampleMap
+[2018.12.09-20.56.36:870][561]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-20.56.36:870][561]LogTemp: Display: ParseSettings for IpNetDriver_5
+[2018.12.09-20.56.36:870][561]LogTemp: Display: ParseSettings for PendingNetDriver
+[2018.12.09-20.56.36:870][561]LogInit: WinSock: Socket queue 32768 / 32768
+[2018.12.09-20.56.36:871][561]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2018.12.09-20.56.36:871][561]LogNet: Game client on port 17777, rate 10000
+[2018.12.09-20.56.36:874][561]PIE: Play in editor start time for /Game/FirstPersonCPP/Maps/FirstPersonExampleMap 0.197
+[2018.12.09-20.56.36:885][561]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:56170
+[2018.12.09-20.56.36:885][561]LogHandshake: SendConnectChallenge. Timestamp: 0.016667, Cookie: 065140163117231097099192011146240254249135148171209066056189
+[2018.12.09-20.56.36:887][561]LogHandshake: SendChallengeResponse. Timestamp: 0.016667, Cookie: 065140163117231097099192011146240254249135148171209066056189
+[2018.12.09-20.56.36:953][562]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:56170
+[2018.12.09-20.56.36:953][562]LogHandshake: SendChallengeAck. InCookie: 065140163117231097099192011146240254249135148171209066056189
+[2018.12.09-20.56.36:953][562]LogNet: Server accepting post-challenge connection from: 127.0.0.1:56170
+[2018.12.09-20.56.36:953][562]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2018.12.09-20.56.36:954][562]LogNet: NotifyAcceptedConnection: Name: Test_Level00, TimeStamp: 12/09/18 15:56:36, [UNetConnection] RemoteAddr: 127.0.0.1:56170, Name: IpConnection_5, Driver: GameNetDriver IpNetDriver_4, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2018.12.09-20.56.36:954][562]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:56170, Name: IpConnection_5, Driver: GameNetDriver IpNetDriver_4, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2018.12.09-20.56.36:955][562]LogNet: UPendingNetGame::SendInitialJoin: Sending hello. [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_4, Driver: PendingNetDriver IpNetDriver_5, IsServer: NO, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2018.12.09-20.56.36:970][563]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00: Accepted
+[2018.12.09-20.56.36:971][563]LogNet: Remote platform little endian=1
+[2018.12.09-20.56.36:971][563]LogNet: This platform little endian=1
+[2018.12.09-20.56.36:992][564]LogNet: Login request: /Game/FirstPersonCPP/Maps/FirstPersonExampleMap?Name=DESKTOP-G1UAKUU-B7416497430777D1CDF84ABBDE952C8C userId: DESKTOP-G1UAKUU-B7416497430777D1CDF84ABBDE952C8C
+[2018.12.09-20.56.36:996][564]LogNet: Welcomed by server (Level: /Game/Levels/UEDPIE_1_Test_Level00, Game: /Game/Levels/NewGameModeTest.NewGameModeTest_C)
+[2018.12.09-20.56.36:997][564]LogLoad: LoadMap: 127.0.0.1:17777//Game/Levels/UEDPIE_1_Test_Level00?game=/Game/Levels/NewGameModeTest.NewGameModeTest_C
+[2018.12.09-20.56.37:017][564]LogAIModule: Creating AISystem for world Test_Level00
+[2018.12.09-20.56.37:018][564]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-20.56.37:021][564]LogWorld: Bringing World /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00 up for play (max tick rate 60) at 2018.12.09-15.56.37
+[2018.12.09-20.56.37:021][564]LogWorld: Bringing up level for play took: 0.002027
+[2018.12.09-20.56.37:022][564]LogLoad: Took 0.025419 seconds to LoadMap(/Game/Levels/UEDPIE_1_Test_Level00)
+[2018.12.09-20.56.37:031][565]LogNet: Client netspeed is 10000
+[2018.12.09-20.56.37:031][565]LogNet: Join request: /Game/FirstPersonCPP/Maps/FirstPersonExampleMap?Name=DESKTOP-G1UAKUU-B7416497430777D1CDF84ABBDE952C8C?SplitscreenCount=1
+[2018.12.09-20.56.37:032][565]LogOnline: Warning: OSS: No game present to join for session (GameSession)
+[2018.12.09-20.56.37:034][565]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.56.37:035][565]LogNet: Join succeeded: DESKTOP-G1UAKUU-B741
+[2018.12.09-20.56.37:100][568]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.56.37:102][568]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.56.37:103][568]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.56.37:104][568]LogNet: Warning: UIpNetDriver::ProcessRemoteFunction: No owning connection for actor BP_Employee_C_1. Function Server_WeaponSetup will not be processed.
+[2018.12.09-20.56.37:132][570]LogOnline: Warning: OSS: No game present to join for session (GameSession)
+[2018.12.09-20.56.37:149][571]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.56.37:166][572]LogOnline: Warning: OSS: No game present to join for session (GameSession)
+[2018.12.09-20.56.39:894][712]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.12.09-20.56.46:055][ 60]LogSlate: Window 'Corporate_America Game Preview Client 1 (64-bit/PCD3D_SM5)' being destroyed
+[2018.12.09-20.56.46:090][ 60]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-20.56.46:090][ 60]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
+[2018.12.09-20.56.46:091][ 60]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
+[2018.12.09-20.56.46:091][ 60]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
+[2018.12.09-20.56.46:091][ 60]LogActor: Warning: SetReplicates called on actor 'BP_Employee_C_0' that is not valid for having its role modified.
+[2018.12.09-20.56.46:091][ 60]LogOnline: Warning: OSS: No game present to leave for session (GameSession)
+[2018.12.09-20.56.46:154][ 60]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-20.56.46:154][ 60]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
+[2018.12.09-20.56.46:155][ 60]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
+[2018.12.09-20.56.46:155][ 60]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
+[2018.12.09-20.56.46:155][ 60]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2018.12.09-20.56.46:166][ 60]LogNet: UChannel::CleanUp: ChIndex == 0. Closing connection. [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:56170, Name: IpConnection_5, Driver: GameNetDriver IpNetDriver_4, IsServer: YES, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-B7416497430777D1CDF84ABBDE952C8C
+[2018.12.09-20.56.46:167][ 60]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:56170, Name: IpConnection_5, Driver: GameNetDriver IpNetDriver_4, IsServer: YES, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-B7416497430777D1CDF84ABBDE952C8C, Channels: 2, Time: 2018.12.09-20.56.46
+[2018.12.09-20.56.46:167][ 60]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:56170, Name: IpConnection_5, Driver: GameNetDriver IpNetDriver_4, IsServer: YES, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-B7416497430777D1CDF84ABBDE952C8C
+[2018.12.09-20.56.46:167][ 60]LogNet: UChannel::CleanUp: ChIndex == 0. Closing connection. [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_4, Driver: GameNetDriver IpNetDriver_5, IsServer: NO, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-B7416497430777D1CDF84ABBDE952C8C
+[2018.12.09-20.56.46:168][ 60]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_4, Driver: GameNetDriver IpNetDriver_5, IsServer: NO, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-B7416497430777D1CDF84ABBDE952C8C, Channels: 2, Time: 2018.12.09-20.56.46
+[2018.12.09-20.56.46:168][ 60]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_4, Driver: GameNetDriver IpNetDriver_5, IsServer: NO, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-B7416497430777D1CDF84ABBDE952C8C
+[2018.12.09-20.56.46:174][ 60]LogExit: GameNetDriver None shut down
+[2018.12.09-20.56.46:175][ 60]LogExit: GameNetDriver None shut down
+[2018.12.09-20.56.46:206][ 61]LogPlayLevel: Display: Destroying online subsystem :Context_7
+[2018.12.09-20.56.46:206][ 61]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-20.56.46:206][ 61]LogPlayLevel: Display: Destroying online subsystem :Context_6
+[2018.12.09-20.56.46:206][ 61]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-20.57.08:368][390]Cmd: SELECT NONE
+[2018.12.09-20.57.18:405][517]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.12.09-20.57.19:124][554]Candidate modules for hot reload:
+[2018.12.09-20.57.19:124][554]  Corporate_America
+[2018.12.09-20.57.19:125][554]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.19/Engine/Binaries/DotNET/UnrealBuildTool.exe Corporate_America -ModuleWithSuffix=Corporate_America,4125 Win64 Development -editorrecompile -canskiplink "D:/Corporate America/CorporateAmerica/Corporate_America/Corporate_America.uproject" ]
+[2018.12.09-20.57.19:129][554]Warning: Starting HotReload took  0.1s.
+[2018.12.09-20.57.24:734][891]CompilerResultsLog: New page: Compilation - Dec 9, 2018, 10:57:24 AM
+[2018.12.09-20.57.24:734][891]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build.
+[2018.12.09-20.57.24:735][891]CompilerResultsLog: Compiling game modules for hot reload
+[2018.12.09-20.57.24:735][891]CompilerResultsLog: Performing 3 actions (4 in parallel)
+[2018.12.09-20.57.24:735][891]CompilerResultsLog: Employee.cpp
+[2018.12.09-20.57.24:735][891]CompilerResultsLog: [2/3] Link UE4Editor-Corporate_America-4125.dll
+[2018.12.09-20.57.24:735][891]CompilerResultsLog: [3/3] Link UE4Editor-Corporate_America-4125.lib
+[2018.12.09-20.57.24:736][891]CompilerResultsLog:    Creating library D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Corporate_America-4125.lib and object D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Corporate_America-4125.exp
+[2018.12.09-20.57.24:736][891]CompilerResultsLog:    Creating library D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Corporate_America-4125.suppressed.lib and object D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Corporate_America-4125.suppressed.exp
+[2018.12.09-20.57.24:737][891]CompilerResultsLog: Total build time: 5.30 seconds (Local executor: 3.65 seconds)
+[2018.12.09-20.57.24:738][891]LogMainFrame: MainFrame: Module compiling took 5.618 seconds
+[2018.12.09-20.57.24:784][891]LogContentBrowser: Native class hierarchy updated for 'Corporate_America' in 0.0012 seconds. Added 9 classes and 3 folders.
+[2018.12.09-20.57.24:786][891]Display: HotReload successful (9 functions remapped  0 scriptstructs remapped)
+[2018.12.09-20.57.24:892][891]LogContentBrowser: Native class hierarchy populated in 0.0103 seconds. Added 2464 classes and 566 folders.
+[2018.12.09-20.57.24:896][891]Display: HotReload took  5.8s.
+[2018.12.09-20.57.26:863][  9]LogTemp: Repeating last play command: Selected Viewport
+[2018.12.09-20.57.26:883][  9]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2018.12.09-20.57.26:884][  9]PIE: New page: PIE session: Test_Level00 (Dec 9, 2018, 10:57:26 AM)
+[2018.12.09-20.57.26:884][  9]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_1_Test_Level00
+[2018.12.09-20.57.26:887][  9]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002606s)
+[2018.12.09-20.57.26:888][  9]LogAIModule: Creating AISystem for world Test_Level00
+[2018.12.09-20.57.26:888][  9]LogPlayLevel: PIE: World Init took: (0.001036s)
+[2018.12.09-20.57.26:888][  9]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Test_Level00.Test_Level00 to /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00 (0.004085s)
+[2018.12.09-20.57.26:904][  9]LogInit: XAudio2 using 'Speakers / Headphones (Realtek Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2018.12.09-20.57.26:981][  9]LogInit: FAudioDevice initialized.
+[2018.12.09-20.57.27:018][  9]LogLoad: Game class is 'NewGameModeTest_C'
+[2018.12.09-20.57.27:020][  9]LogWorld: Bringing World /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00 up for play (max tick rate 60) at 2018.12.09-15.57.27
+[2018.12.09-20.57.27:020][  9]LogWorld: Bringing up level for play took: 0.001563
+[2018.12.09-20.57.27:034][  9]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-20.57.27:034][  9]LogTemp: Display: ParseSettings for IpNetDriver_6
+[2018.12.09-20.57.27:034][  9]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-20.57.27:034][  9]LogInit: WinSock: Socket queue 131072 / 131072
+[2018.12.09-20.57.27:035][  9]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2018.12.09-20.57.27:035][  9]LogNet: GameNetDriver IpNetDriver_6 IpNetDriver listening on port 17777
+[2018.12.09-20.57.27:035][  9]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.57.27:036][  9]PIE: Play in editor start time for /Game/Levels/UEDPIE_1_Test_Level00 0.36
+[2018.12.09-20.57.27:039][  9]PIE: New page: PIE session: Test_Level00 (Dec 9, 2018, 10:57:27 AM)
+[2018.12.09-20.57.27:046][  9]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.12.09-20.57.27:131][  9]LogNet: Browse: 127.0.0.1:17777//Game/FirstPersonCPP/Maps/FirstPersonExampleMap
+[2018.12.09-20.57.27:131][  9]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-20.57.27:132][  9]LogTemp: Display: ParseSettings for IpNetDriver_7
+[2018.12.09-20.57.27:132][  9]LogTemp: Display: ParseSettings for PendingNetDriver
+[2018.12.09-20.57.27:132][  9]LogInit: WinSock: Socket queue 32768 / 32768
+[2018.12.09-20.57.27:132][  9]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2018.12.09-20.57.27:133][  9]LogNet: Game client on port 17777, rate 10000
+[2018.12.09-20.57.27:136][  9]PIE: Play in editor start time for /Game/FirstPersonCPP/Maps/FirstPersonExampleMap 0.459
+[2018.12.09-20.57.27:148][  9]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:56171
+[2018.12.09-20.57.27:148][  9]LogHandshake: SendConnectChallenge. Timestamp: 0.016667, Cookie: 075032180150222221240149208243252238195187091180157079100087
+[2018.12.09-20.57.27:150][  9]LogHandshake: SendChallengeResponse. Timestamp: 0.016667, Cookie: 075032180150222221240149208243252238195187091180157079100087
+[2018.12.09-20.57.27:214][ 10]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:56171
+[2018.12.09-20.57.27:214][ 10]LogHandshake: SendChallengeAck. InCookie: 075032180150222221240149208243252238195187091180157079100087
+[2018.12.09-20.57.27:214][ 10]LogNet: Server accepting post-challenge connection from: 127.0.0.1:56171
+[2018.12.09-20.57.27:215][ 10]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2018.12.09-20.57.27:215][ 10]LogNet: NotifyAcceptedConnection: Name: Test_Level00, TimeStamp: 12/09/18 15:57:27, [UNetConnection] RemoteAddr: 127.0.0.1:56171, Name: IpConnection_7, Driver: GameNetDriver IpNetDriver_6, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2018.12.09-20.57.27:215][ 10]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:56171, Name: IpConnection_7, Driver: GameNetDriver IpNetDriver_6, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2018.12.09-20.57.27:216][ 10]LogNet: UPendingNetGame::SendInitialJoin: Sending hello. [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_6, Driver: PendingNetDriver IpNetDriver_7, IsServer: NO, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2018.12.09-20.57.27:229][ 11]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00: Accepted
+[2018.12.09-20.57.27:230][ 11]LogNet: Remote platform little endian=1
+[2018.12.09-20.57.27:231][ 11]LogNet: This platform little endian=1
+[2018.12.09-20.57.27:251][ 12]LogNet: Login request: /Game/FirstPersonCPP/Maps/FirstPersonExampleMap?Name=DESKTOP-G1UAKUU-44377CA04E3100E1EDED4488804484CC userId: DESKTOP-G1UAKUU-44377CA04E3100E1EDED4488804484CC
+[2018.12.09-20.57.27:252][ 12]LogNet: Welcomed by server (Level: /Game/Levels/UEDPIE_1_Test_Level00, Game: /Game/Levels/NewGameModeTest.NewGameModeTest_C)
+[2018.12.09-20.57.27:252][ 12]LogLoad: LoadMap: 127.0.0.1:17777//Game/Levels/UEDPIE_1_Test_Level00?game=/Game/Levels/NewGameModeTest.NewGameModeTest_C
+[2018.12.09-20.57.27:270][ 12]LogAIModule: Creating AISystem for world Test_Level00
+[2018.12.09-20.57.27:270][ 12]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-20.57.27:274][ 12]LogWorld: Bringing World /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00 up for play (max tick rate 60) at 2018.12.09-15.57.27
+[2018.12.09-20.57.27:276][ 12]LogWorld: Bringing up level for play took: 0.003955
+[2018.12.09-20.57.27:276][ 12]LogLoad: Took 0.023731 seconds to LoadMap(/Game/Levels/UEDPIE_1_Test_Level00)
+[2018.12.09-20.57.27:284][ 13]LogNet: Client netspeed is 10000
+[2018.12.09-20.57.27:284][ 13]LogNet: Join request: /Game/FirstPersonCPP/Maps/FirstPersonExampleMap?Name=DESKTOP-G1UAKUU-44377CA04E3100E1EDED4488804484CC?SplitscreenCount=1
+[2018.12.09-20.57.27:284][ 13]LogOnline: Warning: OSS: No game present to join for session (GameSession)
+[2018.12.09-20.57.27:286][ 13]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.57.27:287][ 13]LogNet: Join succeeded: DESKTOP-G1UAKUU-4437
+[2018.12.09-20.57.27:356][ 17]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.57.27:372][ 18]LogOnline: Warning: OSS: No game present to join for session (GameSession)
+[2018.12.09-20.57.27:388][ 19]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.57.27:405][ 20]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.57.27:406][ 20]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.57.27:408][ 20]LogNet: Warning: UIpNetDriver::ProcessRemoteFunction: No owning connection for actor BP_Employee_C_1. Function Server_WeaponSetup will not be processed.
+[2018.12.09-20.57.27:440][ 22]LogOnline: Warning: OSS: No game present to join for session (GameSession)
+[2018.12.09-20.57.32:521][327]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.12.09-20.57.48:627][254]LogSlate: Window 'Corporate_America Game Preview Client 1 (64-bit/PCD3D_SM5)' being destroyed
+[2018.12.09-20.57.48:666][254]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-20.57.48:667][254]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
+[2018.12.09-20.57.48:669][254]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
+[2018.12.09-20.57.48:670][254]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
+[2018.12.09-20.57.48:670][254]LogOnline: Warning: OSS: No game present to leave for session (GameSession)
+[2018.12.09-20.57.48:701][254]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-20.57.48:701][254]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
+[2018.12.09-20.57.48:702][254]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
+[2018.12.09-20.57.48:703][254]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
+[2018.12.09-20.57.48:703][254]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2018.12.09-20.57.48:719][254]LogNet: UChannel::CleanUp: ChIndex == 0. Closing connection. [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:56171, Name: IpConnection_7, Driver: GameNetDriver IpNetDriver_6, IsServer: YES, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-44377CA04E3100E1EDED4488804484CC
+[2018.12.09-20.57.48:719][254]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:56171, Name: IpConnection_7, Driver: GameNetDriver IpNetDriver_6, IsServer: YES, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-44377CA04E3100E1EDED4488804484CC, Channels: 2, Time: 2018.12.09-20.57.48
+[2018.12.09-20.57.48:720][254]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:56171, Name: IpConnection_7, Driver: GameNetDriver IpNetDriver_6, IsServer: YES, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-44377CA04E3100E1EDED4488804484CC
+[2018.12.09-20.57.48:720][254]LogNet: UChannel::CleanUp: ChIndex == 0. Closing connection. [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_6, Driver: GameNetDriver IpNetDriver_7, IsServer: NO, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-44377CA04E3100E1EDED4488804484CC
+[2018.12.09-20.57.48:721][254]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_6, Driver: GameNetDriver IpNetDriver_7, IsServer: NO, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-44377CA04E3100E1EDED4488804484CC, Channels: 2, Time: 2018.12.09-20.57.48
+[2018.12.09-20.57.48:722][254]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_6, Driver: GameNetDriver IpNetDriver_7, IsServer: NO, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-44377CA04E3100E1EDED4488804484CC
+[2018.12.09-20.57.48:728][254]LogExit: GameNetDriver None shut down
+[2018.12.09-20.57.48:728][254]LogExit: GameNetDriver None shut down
+[2018.12.09-20.57.48:741][255]LogPlayLevel: Display: Destroying online subsystem :Context_9
+[2018.12.09-20.57.48:741][255]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-20.57.48:742][255]LogPlayLevel: Display: Destroying online subsystem :Context_8
+[2018.12.09-20.57.48:742][255]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-20.58.44:537][878]Candidate modules for hot reload:
+[2018.12.09-20.58.44:537][878]  Corporate_America
+[2018.12.09-20.58.44:538][878]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.19/Engine/Binaries/DotNET/UnrealBuildTool.exe Corporate_America -ModuleWithSuffix=Corporate_America,6285 Win64 Development -editorrecompile -canskiplink "D:/Corporate America/CorporateAmerica/Corporate_America/Corporate_America.uproject" ]
+[2018.12.09-20.58.44:542][878]Warning: Starting HotReload took  0.0s.
+[2018.12.09-20.58.49:039][149]CompilerResultsLog: New page: Compilation - Dec 9, 2018, 10:58:49 AM
+[2018.12.09-20.58.49:040][149]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build.
+[2018.12.09-20.58.49:040][149]CompilerResultsLog: Compiling game modules for hot reload
+[2018.12.09-20.58.49:041][149]CompilerResultsLog: Performing 3 actions (4 in parallel)
+[2018.12.09-20.58.49:041][149]CompilerResultsLog: Weapon.cpp
+[2018.12.09-20.58.49:041][149]CompilerResultsLog: [2/3] Link UE4Editor-Corporate_America-6285.dll
+[2018.12.09-20.58.49:041][149]CompilerResultsLog: [3/3] Link UE4Editor-Corporate_America-6285.lib
+[2018.12.09-20.58.49:041][149]CompilerResultsLog:    Creating library D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Corporate_America-6285.lib and object D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Corporate_America-6285.exp
+[2018.12.09-20.58.49:042][149]CompilerResultsLog:    Creating library D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Corporate_America-6285.suppressed.lib and object D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Corporate_America-6285.suppressed.exp
+[2018.12.09-20.58.49:043][149]CompilerResultsLog: Total build time: 4.22 seconds (Local executor: 2.74 seconds)
+[2018.12.09-20.58.49:043][149]LogMainFrame: MainFrame: Module compiling took 4.510 seconds
+[2018.12.09-20.58.49:092][149]LogContentBrowser: Native class hierarchy updated for 'Corporate_America' in 0.0017 seconds. Added 9 classes and 3 folders.
+[2018.12.09-20.58.49:094][149]Display: HotReload successful (9 functions remapped  0 scriptstructs remapped)
+[2018.12.09-20.58.49:134][149]LogContentBrowser: Native class hierarchy populated in 0.0100 seconds. Added 2464 classes and 566 folders.
+[2018.12.09-20.58.49:138][149]Display: HotReload took  4.6s.
+[2018.12.09-20.58.52:051][322]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2018.12.09-20.58.52:052][322]PIE: New page: PIE session: Test_Level00 (Dec 9, 2018, 10:58:52 AM)
+[2018.12.09-20.58.52:052][322]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_1_Test_Level00
+[2018.12.09-20.58.52:055][322]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002684s)
+[2018.12.09-20.58.52:056][322]LogAIModule: Creating AISystem for world Test_Level00
+[2018.12.09-20.58.52:056][322]LogPlayLevel: PIE: World Init took: (0.000670s)
+[2018.12.09-20.58.52:056][322]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Test_Level00.Test_Level00 to /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00 (0.003948s)
+[2018.12.09-20.58.52:072][322]LogInit: XAudio2 using 'Speakers / Headphones (Realtek Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2018.12.09-20.58.52:151][322]LogInit: FAudioDevice initialized.
+[2018.12.09-20.58.52:254][322]LogLoad: Game class is 'NewGameModeTest_C'
+[2018.12.09-20.58.52:257][322]LogWorld: Bringing World /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00 up for play (max tick rate 60) at 2018.12.09-15.58.52
+[2018.12.09-20.58.52:257][322]LogWorld: Bringing up level for play took: 0.001708
+[2018.12.09-20.58.52:271][322]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-20.58.52:271][322]LogTemp: Display: ParseSettings for IpNetDriver_8
+[2018.12.09-20.58.52:271][322]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-20.58.52:271][322]LogInit: WinSock: Socket queue 131072 / 131072
+[2018.12.09-20.58.52:272][322]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2018.12.09-20.58.52:272][322]LogNet: GameNetDriver IpNetDriver_8 IpNetDriver listening on port 17777
+[2018.12.09-20.58.52:273][322]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.58.52:276][322]PIE: Play in editor start time for /Game/Levels/UEDPIE_1_Test_Level00 -0.401
+[2018.12.09-20.58.52:277][322]PIE: New page: PIE session: Test_Level00 (Dec 9, 2018, 10:58:52 AM)
+[2018.12.09-20.58.52:289][322]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.12.09-20.58.52:374][322]LogNet: Browse: 127.0.0.1:17777//Game/FirstPersonCPP/Maps/FirstPersonExampleMap
+[2018.12.09-20.58.52:375][322]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-20.58.52:375][322]LogTemp: Display: ParseSettings for IpNetDriver_9
+[2018.12.09-20.58.52:375][322]LogTemp: Display: ParseSettings for PendingNetDriver
+[2018.12.09-20.58.52:375][322]LogInit: WinSock: Socket queue 32768 / 32768
+[2018.12.09-20.58.52:376][322]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2018.12.09-20.58.52:376][322]LogNet: Game client on port 17777, rate 10000
+[2018.12.09-20.58.52:381][322]PIE: Play in editor start time for /Game/FirstPersonCPP/Maps/FirstPersonExampleMap -0.296
+[2018.12.09-20.58.52:390][322]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:55677
+[2018.12.09-20.58.52:390][322]LogHandshake: SendConnectChallenge. Timestamp: 0.016667, Cookie: 153073116139064103002122241010243056184150082134081083063043
+[2018.12.09-20.58.52:391][322]LogHandshake: SendChallengeResponse. Timestamp: 0.016667, Cookie: 153073116139064103002122241010243056184150082134081083063043
+[2018.12.09-20.58.52:488][323]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:55677
+[2018.12.09-20.58.52:489][323]LogHandshake: SendChallengeAck. InCookie: 153073116139064103002122241010243056184150082134081083063043
+[2018.12.09-20.58.52:490][323]LogNet: Server accepting post-challenge connection from: 127.0.0.1:55677
+[2018.12.09-20.58.52:491][323]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2018.12.09-20.58.52:492][323]LogNet: NotifyAcceptedConnection: Name: Test_Level00, TimeStamp: 12/09/18 15:58:52, [UNetConnection] RemoteAddr: 127.0.0.1:55677, Name: IpConnection_9, Driver: GameNetDriver IpNetDriver_8, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2018.12.09-20.58.52:492][323]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:55677, Name: IpConnection_9, Driver: GameNetDriver IpNetDriver_8, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2018.12.09-20.58.52:494][323]LogNet: UPendingNetGame::SendInitialJoin: Sending hello. [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_8, Driver: PendingNetDriver IpNetDriver_9, IsServer: NO, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2018.12.09-20.58.52:509][324]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00: Accepted
+[2018.12.09-20.58.52:510][324]LogNet: Remote platform little endian=1
+[2018.12.09-20.58.52:510][324]LogNet: This platform little endian=1
+[2018.12.09-20.58.52:535][325]LogNet: Login request: /Game/FirstPersonCPP/Maps/FirstPersonExampleMap?Name=DESKTOP-G1UAKUU-B0C052ED42EB203AC64D2C8B40FA9E9F userId: DESKTOP-G1UAKUU-B0C052ED42EB203AC64D2C8B40FA9E9F
+[2018.12.09-20.58.52:537][325]LogNet: Welcomed by server (Level: /Game/Levels/UEDPIE_1_Test_Level00, Game: /Game/Levels/NewGameModeTest.NewGameModeTest_C)
+[2018.12.09-20.58.52:539][325]LogLoad: LoadMap: 127.0.0.1:17777//Game/Levels/UEDPIE_1_Test_Level00?game=/Game/Levels/NewGameModeTest.NewGameModeTest_C
+[2018.12.09-20.58.52:556][325]LogAIModule: Creating AISystem for world Test_Level00
+[2018.12.09-20.58.52:557][325]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-20.58.52:559][325]LogWorld: Bringing World /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00 up for play (max tick rate 60) at 2018.12.09-15.58.52
+[2018.12.09-20.58.52:561][325]LogWorld: Bringing up level for play took: 0.001713
+[2018.12.09-20.58.52:561][325]LogLoad: Took 0.021931 seconds to LoadMap(/Game/Levels/UEDPIE_1_Test_Level00)
+[2018.12.09-20.58.52:570][326]LogNet: Client netspeed is 10000
+[2018.12.09-20.58.52:570][326]LogNet: Join request: /Game/FirstPersonCPP/Maps/FirstPersonExampleMap?Name=DESKTOP-G1UAKUU-B0C052ED42EB203AC64D2C8B40FA9E9F?SplitscreenCount=1
+[2018.12.09-20.58.52:571][326]LogOnline: Warning: OSS: No game present to join for session (GameSession)
+[2018.12.09-20.58.52:573][326]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.58.52:574][326]LogNet: Join succeeded: DESKTOP-G1UAKUU-B0C0
+[2018.12.09-20.58.52:636][329]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.58.52:669][331]LogOnline: Warning: OSS: No game present to join for session (GameSession)
+[2018.12.09-20.58.52:685][332]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.58.52:686][332]LogOnline: Warning: OSS: No game present to join for session (GameSession)
+[2018.12.09-20.58.52:702][333]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.58.52:703][333]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-20.58.52:703][333]LogNet: Warning: UIpNetDriver::ProcessRemoteFunction: No owning connection for actor BP_Employee_C_1. Function Server_WeaponSetup will not be processed.
+[2018.12.09-20.58.53:470][379]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.12.09-20.58.54:327][404]LogRenderer: Reallocating scene render targets to support 1216x792 Format 10 NumSamples 1 (Frame:84).
+[2018.12.09-20.58.59:007][623]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.12.09-20.59.04:588][956]LogSlate: Window 'Corporate_America Game Preview Client 1 (64-bit/PCD3D_SM5)' being destroyed
+[2018.12.09-20.59.04:622][956]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-20.59.04:622][956]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
+[2018.12.09-20.59.04:625][956]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
+[2018.12.09-20.59.04:625][956]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
+[2018.12.09-20.59.04:625][956]LogOnline: Warning: OSS: No game present to leave for session (GameSession)
+[2018.12.09-20.59.04:649][956]LogSlate: Window 'Corporate_America Game Preview Server (64-bit/PCD3D_SM5)' being destroyed
+[2018.12.09-20.59.04:685][956]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-20.59.04:685][956]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
+[2018.12.09-20.59.04:686][956]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
+[2018.12.09-20.59.04:686][956]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
+[2018.12.09-20.59.04:686][956]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2018.12.09-20.59.04:703][956]LogNet: UChannel::CleanUp: ChIndex == 0. Closing connection. [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:55677, Name: IpConnection_9, Driver: GameNetDriver IpNetDriver_8, IsServer: YES, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-B0C052ED42EB203AC64D2C8B40FA9E9F
+[2018.12.09-20.59.04:704][956]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:55677, Name: IpConnection_9, Driver: GameNetDriver IpNetDriver_8, IsServer: YES, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-B0C052ED42EB203AC64D2C8B40FA9E9F, Channels: 2, Time: 2018.12.09-20.59.04
+[2018.12.09-20.59.04:704][956]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:55677, Name: IpConnection_9, Driver: GameNetDriver IpNetDriver_8, IsServer: YES, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-B0C052ED42EB203AC64D2C8B40FA9E9F
+[2018.12.09-20.59.04:705][956]LogNet: UChannel::CleanUp: ChIndex == 0. Closing connection. [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_8, Driver: GameNetDriver IpNetDriver_9, IsServer: NO, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-B0C052ED42EB203AC64D2C8B40FA9E9F
+[2018.12.09-20.59.04:705][956]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_8, Driver: GameNetDriver IpNetDriver_9, IsServer: NO, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-B0C052ED42EB203AC64D2C8B40FA9E9F, Channels: 2, Time: 2018.12.09-20.59.04
+[2018.12.09-20.59.04:706][956]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_8, Driver: GameNetDriver IpNetDriver_9, IsServer: NO, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-B0C052ED42EB203AC64D2C8B40FA9E9F
+[2018.12.09-20.59.04:713][956]LogExit: GameNetDriver None shut down
+[2018.12.09-20.59.04:714][956]LogExit: GameNetDriver None shut down
+[2018.12.09-20.59.04:736][957]LogPlayLevel: Display: Destroying online subsystem :Context_11
+[2018.12.09-20.59.04:736][957]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-20.59.04:736][957]LogPlayLevel: Display: Destroying online subsystem :Context_10
+[2018.12.09-20.59.04:736][957]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-21.01.27:687][683]Candidate modules for hot reload:
+[2018.12.09-21.01.27:687][683]  Corporate_America
+[2018.12.09-21.01.27:688][683]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.19/Engine/Binaries/DotNET/UnrealBuildTool.exe Corporate_America -ModuleWithSuffix=Corporate_America,1225 Win64 Development -editorrecompile -canskiplink "D:/Corporate America/CorporateAmerica/Corporate_America/Corporate_America.uproject" ]
+[2018.12.09-21.01.27:691][683]Warning: Starting HotReload took  0.0s.
+[2018.12.09-21.01.33:228][ 16]CompilerResultsLog: New page: Compilation - Dec 9, 2018, 11:01:33 AM
+[2018.12.09-21.01.33:229][ 16]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build.
+[2018.12.09-21.01.33:229][ 16]CompilerResultsLog: Compiling game modules for hot reload
+[2018.12.09-21.01.33:229][ 16]CompilerResultsLog: Performing 3 actions (4 in parallel)
+[2018.12.09-21.01.33:229][ 16]CompilerResultsLog: Employee.cpp
+[2018.12.09-21.01.33:229][ 16]CompilerResultsLog: [2/3] Link UE4Editor-Corporate_America-1225.dll
+[2018.12.09-21.01.33:229][ 16]CompilerResultsLog: [3/3] Link UE4Editor-Corporate_America-1225.lib
+[2018.12.09-21.01.33:229][ 16]CompilerResultsLog:    Creating library D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Corporate_America-1225.lib and object D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Corporate_America-1225.exp
+[2018.12.09-21.01.33:230][ 16]CompilerResultsLog:    Creating library D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Corporate_America-1225.suppressed.lib and object D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Corporate_America-1225.suppressed.exp
+[2018.12.09-21.01.33:230][ 16]CompilerResultsLog: Total build time: 5.25 seconds (Local executor: 3.74 seconds)
+[2018.12.09-21.01.33:230][ 16]LogMainFrame: MainFrame: Module compiling took 5.549 seconds
+[2018.12.09-21.01.33:281][ 16]LogContentBrowser: Native class hierarchy updated for 'Corporate_America' in 0.0013 seconds. Added 9 classes and 3 folders.
+[2018.12.09-21.01.33:283][ 16]Display: HotReload successful (9 functions remapped  0 scriptstructs remapped)
+[2018.12.09-21.01.33:325][ 16]LogContentBrowser: Native class hierarchy populated in 0.0099 seconds. Added 2464 classes and 566 folders.
+[2018.12.09-21.01.33:329][ 16]Display: HotReload took  5.7s.
+[2018.12.09-21.01.34:696][ 98]LogTemp: Repeating last play command: New Editor Window (PIE)
+[2018.12.09-21.01.34:713][ 98]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2018.12.09-21.01.34:715][ 98]PIE: New page: PIE session: Test_Level00 (Dec 9, 2018, 11:01:34 AM)
+[2018.12.09-21.01.34:715][ 98]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_1_Test_Level00
+[2018.12.09-21.01.34:719][ 98]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003889s)
+[2018.12.09-21.01.34:720][ 98]LogAIModule: Creating AISystem for world Test_Level00
+[2018.12.09-21.01.34:720][ 98]LogPlayLevel: PIE: World Init took: (0.000992s)
+[2018.12.09-21.01.34:721][ 98]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Test_Level00.Test_Level00 to /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00 (0.005535s)
+[2018.12.09-21.01.34:736][ 98]LogInit: XAudio2 using 'Speakers / Headphones (Realtek Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2018.12.09-21.01.34:817][ 98]LogInit: FAudioDevice initialized.
+[2018.12.09-21.01.34:913][ 98]LogLoad: Game class is 'NewGameModeTest_C'
+[2018.12.09-21.01.34:915][ 98]LogWorld: Bringing World /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00 up for play (max tick rate 60) at 2018.12.09-16.01.34
+[2018.12.09-21.01.34:916][ 98]LogWorld: Bringing up level for play took: 0.001479
+[2018.12.09-21.01.34:931][ 98]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-21.01.34:931][ 98]LogTemp: Display: ParseSettings for IpNetDriver_10
+[2018.12.09-21.01.34:931][ 98]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-21.01.34:931][ 98]LogInit: WinSock: Socket queue 131072 / 131072
+[2018.12.09-21.01.34:932][ 98]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2018.12.09-21.01.34:932][ 98]LogNet: GameNetDriver IpNetDriver_10 IpNetDriver listening on port 17777
+[2018.12.09-21.01.34:933][ 98]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-21.01.34:936][ 98]PIE: Play in editor start time for /Game/Levels/UEDPIE_1_Test_Level00 0.26
+[2018.12.09-21.01.34:938][ 98]PIE: New page: PIE session: Test_Level00 (Dec 9, 2018, 11:01:34 AM)
+[2018.12.09-21.01.34:948][ 98]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.12.09-21.01.35:043][ 98]LogNet: Browse: 127.0.0.1:17777//Game/FirstPersonCPP/Maps/FirstPersonExampleMap
+[2018.12.09-21.01.35:044][ 98]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-21.01.35:044][ 98]LogTemp: Display: ParseSettings for IpNetDriver_11
+[2018.12.09-21.01.35:044][ 98]LogTemp: Display: ParseSettings for PendingNetDriver
+[2018.12.09-21.01.35:044][ 98]LogInit: WinSock: Socket queue 32768 / 32768
+[2018.12.09-21.01.35:045][ 98]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2018.12.09-21.01.35:045][ 98]LogNet: Game client on port 17777, rate 10000
+[2018.12.09-21.01.35:049][ 98]PIE: Play in editor start time for /Game/FirstPersonCPP/Maps/FirstPersonExampleMap 0.373
+[2018.12.09-21.01.35:061][ 98]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:50293
+[2018.12.09-21.01.35:062][ 98]LogHandshake: SendConnectChallenge. Timestamp: 0.016667, Cookie: 243202151009059177061218191022115140211210096241007230083134
+[2018.12.09-21.01.35:063][ 98]LogHandshake: SendChallengeResponse. Timestamp: 0.016667, Cookie: 243202151009059177061218191022115140211210096241007230083134
+[2018.12.09-21.01.35:158][ 99]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:50293
+[2018.12.09-21.01.35:158][ 99]LogHandshake: SendChallengeAck. InCookie: 243202151009059177061218191022115140211210096241007230083134
+[2018.12.09-21.01.35:158][ 99]LogNet: Server accepting post-challenge connection from: 127.0.0.1:50293
+[2018.12.09-21.01.35:159][ 99]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2018.12.09-21.01.35:159][ 99]LogNet: NotifyAcceptedConnection: Name: Test_Level00, TimeStamp: 12/09/18 16:01:35, [UNetConnection] RemoteAddr: 127.0.0.1:50293, Name: IpConnection_11, Driver: GameNetDriver IpNetDriver_10, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2018.12.09-21.01.35:160][ 99]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:50293, Name: IpConnection_11, Driver: GameNetDriver IpNetDriver_10, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2018.12.09-21.01.35:163][ 99]LogNet: UPendingNetGame::SendInitialJoin: Sending hello. [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_10, Driver: PendingNetDriver IpNetDriver_11, IsServer: NO, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2018.12.09-21.01.35:179][100]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00: Accepted
+[2018.12.09-21.01.35:179][100]LogNet: Remote platform little endian=1
+[2018.12.09-21.01.35:180][100]LogNet: This platform little endian=1
+[2018.12.09-21.01.35:198][101]LogNet: Login request: /Game/FirstPersonCPP/Maps/FirstPersonExampleMap?Name=DESKTOP-G1UAKUU-7817D29643E7177EBC2E85BF2632A9E3 userId: DESKTOP-G1UAKUU-7817D29643E7177EBC2E85BF2632A9E3
+[2018.12.09-21.01.35:200][101]LogNet: Welcomed by server (Level: /Game/Levels/UEDPIE_1_Test_Level00, Game: /Game/Levels/NewGameModeTest.NewGameModeTest_C)
+[2018.12.09-21.01.35:201][101]LogLoad: LoadMap: 127.0.0.1:17777//Game/Levels/UEDPIE_1_Test_Level00?game=/Game/Levels/NewGameModeTest.NewGameModeTest_C
+[2018.12.09-21.01.35:220][101]LogAIModule: Creating AISystem for world Test_Level00
+[2018.12.09-21.01.35:220][101]LogTemp: Display: ParseSettings for GameNetDriver
+[2018.12.09-21.01.35:222][101]LogWorld: Bringing World /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00 up for play (max tick rate 60) at 2018.12.09-16.01.35
+[2018.12.09-21.01.35:222][101]LogWorld: Bringing up level for play took: 0.001381
+[2018.12.09-21.01.35:223][101]LogLoad: Took 0.021597 seconds to LoadMap(/Game/Levels/UEDPIE_1_Test_Level00)
+[2018.12.09-21.01.35:235][102]LogNet: Client netspeed is 10000
+[2018.12.09-21.01.35:235][102]LogNet: Join request: /Game/FirstPersonCPP/Maps/FirstPersonExampleMap?Name=DESKTOP-G1UAKUU-7817D29643E7177EBC2E85BF2632A9E3?SplitscreenCount=1
+[2018.12.09-21.01.35:235][102]LogOnline: Warning: OSS: No game present to join for session (GameSession)
+[2018.12.09-21.01.35:237][102]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_1_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-21.01.35:238][102]LogNet: Join succeeded: DESKTOP-G1UAKUU-7817
+[2018.12.09-21.01.35:314][106]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-21.01.35:316][106]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-21.01.35:318][106]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-21.01.35:320][106]LogNet: Warning: UIpNetDriver::ProcessRemoteFunction: No owning connection for actor BP_Employee_C_1. Function Server_WeaponSetup will not be processed.
+[2018.12.09-21.01.35:348][108]LogOnline: Warning: OSS: No game present to join for session (GameSession)
+[2018.12.09-21.01.35:364][109]LogOnline: Warning: OSS: No game present to join for session (GameSession)
+[2018.12.09-21.01.35:365][109]LogActor: Warning: SmartPhoneBP_C /Game/Levels/UEDPIE_2_Test_Level00.Test_Level00:PersistentLevel.SmartPhoneBP_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2018.12.09-21.01.35:597][123]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.12.09-21.01.38:070][184]LogSpawn: Warning: SpawnActor failed because of collision at the spawn location [X=66.243 Y=-1829.027 Z=181.637] for [BP_EMail_C]
+[2018.12.09-21.01.40:834][350]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.12.09-21.01.45:572][634]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.12.09-21.01.52:910][ 74]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.12.09-21.02.02:039][621]LogSpawn: Warning: SpawnActor failed because of collision at the spawn location [X=229.050 Y=-1642.500 Z=186.139] for [BP_EMail_C]
+[2018.12.09-21.02.03:731][721]LogSlate: Window 'Corporate_America Game Preview Client 1 (64-bit/PCD3D_SM5)' being destroyed
+[2018.12.09-21.02.03:765][721]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-21.02.03:765][721]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
+[2018.12.09-21.02.03:767][721]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
+[2018.12.09-21.02.03:767][721]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
+[2018.12.09-21.02.03:767][721]LogOnline: Warning: OSS: No game present to leave for session (GameSession)
+[2018.12.09-21.02.03:785][721]LogSlate: Window 'Corporate_America Game Preview Server (64-bit/PCD3D_SM5)' being destroyed
+[2018.12.09-21.02.03:824][721]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-21.02.03:824][721]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Stop() ActiveTask:0000000000000000 Tasks[0/0]
+[2018.12.09-21.02.03:825][721]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() started
+[2018.12.09-21.02.03:825][721]LogOnline: Display: OSS: FOnlineAsyncTaskManager::Exit() finished
+[2018.12.09-21.02.03:825][721]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2018.12.09-21.02.03:841][721]LogNet: UChannel::CleanUp: ChIndex == 0. Closing connection. [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:50293, Name: IpConnection_11, Driver: GameNetDriver IpNetDriver_10, IsServer: YES, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-7817D29643E7177EBC2E85BF2632A9E3
+[2018.12.09-21.02.03:841][721]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:50293, Name: IpConnection_11, Driver: GameNetDriver IpNetDriver_10, IsServer: YES, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-7817D29643E7177EBC2E85BF2632A9E3, Channels: 2, Time: 2018.12.09-21.02.03
+[2018.12.09-21.02.03:841][721]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:50293, Name: IpConnection_11, Driver: GameNetDriver IpNetDriver_10, IsServer: YES, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-7817D29643E7177EBC2E85BF2632A9E3
+[2018.12.09-21.02.03:842][721]LogNet: UChannel::CleanUp: ChIndex == 0. Closing connection. [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_10, Driver: GameNetDriver IpNetDriver_11, IsServer: NO, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-7817D29643E7177EBC2E85BF2632A9E3
+[2018.12.09-21.02.03:842][721]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_10, Driver: GameNetDriver IpNetDriver_11, IsServer: NO, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-7817D29643E7177EBC2E85BF2632A9E3, Channels: 2, Time: 2018.12.09-21.02.03
+[2018.12.09-21.02.03:843][721]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_10, Driver: GameNetDriver IpNetDriver_11, IsServer: NO, PC: None, Owner: None, UniqueId: DESKTOP-G1UAKUU-7817D29643E7177EBC2E85BF2632A9E3
+[2018.12.09-21.02.03:851][721]LogExit: GameNetDriver None shut down
+[2018.12.09-21.02.03:851][721]LogExit: GameNetDriver None shut down
+[2018.12.09-21.02.03:861][722]LogPlayLevel: Display: Destroying online subsystem :Context_13
+[2018.12.09-21.02.03:861][722]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()
+[2018.12.09-21.02.03:861][722]LogPlayLevel: Display: Destroying online subsystem :Context_12
+[2018.12.09-21.02.03:862][722]LogOnline: Display: OSS: FOnlineSubsystemNull::Shutdown()

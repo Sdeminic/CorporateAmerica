@@ -428,6 +428,8 @@
 		<ClInclude Include="..\..\Source\Corporate_America\Corporate_AmericaProjectile.h" />
 		<ClCompile Include="..\..\Source\Corporate_America\Employee.cpp" />
 		<ClInclude Include="..\..\Source\Corporate_America\Employee.h" />
+		<ClCompile Include="..\..\Source\Corporate_America\Projectile.cpp" />
+		<ClInclude Include="..\..\Source\Corporate_America\Projectile.h" />
 		<ClCompile Include="..\..\Source\Corporate_America\Weapon.cpp" />
 		<ClInclude Include="..\..\Source\Corporate_America\Weapon.h" />
 		<ClInclude Include="..\..\Source\Corporate_America\TP_ThirdPerson\TP_ThirdPerson.h" />

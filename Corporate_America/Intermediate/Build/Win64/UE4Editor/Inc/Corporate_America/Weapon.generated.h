@@ -13,8 +13,60 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define CORPORATE_AMERICA_Weapon_generated_h
 
-#define Corporate_America_Source_Corporate_America_Weapon_h_12_RPC_WRAPPERS
-#define Corporate_America_Source_Corporate_America_Weapon_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define Corporate_America_Source_Corporate_America_Weapon_h_12_RPC_WRAPPERS \
+	virtual bool Server_OnFire_Validate(); \
+	virtual void Server_OnFire_Implementation(); \
+ \
+	DECLARE_FUNCTION(execServer_OnFire) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		if (!P_THIS->Server_OnFire_Validate()) \
+		{ \
+			RPC_ValidateFailed(TEXT("Server_OnFire_Validate")); \
+			return; \
+		} \
+		P_THIS->Server_OnFire_Implementation(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execOnFire) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnFire(); \
+		P_NATIVE_END; \
+	}
+
+
+#define Corporate_America_Source_Corporate_America_Weapon_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual bool Server_OnFire_Validate(); \
+	virtual void Server_OnFire_Implementation(); \
+ \
+	DECLARE_FUNCTION(execServer_OnFire) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		if (!P_THIS->Server_OnFire_Validate()) \
+		{ \
+			RPC_ValidateFailed(TEXT("Server_OnFire_Validate")); \
+			return; \
+		} \
+		P_THIS->Server_OnFire_Implementation(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execOnFire) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnFire(); \
+		P_NATIVE_END; \
+	}
+
+
+#define Corporate_America_Source_Corporate_America_Weapon_h_12_EVENT_PARMS
+#define Corporate_America_Source_Corporate_America_Weapon_h_12_CALLBACK_WRAPPERS
 #define Corporate_America_Source_Corporate_America_Weapon_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAWeapon(); \
@@ -60,12 +112,16 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AWeapon); \
 
 
 #define Corporate_America_Source_Corporate_America_Weapon_h_12_PRIVATE_PROPERTY_OFFSET
-#define Corporate_America_Source_Corporate_America_Weapon_h_9_PROLOG
+#define Corporate_America_Source_Corporate_America_Weapon_h_9_PROLOG \
+	Corporate_America_Source_Corporate_America_Weapon_h_12_EVENT_PARMS
+
+
 #define Corporate_America_Source_Corporate_America_Weapon_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	Corporate_America_Source_Corporate_America_Weapon_h_12_PRIVATE_PROPERTY_OFFSET \
 	Corporate_America_Source_Corporate_America_Weapon_h_12_RPC_WRAPPERS \
+	Corporate_America_Source_Corporate_America_Weapon_h_12_CALLBACK_WRAPPERS \
 	Corporate_America_Source_Corporate_America_Weapon_h_12_INCLASS \
 	Corporate_America_Source_Corporate_America_Weapon_h_12_STANDARD_CONSTRUCTORS \
 public: \
@@ -77,6 +133,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	Corporate_America_Source_Corporate_America_Weapon_h_12_PRIVATE_PROPERTY_OFFSET \
 	Corporate_America_Source_Corporate_America_Weapon_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	Corporate_America_Source_Corporate_America_Weapon_h_12_CALLBACK_WRAPPERS \
 	Corporate_America_Source_Corporate_America_Weapon_h_12_INCLASS_NO_PURE_DECLS \
 	Corporate_America_Source_Corporate_America_Weapon_h_12_ENHANCED_CONSTRUCTORS \
 private: \

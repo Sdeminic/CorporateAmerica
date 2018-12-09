@@ -1,0 +1,8 @@
+﻿  Using 'git status' to determine working set for adaptive non-unity build.
+  Performing 3 actions (4 in parallel)
+  Weapon.cpp
+  [2/3] Link UE4Editor-Corporate_America.dll
+  [3/3] Link UE4Editor-Corporate_America.lib
+     Creating library D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Corporate_America.lib and object D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Corporate_America.exp
+     Creating library D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Corporate_America.suppressed.lib and object D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Corporate_America.suppressed.exp
+  Total build time: 6.82 seconds (Local executor: 3.25 seconds)

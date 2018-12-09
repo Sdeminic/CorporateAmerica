@@ -5,6 +5,7 @@
 #include "Employee.h"
 #include "Animation/AnimInstance.h"
 #include "Camera/CameraComponent.h"
+#include "Weapon.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
 #include "GameFramework/InputSettings.h"
@@ -42,21 +43,15 @@ void AEmployee::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//if (GunBlueprint == NULL) {
-		//UE_LOG(LogTemp, Warning, TEXT("Gun blueprint missing."));
-		//return;
-	//}
-	//Gun = GetWorld()->SpawnActor<AGun>(GunBlueprint);
+	if (WeaponBP == NULL) {
+		UE_LOG(LogTemp, Warning, TEXT("Weapon blueprint missing."));
+		return;
+	}
+	Weapon = GetWorld()->SpawnActor<AWeapon>(WeaponBP);
 
-	//Attach gun mesh component to Skeleton, doing it here because the skelton is not yet created in the constructor
-	//if (IsPlayerControlled()) {
-	//	Gun->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
-	//	Gun->AnimInstanceFP = Mesh1P->GetAnimInstance();
-//	}
-	//else {
-	//	Gun->AttachToComponent(GetMesh(), FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
-	//}
-	//Gun->AnimInstanceTP = GetMesh()->GetAnimInstance();
+	Server_WeaponSetup();
+
+	LastShot = FPlatformTime::Seconds();
 }
 
 // Called every frame
@@ -111,4 +106,72 @@ void AEmployee::SetupPlayerInputComponent(UInputComponent * InputComponent)
 	InputComponent->BindAxis("TurnRate", this, &AEmployee::TurnAtRate);
 	InputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 	InputComponent->BindAxis("LookUpRate", this, &AEmployee::LookUpAtRate);
+	InputComponent->BindAction("Fire", IE_Pressed, this, &AEmployee::PullTrigger);
+}
+
+void AEmployee::PullTrigger()
+{
+	if(Role == ROLE_SimulatedProxy){ 
+		Weapon->Client_OnFire();
+	}
+	else{
+		Server_OnFire();
+		Weapon->Client_OnFire();
+	}
+
+	if (Ammo >= 1 && FPlatformTime::Seconds() - LastShot > ShotCooldown) {
+		
+		--Ammo;
+		LastShot = FPlatformTime::Seconds();
+	}
+}
+
+int32 AEmployee::GetAmmo()
+{
+	return Ammo;
+}
+
+void AEmployee::SetAmmo(int32 AmmoToSet)
+{
+	Ammo = AmmoToSet;
+}
+
+void AEmployee::Server_WeaponSetup_Implementation()
+{
+	WeaponSetup();
+}
+
+bool AEmployee::Server_WeaponSetup_Validate()
+{
+	return true;
+}
+
+void AEmployee::Server_OnFire_Implementation()
+{
+	Weapon->OnFire();
+}
+
+bool AEmployee::Server_OnFire_Validate()
+{
+	return true;
+}
+
+void AEmployee::WeaponSetup()
+{
+	//Attach Weapon mesh component to Skeleton, doing it here because the skelton is not yet created in the constructor
+	if (IsPlayerControlled()) {
+		Weapon->AttachToComponent(this->Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
+		Weapon->AnimInstanceFP = this->Mesh1P->GetAnimInstance();
+	}
+	else {
+		Weapon->AttachToComponent(this->GetMesh(), FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
+	}
+	Weapon->AnimInstanceTP = this->GetMesh()->GetAnimInstance();
+}
+
+void AEmployee::UnPossessed()
+{
+	Super::UnPossessed();
+	if (!Weapon) { return; }
+	Weapon->AttachToComponent(GetMesh(), FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
 }
