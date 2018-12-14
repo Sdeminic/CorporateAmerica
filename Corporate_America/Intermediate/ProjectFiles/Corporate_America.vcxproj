@@ -84,7 +84,7 @@
 		</ProjectConfiguration>
 	</ItemGroup>
 	<PropertyGroup Label="Globals">
-		<ProjectGuid>{CC7964AC-71C9-46DA-966B-D91EE9FD5E2A}</ProjectGuid>
+		<ProjectGuid>{ECF423B8-00F0-498D-AFF8-272A052885CA}</ProjectGuid>
 		<Keyword>MakeFileProj</Keyword>
 		<RootNamespace>Corporate_America</RootNamespace>
 		<PlatformToolset>v141</PlatformToolset>

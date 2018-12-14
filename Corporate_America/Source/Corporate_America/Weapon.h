@@ -4,15 +4,17 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Animation/AnimInstance.h"
 #include "Weapon.generated.h"
 
-UCLASS()
+
+UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class CORPORATE_AMERICA_API AWeapon : public AActor
 {
 	GENERATED_BODY()
 
-public:
-	// Sets default values for this actor's properties
+public:	
+	// Sets default values for this component's properties
 	AWeapon();
 
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
@@ -68,5 +70,14 @@ public:
 
 
 	UFUNCTION(Server, Reliable, WithValidation)
-		void Server_OnFire();
+		void Server_OnFire(FVector Location, FRotator Rotation);
+
+	/** Returns Mesh1P subobject **/
+	FORCEINLINE class USkeletalMeshComponent* GetMesh() const { return FP_Gun; }
+
+
+
+
+		
+	
 };

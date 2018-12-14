@@ -19,19 +19,23 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 	UPackage* Z_Construct_UPackage__Script_Corporate_America();
 	CORPORATE_AMERICA_API UFunction* Z_Construct_UFunction_AWeapon_OnFire();
 	CORPORATE_AMERICA_API UFunction* Z_Construct_UFunction_AWeapon_Server_OnFire();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimInstance_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	CORPORATE_AMERICA_API UClass* Z_Construct_UClass_AProjectile_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 // End Cross Module References
 	static FName NAME_AWeapon_Server_OnFire = FName(TEXT("Server_OnFire"));
-	void AWeapon::Server_OnFire()
+	void AWeapon::Server_OnFire(FVector Location, FRotator Rotation)
 	{
-		ProcessEvent(FindFunctionChecked(NAME_AWeapon_Server_OnFire),NULL);
+		Weapon_eventServer_OnFire_Parms Parms;
+		Parms.Location=Location;
+		Parms.Rotation=Rotation;
+		ProcessEvent(FindFunctionChecked(NAME_AWeapon_Server_OnFire),&Parms);
 	}
 	void AWeapon::StaticRegisterNativesAWeapon()
 	{
@@ -64,12 +68,18 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
+			static const UE4CodeGen_Private::FStructPropertyParams NewProp_Rotation = { UE4CodeGen_Private::EPropertyClass::Struct, "Rotation", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000080, 1, nullptr, STRUCT_OFFSET(Weapon_eventServer_OnFire_Parms, Rotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(nullptr, 0) };
+			static const UE4CodeGen_Private::FStructPropertyParams NewProp_Location = { UE4CodeGen_Private::EPropertyClass::Struct, "Location", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000080, 1, nullptr, STRUCT_OFFSET(Weapon_eventServer_OnFire_Parms, Location), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
+			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Rotation,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Location,
+			};
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 				{ "ModuleRelativePath", "Weapon.h" },
 			};
 #endif
-			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AWeapon, "Server_OnFire", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80220CC0, 0, nullptr, 0, 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AWeapon, "Server_OnFire", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80A20CC0, sizeof(Weapon_eventServer_OnFire_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 		}
 		return ReturnFunction;
@@ -89,10 +99,12 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 			};
 			static const FClassFunctionLinkInfo FuncInfo[] = {
 				{ &Z_Construct_UFunction_AWeapon_OnFire, "OnFire" }, // 3373082437
-				{ &Z_Construct_UFunction_AWeapon_Server_OnFire, "Server_OnFire" }, // 4210926151
+				{ &Z_Construct_UFunction_AWeapon_Server_OnFire, "Server_OnFire" }, // 3545268893
 			};
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+				{ "BlueprintSpawnableComponent", "" },
+				{ "ClassGroupNames", "Custom" },
 				{ "IncludePath", "Weapon.h" },
 				{ "ModuleRelativePath", "Weapon.h" },
 			};
@@ -234,7 +246,7 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AWeapon, 1239578735);
+	IMPLEMENT_CLASS(AWeapon, 3314676792);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AWeapon(Z_Construct_UClass_AWeapon, &AWeapon::StaticClass, TEXT("/Script/Corporate_America"), TEXT("AWeapon"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AWeapon);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

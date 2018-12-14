@@ -6,6 +6,7 @@
 #include "Animation/AnimInstance.h"
 #include "Camera/CameraComponent.h"
 #include "Weapon.h"
+#include "UnrealNetwork.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
 #include "GameFramework/InputSettings.h"
@@ -36,21 +37,19 @@ AEmployee::AEmployee()
 	Mesh1P->CastShadow = false;
 	Mesh1P->RelativeRotation = FRotator(1.9f, -19.19f, 5.2f);
 	Mesh1P->RelativeLocation = FVector(-0.5f, -4.4f, -155.7f);
+
+	Weapon = CreateDefaultSubobject<UChildActorComponent>(TEXT("Active Weapon"));
+	Weapon->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
+
 }
 
 // Called when the game starts or when spawned
 void AEmployee::BeginPlay()
 {
 	Super::BeginPlay();
-
-	if (WeaponBP == NULL) {
-		UE_LOG(LogTemp, Warning, TEXT("Weapon blueprint missing."));
-		return;
+	if (Weapon->GetChildActor()) {
+		Weapon->GetChildActor()->SetOwner(this);
 	}
-	Weapon = GetWorld()->SpawnActor<AWeapon>(WeaponBP);
-
-	Server_WeaponSetup();
-
 	LastShot = FPlatformTime::Seconds();
 }
 
@@ -59,6 +58,11 @@ void AEmployee::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if (Role == ROLE_AutonomousProxy) {
+		Server_SendRotation(GetControlRotation());//Cast<AWeapon>(Weapon->GetChildActor())->FP_MuzzleLocation->GetComponentRotation());
+	}
+	
+	FirstPersonCameraComponent->SetWorldRotation(CameraRotation);
 }
 
 void AEmployee::MoveForward(float Value)
@@ -111,12 +115,13 @@ void AEmployee::SetupPlayerInputComponent(UInputComponent * InputComponent)
 
 void AEmployee::PullTrigger()
 {
-	if(Role == ROLE_SimulatedProxy){ 
-		Weapon->Client_OnFire();
+	if (!Weapon) return;
+	if (Role == ROLE_SimulatedProxy) {
+		Cast<AWeapon>(Weapon->GetChildActor())->Client_OnFire();
 	}
 	else{
 		Server_OnFire();
-		Weapon->Client_OnFire();
+		Cast<AWeapon>(Weapon->GetChildActor())->Client_OnFire();
 	}
 
 	if (Ammo >= 1 && FPlatformTime::Seconds() - LastShot > ShotCooldown) {
@@ -136,19 +141,9 @@ void AEmployee::SetAmmo(int32 AmmoToSet)
 	Ammo = AmmoToSet;
 }
 
-void AEmployee::Server_WeaponSetup_Implementation()
-{
-	WeaponSetup();
-}
-
-bool AEmployee::Server_WeaponSetup_Validate()
-{
-	return true;
-}
-
 void AEmployee::Server_OnFire_Implementation()
 {
-	Weapon->OnFire();
+	Cast<AWeapon>(Weapon->GetChildActor())->OnFire();
 }
 
 bool AEmployee::Server_OnFire_Validate()
@@ -156,17 +151,14 @@ bool AEmployee::Server_OnFire_Validate()
 	return true;
 }
 
-void AEmployee::WeaponSetup()
+void AEmployee::Server_SendRotation_Implementation(FRotator Rotation)
 {
-	//Attach Weapon mesh component to Skeleton, doing it here because the skelton is not yet created in the constructor
-	if (IsPlayerControlled()) {
-		Weapon->AttachToComponent(this->Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
-		Weapon->AnimInstanceFP = this->Mesh1P->GetAnimInstance();
-	}
-	else {
-		Weapon->AttachToComponent(this->GetMesh(), FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
-	}
-	Weapon->AnimInstanceTP = this->GetMesh()->GetAnimInstance();
+	CameraRotation = Rotation;
+}
+
+bool AEmployee::Server_SendRotation_Validate(FRotator Rotation)
+{
+	return true;
 }
 
 void AEmployee::UnPossessed()
@@ -174,4 +166,12 @@ void AEmployee::UnPossessed()
 	Super::UnPossessed();
 	if (!Weapon) { return; }
 	Weapon->AttachToComponent(GetMesh(), FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
+}
+
+
+void AEmployee::GetLifetimeReplicatedProps(TArray< FLifetimeProperty > & OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(AEmployee, CameraRotation);
 }

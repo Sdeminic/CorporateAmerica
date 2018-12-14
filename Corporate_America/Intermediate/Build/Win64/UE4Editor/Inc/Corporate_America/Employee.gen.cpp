@@ -20,9 +20,11 @@ void EmptyLinkFunctionForGeneratedCodeEmployee() {}
 	CORPORATE_AMERICA_API UFunction* Z_Construct_UFunction_AEmployee_GetAmmo();
 	CORPORATE_AMERICA_API UFunction* Z_Construct_UFunction_AEmployee_PullTrigger();
 	CORPORATE_AMERICA_API UFunction* Z_Construct_UFunction_AEmployee_Server_OnFire();
-	CORPORATE_AMERICA_API UFunction* Z_Construct_UFunction_AEmployee_Server_WeaponSetup();
+	CORPORATE_AMERICA_API UFunction* Z_Construct_UFunction_AEmployee_Server_SendRotation();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
 	CORPORATE_AMERICA_API UFunction* Z_Construct_UFunction_AEmployee_SetAmmo();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UChildActorComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	CORPORATE_AMERICA_API UClass* Z_Construct_UClass_AWeapon_NoRegister();
@@ -32,10 +34,12 @@ void EmptyLinkFunctionForGeneratedCodeEmployee() {}
 	{
 		ProcessEvent(FindFunctionChecked(NAME_AEmployee_Server_OnFire),NULL);
 	}
-	static FName NAME_AEmployee_Server_WeaponSetup = FName(TEXT("Server_WeaponSetup"));
-	void AEmployee::Server_WeaponSetup()
+	static FName NAME_AEmployee_Server_SendRotation = FName(TEXT("Server_SendRotation"));
+	void AEmployee::Server_SendRotation(FRotator Rotation)
 	{
-		ProcessEvent(FindFunctionChecked(NAME_AEmployee_Server_WeaponSetup),NULL);
+		Employee_eventServer_SendRotation_Parms Parms;
+		Parms.Rotation=Rotation;
+		ProcessEvent(FindFunctionChecked(NAME_AEmployee_Server_SendRotation),&Parms);
 	}
 	void AEmployee::StaticRegisterNativesAEmployee()
 	{
@@ -44,7 +48,7 @@ void EmptyLinkFunctionForGeneratedCodeEmployee() {}
 			{ "GetAmmo", &AEmployee::execGetAmmo },
 			{ "PullTrigger", &AEmployee::execPullTrigger },
 			{ "Server_OnFire", &AEmployee::execServer_OnFire },
-			{ "Server_WeaponSetup", &AEmployee::execServer_WeaponSetup },
+			{ "Server_SendRotation", &AEmployee::execServer_SendRotation },
 			{ "SetAmmo", &AEmployee::execSetAmmo },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
@@ -104,17 +108,21 @@ void EmptyLinkFunctionForGeneratedCodeEmployee() {}
 		}
 		return ReturnFunction;
 	}
-	UFunction* Z_Construct_UFunction_AEmployee_Server_WeaponSetup()
+	UFunction* Z_Construct_UFunction_AEmployee_Server_SendRotation()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
+			static const UE4CodeGen_Private::FStructPropertyParams NewProp_Rotation = { UE4CodeGen_Private::EPropertyClass::Struct, "Rotation", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000080, 1, nullptr, STRUCT_OFFSET(Employee_eventServer_SendRotation_Parms, Rotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(nullptr, 0) };
+			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Rotation,
+			};
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 				{ "ModuleRelativePath", "Employee.h" },
 			};
 #endif
-			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AEmployee, "Server_WeaponSetup", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80280CC0, 0, nullptr, 0, 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AEmployee, "Server_SendRotation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80A80CC0, sizeof(Employee_eventServer_SendRotation_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 		}
 		return ReturnFunction;
@@ -160,7 +168,7 @@ void EmptyLinkFunctionForGeneratedCodeEmployee() {}
 				{ &Z_Construct_UFunction_AEmployee_GetAmmo, "GetAmmo" }, // 3828485126
 				{ &Z_Construct_UFunction_AEmployee_PullTrigger, "PullTrigger" }, // 976812184
 				{ &Z_Construct_UFunction_AEmployee_Server_OnFire, "Server_OnFire" }, // 1356047154
-				{ &Z_Construct_UFunction_AEmployee_Server_WeaponSetup, "Server_WeaponSetup" }, // 2250102571
+				{ &Z_Construct_UFunction_AEmployee_Server_SendRotation, "Server_SendRotation" }, // 446258569
 				{ &Z_Construct_UFunction_AEmployee_SetAmmo, "SetAmmo" }, // 29724320
 			};
 #if WITH_METADATA
@@ -180,6 +188,15 @@ void EmptyLinkFunctionForGeneratedCodeEmployee() {}
 #endif
 			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Mesh1P = { UE4CodeGen_Private::EPropertyClass::Object, "Mesh1P", RF_Public|RF_Transient|RF_MarkAsNative, 0x00400000000b0009, 1, nullptr, STRUCT_OFFSET(AEmployee, Mesh1P), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(NewProp_Mesh1P_MetaData, ARRAY_COUNT(NewProp_Mesh1P_MetaData)) };
 #if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Weapon_MetaData[] = {
+				{ "AllowPrivateAccess", "true" },
+				{ "Category", "Camera" },
+				{ "EditInline", "true" },
+				{ "ModuleRelativePath", "Employee.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Weapon = { UE4CodeGen_Private::EPropertyClass::Object, "Weapon", RF_Public|RF_Transient|RF_MarkAsNative, 0x00400000000b001d, 1, nullptr, STRUCT_OFFSET(AEmployee, Weapon), Z_Construct_UClass_UChildActorComponent_NoRegister, METADATA_PARAMS(NewProp_Weapon_MetaData, ARRAY_COUNT(NewProp_Weapon_MetaData)) };
+#if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FirstPersonCameraComponent_MetaData[] = {
 				{ "AllowPrivateAccess", "true" },
 				{ "Category", "Camera" },
@@ -190,20 +207,18 @@ void EmptyLinkFunctionForGeneratedCodeEmployee() {}
 #endif
 			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FirstPersonCameraComponent = { UE4CodeGen_Private::EPropertyClass::Object, "FirstPersonCameraComponent", RF_Public|RF_Transient|RF_MarkAsNative, 0x00400000000a001d, 1, nullptr, STRUCT_OFFSET(AEmployee, FirstPersonCameraComponent), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(NewProp_FirstPersonCameraComponent_MetaData, ARRAY_COUNT(NewProp_FirstPersonCameraComponent_MetaData)) };
 #if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CameraRotation_MetaData[] = {
+				{ "ModuleRelativePath", "Employee.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FStructPropertyParams NewProp_CameraRotation = { UE4CodeGen_Private::EPropertyClass::Struct, "CameraRotation", RF_Public|RF_Transient|RF_MarkAsNative, 0x0020080000000020, 1, nullptr, STRUCT_OFFSET(AEmployee, CameraRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(NewProp_CameraRotation_MetaData, ARRAY_COUNT(NewProp_CameraRotation_MetaData)) };
+#if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WeaponBP_MetaData[] = {
 				{ "Category", "Setup" },
 				{ "ModuleRelativePath", "Employee.h" },
 			};
 #endif
 			static const UE4CodeGen_Private::FClassPropertyParams NewProp_WeaponBP = { UE4CodeGen_Private::EPropertyClass::Class, "WeaponBP", RF_Public|RF_Transient|RF_MarkAsNative, 0x0024080000010001, 1, nullptr, STRUCT_OFFSET(AEmployee, WeaponBP), Z_Construct_UClass_AWeapon_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(NewProp_WeaponBP_MetaData, ARRAY_COUNT(NewProp_WeaponBP_MetaData)) };
-#if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Weapon_MetaData[] = {
-				{ "AllowPrivateAccess", "true" },
-				{ "Category", "Camera" },
-				{ "ModuleRelativePath", "Employee.h" },
-			};
-#endif
-			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Weapon = { UE4CodeGen_Private::EPropertyClass::Object, "Weapon", RF_Public|RF_Transient|RF_MarkAsNative, 0x0020080000020015, 1, nullptr, STRUCT_OFFSET(AEmployee, Weapon), Z_Construct_UClass_AWeapon_NoRegister, METADATA_PARAMS(NewProp_Weapon_MetaData, ARRAY_COUNT(NewProp_Weapon_MetaData)) };
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseLookUpRate_MetaData[] = {
 				{ "Category", "Camera" },
@@ -222,9 +237,10 @@ void EmptyLinkFunctionForGeneratedCodeEmployee() {}
 			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BaseTurnRate = { UE4CodeGen_Private::EPropertyClass::Float, "BaseTurnRate", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000020015, 1, nullptr, STRUCT_OFFSET(AEmployee, BaseTurnRate), METADATA_PARAMS(NewProp_BaseTurnRate_MetaData, ARRAY_COUNT(NewProp_BaseTurnRate_MetaData)) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Mesh1P,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_FirstPersonCameraComponent,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_WeaponBP,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Weapon,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_FirstPersonCameraComponent,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_CameraRotation,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_WeaponBP,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_BaseLookUpRate,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_BaseTurnRate,
 			};
@@ -246,7 +262,7 @@ void EmptyLinkFunctionForGeneratedCodeEmployee() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEmployee, 1913946576);
+	IMPLEMENT_CLASS(AEmployee, 3574042454);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AEmployee(Z_Construct_UClass_AEmployee, &AEmployee::StaticClass, TEXT("/Script/Corporate_America"), TEXT("AEmployee"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AEmployee);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

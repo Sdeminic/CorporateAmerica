@@ -8,16 +8,31 @@
 #include "ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FRotator;
 #ifdef CORPORATE_AMERICA_Employee_generated_h
 #error "Employee.generated.h already included, missing '#pragma once' in Employee.h"
 #endif
 #define CORPORATE_AMERICA_Employee_generated_h
 
 #define Corporate_America_Source_Corporate_America_Employee_h_12_RPC_WRAPPERS \
+	virtual bool Server_SendRotation_Validate(FRotator ); \
+	virtual void Server_SendRotation_Implementation(FRotator Rotation); \
 	virtual bool Server_OnFire_Validate(); \
 	virtual void Server_OnFire_Implementation(); \
-	virtual bool Server_WeaponSetup_Validate(); \
-	virtual void Server_WeaponSetup_Implementation(); \
+ \
+	DECLARE_FUNCTION(execServer_SendRotation) \
+	{ \
+		P_GET_STRUCT(FRotator,Z_Param_Rotation); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		if (!P_THIS->Server_SendRotation_Validate(Z_Param_Rotation)) \
+		{ \
+			RPC_ValidateFailed(TEXT("Server_SendRotation_Validate")); \
+			return; \
+		} \
+		P_THIS->Server_SendRotation_Implementation(Z_Param_Rotation); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execServer_OnFire) \
 	{ \
@@ -29,19 +44,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 			return; \
 		} \
 		P_THIS->Server_OnFire_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execServer_WeaponSetup) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->Server_WeaponSetup_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("Server_WeaponSetup_Validate")); \
-			return; \
-		} \
-		P_THIS->Server_WeaponSetup_Implementation(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -72,10 +74,24 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 
 #define Corporate_America_Source_Corporate_America_Employee_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual bool Server_SendRotation_Validate(FRotator ); \
+	virtual void Server_SendRotation_Implementation(FRotator Rotation); \
 	virtual bool Server_OnFire_Validate(); \
 	virtual void Server_OnFire_Implementation(); \
-	virtual bool Server_WeaponSetup_Validate(); \
-	virtual void Server_WeaponSetup_Implementation(); \
+ \
+	DECLARE_FUNCTION(execServer_SendRotation) \
+	{ \
+		P_GET_STRUCT(FRotator,Z_Param_Rotation); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		if (!P_THIS->Server_SendRotation_Validate(Z_Param_Rotation)) \
+		{ \
+			RPC_ValidateFailed(TEXT("Server_SendRotation_Validate")); \
+			return; \
+		} \
+		P_THIS->Server_SendRotation_Implementation(Z_Param_Rotation); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execServer_OnFire) \
 	{ \
@@ -87,19 +103,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 			return; \
 		} \
 		P_THIS->Server_OnFire_Implementation(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execServer_WeaponSetup) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->Server_WeaponSetup_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("Server_WeaponSetup_Validate")); \
-			return; \
-		} \
-		P_THIS->Server_WeaponSetup_Implementation(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -129,7 +132,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define Corporate_America_Source_Corporate_America_Employee_h_12_EVENT_PARMS
+#define Corporate_America_Source_Corporate_America_Employee_h_12_EVENT_PARMS \
+	struct Employee_eventServer_SendRotation_Parms \
+	{ \
+		FRotator Rotation; \
+	};
+
+
 #define Corporate_America_Source_Corporate_America_Employee_h_12_CALLBACK_WRAPPERS
 #define Corporate_America_Source_Corporate_America_Employee_h_12_INCLASS_NO_PURE_DECLS \
 private: \
@@ -138,7 +147,8 @@ private: \
 public: \
 	DECLARE_CLASS(AEmployee, ACharacter, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/Corporate_America"), NO_API) \
 	DECLARE_SERIALIZER(AEmployee) \
-	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
+	enum {IsIntrinsic=COMPILED_IN_INTRINSIC}; \
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 
 #define Corporate_America_Source_Corporate_America_Employee_h_12_INCLASS \
@@ -148,7 +158,8 @@ private: \
 public: \
 	DECLARE_CLASS(AEmployee, ACharacter, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/Corporate_America"), NO_API) \
 	DECLARE_SERIALIZER(AEmployee) \
-	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
+	enum {IsIntrinsic=COMPILED_IN_INTRINSIC}; \
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 
 #define Corporate_America_Source_Corporate_America_Employee_h_12_STANDARD_CONSTRUCTORS \
@@ -176,9 +187,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AEmployee); \
 
 
 #define Corporate_America_Source_Corporate_America_Employee_h_12_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__Weapon() { return STRUCT_OFFSET(AEmployee, Weapon); } \
 	FORCEINLINE static uint32 __PPO__WeaponBP() { return STRUCT_OFFSET(AEmployee, WeaponBP); } \
+	FORCEINLINE static uint32 __PPO__CameraRotation() { return STRUCT_OFFSET(AEmployee, CameraRotation); } \
 	FORCEINLINE static uint32 __PPO__FirstPersonCameraComponent() { return STRUCT_OFFSET(AEmployee, FirstPersonCameraComponent); } \
+	FORCEINLINE static uint32 __PPO__Weapon() { return STRUCT_OFFSET(AEmployee, Weapon); } \
 	FORCEINLINE static uint32 __PPO__Mesh1P() { return STRUCT_OFFSET(AEmployee, Mesh1P); }
 
 

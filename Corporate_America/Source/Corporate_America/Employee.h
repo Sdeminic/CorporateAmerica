@@ -49,9 +49,6 @@ protected:
 	 */
 	void LookUpAtRate(float Rate);
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
-	class AWeapon* Weapon;
-
 	UPROPERTY(EditDefaultsOnly, Category = "Setup")
 		TSubclassOf<class AWeapon> WeaponBP;
 
@@ -63,18 +60,24 @@ protected:
 		void SetAmmo(int32 AmmoToSet);
 
 	UFUNCTION(Server, Reliable, WithValidation)
-		void Server_WeaponSetup();
+		void Server_OnFire();
 
 	UFUNCTION(Server, Reliable, WithValidation)
-		void Server_OnFire();
-	
-	void WeaponSetup();
+		void Server_SendRotation(FRotator Rotation);
+
+	UPROPERTY(Replicated)
+		FRotator CameraRotation;
+
 	virtual void UnPossessed() override;
 
 private:
+
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 		class UCameraComponent* FirstPersonCameraComponent;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+		class UChildActorComponent* Weapon;
 
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)

@@ -1,5 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #include "Weapon.h"
 #include "Kismet/GameplayStatics.h"
 #include "Projectile.h"
@@ -8,7 +6,7 @@
 // Sets default values
 AWeapon::AWeapon()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	// Create a gun mesh component
@@ -31,7 +29,7 @@ void AWeapon::OnFire()
 		UWorld* const World = GetWorld();
 		if (World != NULL)
 		{
-			Server_OnFire();
+			Server_OnFire(this->FP_MuzzleLocation->GetComponentLocation(), this->FP_MuzzleLocation->GetComponentRotation());
 			Client_OnFire();
 		}
 	}
@@ -52,31 +50,30 @@ void AWeapon::Client_OnFire()
 	}
 }
 
-void AWeapon::Server_OnFire_Implementation()
+void AWeapon::Server_OnFire_Implementation(FVector Location, FRotator Rotation)
 {
-		const FRotator SpawnRotation = FP_MuzzleLocation->GetComponentRotation();
+	const FRotator SpawnRotation = Rotation;
 
-		// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
-		const FVector SpawnLocation = FP_MuzzleLocation->GetComponentLocation();
+	// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
+	const FVector SpawnLocation = Location;
 
-		//Set Spawn Collision Handling Override
-		FActorSpawnParameters ActorSpawnParams;
-		ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
+	//Set Spawn Collision Handling Override
+	FActorSpawnParameters ActorSpawnParams;
+	ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
 
-		// spawn the projectile at the muzzle
-		GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
+	// spawn the projectile at the muzzle
+	GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
 
-		// try and play a firing animation if specified
-		if (FireAnimationTP != NULL && AnimInstanceTP != NULL)
-		{
-			AnimInstanceTP->Montage_Play(FireAnimationTP, 1.f);
-		}
+	// try and play a firing animation if specified
+	if (FireAnimationTP != NULL && AnimInstanceTP != NULL)
+	{
+		AnimInstanceTP->Montage_Play(FireAnimationTP, 1.f);
+	}
 
 }
 
-bool AWeapon::Server_OnFire_Validate()
+bool AWeapon::Server_OnFire_Validate(FVector Location, FRotator Rotation)
 {
 	return true;
 }
-
 

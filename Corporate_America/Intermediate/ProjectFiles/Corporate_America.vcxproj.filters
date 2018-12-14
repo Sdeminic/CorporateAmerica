@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\Corporate_America.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{C34545C7-E455-4E73-A1FE-16CD77F6EA73}</UniqueIdentifier>
+			<UniqueIdentifier>{C59A2BAA-FC15-4014-98E4-6E8EF827855E}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\Corporate_America.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{18BF6876-9EA2-4234-AD81-6B548DB3D5AD}</UniqueIdentifier>
+			<UniqueIdentifier>{62931706-FA6B-4C40-8545-54B841F3E347}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -31,7 +31,7 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Source\Corporate_America">
-			<UniqueIdentifier>{75D510AF-01CF-4158-9534-8F8802E06E14}</UniqueIdentifier>
+			<UniqueIdentifier>{A7AA0708-E04C-4936-A104-5255287D52B0}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\Corporate_America\Corporate_America.Build.cs">
 			<Filter>Source\Corporate_America</Filter>
@@ -85,7 +85,7 @@
 			<Filter>Source\Corporate_America</Filter>
 		</ClInclude >
 		<Filter Include="Source\Corporate_America\TP_ThirdPerson">
-			<UniqueIdentifier>{C2D3B603-8CC1-4899-88C5-B4B6D50DBEBB}</UniqueIdentifier>
+			<UniqueIdentifier>{2EBB51CB-95D6-4934-B4C0-555D97BEF785}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\Source\Corporate_America\TP_ThirdPerson\TP_ThirdPerson.h">
 			<Filter>Source\Corporate_America\TP_ThirdPerson</Filter>
