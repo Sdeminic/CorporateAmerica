@@ -122,7 +122,7 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 				{ "ModuleRelativePath", "Weapon.h" },
 			};
 #endif
-			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AnimInstanceFP = { UE4CodeGen_Private::EPropertyClass::Object, "AnimInstanceFP", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, STRUCT_OFFSET(AWeapon, AnimInstanceFP), Z_Construct_UClass_UAnimInstance_NoRegister, METADATA_PARAMS(NewProp_AnimInstanceFP_MetaData, ARRAY_COUNT(NewProp_AnimInstanceFP_MetaData)) };
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AnimInstanceFP = { UE4CodeGen_Private::EPropertyClass::Object, "AnimInstanceFP", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000025, 1, nullptr, STRUCT_OFFSET(AWeapon, AnimInstanceFP), Z_Construct_UClass_UAnimInstance_NoRegister, METADATA_PARAMS(NewProp_AnimInstanceFP_MetaData, ARRAY_COUNT(NewProp_AnimInstanceFP_MetaData)) };
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimInstanceTP_MetaData[] = {
 				{ "Category", "Gameplay" },
@@ -246,7 +246,7 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AWeapon, 3314676792);
+	IMPLEMENT_CLASS(AWeapon, 3075738532);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AWeapon(Z_Construct_UClass_AWeapon, &AWeapon::StaticClass, TEXT("/Script/Corporate_America"), TEXT("AWeapon"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AWeapon);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

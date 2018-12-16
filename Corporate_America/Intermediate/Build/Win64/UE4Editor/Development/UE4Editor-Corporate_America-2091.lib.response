@@ -1,0 +1,32 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Corporate_America-2091.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.obj"
+"D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\Corporate_America\Corporate_America.cpp.obj"
+"D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\Corporate_America\Corporate_AmericaCharacter.cpp.obj"
+"D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\Corporate_America\Corporate_AmericaGameMode.cpp.obj"
+"D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\Corporate_America\Corporate_AmericaHUD.cpp.obj"
+"D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\Corporate_America\Corporate_AmericaProjectile.cpp.obj"
+"D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\Corporate_America\Employee.cpp.obj"
+"D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\Corporate_America\Projectile.cpp.obj"
+"D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\Corporate_America\Weapon.cpp.obj"
+"D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\Corporate_America\TP_ThirdPersonCharacter.cpp.obj"
+"D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\Corporate_America\TP_ThirdPersonGameMode.cpp.obj"
+"D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\Corporate_America\Corporate_America.init.gen.cpp.obj"
+"D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\Corporate_America\Corporate_AmericaCharacter.gen.cpp.obj"
+"D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\Corporate_America\Corporate_AmericaGameMode.gen.cpp.obj"
+"D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\Corporate_America\Corporate_AmericaHUD.gen.cpp.obj"
+"D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\Corporate_America\Corporate_AmericaProjectile.gen.cpp.obj"
+"D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\Corporate_America\Employee.gen.cpp.obj"
+"D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\Corporate_America\Projectile.gen.cpp.obj"
+"D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\Corporate_America\TP_ThirdPersonCharacter.gen.cpp.obj"
+"D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\Corporate_America\TP_ThirdPersonGameMode.gen.cpp.obj"
+"D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\Corporate_America\Weapon.gen.cpp.obj"
+"C:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\Corporate_America\PCLaunch.rc.res"
+"C:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Corporate_America-2091.lib"

@@ -1,6 +1,8 @@
 #include "Weapon.h"
 #include "Kismet/GameplayStatics.h"
+#include "UnrealNetwork.h"
 #include "Projectile.h"
+#include "Employee.h"
 #include "Animation/AnimInstance.h"
 
 // Sets default values
@@ -29,8 +31,7 @@ void AWeapon::OnFire()
 		UWorld* const World = GetWorld();
 		if (World != NULL)
 		{
-			Server_OnFire(this->FP_MuzzleLocation->GetComponentLocation(), this->FP_MuzzleLocation->GetComponentRotation());
-			Client_OnFire();
+			Server_OnFire(FP_MuzzleLocation->GetComponentLocation(), FP_MuzzleLocation->GetComponentRotation());
 		}
 	}
 }
@@ -40,9 +41,8 @@ void AWeapon::Client_OnFire()
 	// try and play a firing animation if specified
 	if (FireAnimationFP != NULL && AnimInstanceFP != NULL)
 	{
-		AnimInstanceFP->Montage_Play(FireAnimationFP, 1.f);
+		AnimInstanceFP->Montage_Play(FireAnimationFP, 1.f);	
 	}
-
 	// try and play the sound if specified
 	if (FireSound != NULL)
 	{
@@ -77,3 +77,9 @@ bool AWeapon::Server_OnFire_Validate(FVector Location, FRotator Rotation)
 	return true;
 }
 
+void AWeapon::GetLifetimeReplicatedProps(TArray< FLifetimeProperty > & OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(AWeapon, AnimInstanceFP);
+}

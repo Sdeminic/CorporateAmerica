@@ -70,6 +70,14 @@ struct FRotator;
 		P_NATIVE_BEGIN; \
 		P_THIS->PullTrigger(); \
 		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetCameraRotation) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetCameraRotation(); \
+		P_NATIVE_END; \
 	}
 
 
@@ -128,6 +136,14 @@ struct FRotator;
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->PullTrigger(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetCameraRotation) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetCameraRotation(); \
 		P_NATIVE_END; \
 	}
 
@@ -188,10 +204,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AEmployee); \
 
 #define Corporate_America_Source_Corporate_America_Employee_h_12_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__WeaponBP() { return STRUCT_OFFSET(AEmployee, WeaponBP); } \
-	FORCEINLINE static uint32 __PPO__CameraRotation() { return STRUCT_OFFSET(AEmployee, CameraRotation); } \
 	FORCEINLINE static uint32 __PPO__FirstPersonCameraComponent() { return STRUCT_OFFSET(AEmployee, FirstPersonCameraComponent); } \
 	FORCEINLINE static uint32 __PPO__Weapon() { return STRUCT_OFFSET(AEmployee, Weapon); } \
-	FORCEINLINE static uint32 __PPO__Mesh1P() { return STRUCT_OFFSET(AEmployee, Mesh1P); }
+	FORCEINLINE static uint32 __PPO__Mesh1P() { return STRUCT_OFFSET(AEmployee, Mesh1P); } \
+	FORCEINLINE static uint32 __PPO__CameraRotation() { return STRUCT_OFFSET(AEmployee, CameraRotation); }
 
 
 #define Corporate_America_Source_Corporate_America_Employee_h_9_PROLOG \

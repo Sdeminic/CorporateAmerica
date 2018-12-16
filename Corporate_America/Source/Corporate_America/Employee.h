@@ -26,6 +26,9 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
 		float BaseLookUpRate;
 
+	UFUNCTION(BlueprintCallable)
+		float GetCameraRotation() { return CameraRotation.Pitch; }
+
 protected:
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
 	// Called when the game starts or when spawned
@@ -65,9 +68,6 @@ protected:
 	UFUNCTION(Server, Reliable, WithValidation)
 		void Server_SendRotation(FRotator Rotation);
 
-	UPROPERTY(Replicated)
-		FRotator CameraRotation;
-
 	virtual void UnPossessed() override;
 
 private:
@@ -82,6 +82,9 @@ private:
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
 		class USkeletalMeshComponent* Mesh1P;
+
+	UPROPERTY(Replicated)
+		FRotator CameraRotation;
 
 	float Ammo, LastShot, ShotCooldown;
 };

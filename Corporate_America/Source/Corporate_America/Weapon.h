@@ -58,7 +58,7 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 		UAnimInstance* AnimInstanceTP;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, Category = Gameplay)
 		UAnimInstance* AnimInstanceFP;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 		int32 Ammo = 10;
@@ -74,10 +74,4 @@ public:
 
 	/** Returns Mesh1P subobject **/
 	FORCEINLINE class USkeletalMeshComponent* GetMesh() const { return FP_Gun; }
-
-
-
-
-		
-	
 };

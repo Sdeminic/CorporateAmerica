@@ -49,7 +49,9 @@ void AEmployee::BeginPlay()
 	Super::BeginPlay();
 	if (Weapon->GetChildActor()) {
 		Weapon->GetChildActor()->SetOwner(this);
+		Cast<AWeapon>(Weapon->GetChildActor())->AnimInstanceFP = Mesh1P->GetAnimInstance();
 	}
+
 	LastShot = FPlatformTime::Seconds();
 }
 
@@ -59,7 +61,10 @@ void AEmployee::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	if (Role == ROLE_AutonomousProxy) {
-		Server_SendRotation(GetControlRotation());//Cast<AWeapon>(Weapon->GetChildActor())->FP_MuzzleLocation->GetComponentRotation());
+		Server_SendRotation(GetControlRotation());
+	}
+	if (Role == ROLE_Authority) {
+		CameraRotation = GetControlRotation();
 	}
 	
 	FirstPersonCameraComponent->SetWorldRotation(CameraRotation);

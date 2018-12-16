@@ -87,7 +87,8 @@ private: \
 public: \
 	DECLARE_CLASS(AWeapon, AActor, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/Corporate_America"), NO_API) \
 	DECLARE_SERIALIZER(AWeapon) \
-	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
+	enum {IsIntrinsic=COMPILED_IN_INTRINSIC}; \
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 
 #define Corporate_America_Source_Corporate_America_Weapon_h_14_INCLASS \
@@ -97,7 +98,8 @@ private: \
 public: \
 	DECLARE_CLASS(AWeapon, AActor, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/Corporate_America"), NO_API) \
 	DECLARE_SERIALIZER(AWeapon) \
-	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
+	enum {IsIntrinsic=COMPILED_IN_INTRINSIC}; \
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 
 #define Corporate_America_Source_Corporate_America_Weapon_h_14_STANDARD_CONSTRUCTORS \
