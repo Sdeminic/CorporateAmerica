@@ -1,11 +1,15 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build.
-  Deleting old hot reload file: "D:\Corporate America\CorporateAmerica\Corporate_America\Binaries\Win64\UE4Editor-Corporate_America-6813.dll".
-  Deleting old hot reload file: "D:\Corporate America\CorporateAmerica\Corporate_America\Binaries\Win64\UE4Editor-Corporate_America-6813.pdb".
-  Performing 3 actions (4 in parallel)
+  Parsing headers for Corporate_AmericaEditor
+    Running UnrealHeaderTool "D:\Corporate America\CorporateAmerica\Corporate_America\Corporate_America.uproject" "D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\Corporate_AmericaEditor\Development\Corporate_AmericaEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for Corporate_AmericaEditor in 12.726361 seconds
+  Performing 6 actions (4 in parallel)
+  Weapon.cpp
+  Corporate_America.init.gen.cpp
+  Weapon.gen.cpp
   Employee.cpp
-  [2/3] Link UE4Editor-Corporate_America.dll
-  [3/3] Link UE4Editor-Corporate_America.lib
+  [5/6] Link UE4Editor-Corporate_America.dll
+  [6/6] Link UE4Editor-Corporate_America.lib
      Creating library D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Corporate_America.lib and object D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Corporate_America.exp
      Creating library D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Corporate_America.suppressed.lib and object D:\Corporate America\CorporateAmerica\Corporate_America\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Corporate_America.suppressed.exp
   Deploying Corporate_AmericaEditor Win64 Development...
-  Total build time: 6.19 seconds (Local executor: 3.26 seconds)
+  Total build time: 20.09 seconds (Local executor: 4.96 seconds)

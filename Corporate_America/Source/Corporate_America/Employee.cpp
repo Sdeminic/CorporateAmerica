@@ -9,6 +9,7 @@
 #include "UnrealNetwork.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
+#include "Animation/AnimInstance.h"
 #include "GameFramework/InputSettings.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -50,9 +51,10 @@ void AEmployee::BeginPlay()
 	if (Weapon->GetChildActor()) {
 		Weapon->GetChildActor()->SetOwner(this);
 		Cast<AWeapon>(Weapon->GetChildActor())->AnimInstanceFP = Mesh1P->GetAnimInstance();
+		Cast<AWeapon>(Weapon->GetChildActor())->AnimInstanceTP = GetMesh()->GetAnimInstance();
 	}
 
-	LastShot = FPlatformTime::Seconds();
+	LastShot = GetWorld()->GetTimeSeconds();
 }
 
 // Called every frame
@@ -120,19 +122,18 @@ void AEmployee::SetupPlayerInputComponent(UInputComponent * InputComponent)
 
 void AEmployee::PullTrigger()
 {
-	if (!Weapon) return;
-	if (Role == ROLE_SimulatedProxy) {
-		Cast<AWeapon>(Weapon->GetChildActor())->Client_OnFire();
-	}
-	else{
-		Server_OnFire();
-		Cast<AWeapon>(Weapon->GetChildActor())->Client_OnFire();
-	}
-
-	if (Ammo >= 1 && FPlatformTime::Seconds() - LastShot > ShotCooldown) {
-		
+	if (Ammo >= 1 && GetWorld()->GetTimeSeconds() - LastShot > ShotCooldown) {
+		if (!Weapon) return;
+		if (Role == ROLE_SimulatedProxy) {
+			Cast<AWeapon>(Weapon->GetChildActor())->Client_OnFire(); //Should be TP_OnFire
+		}
+		else {
+			Server_OnFire();
+			Cast<AWeapon>(Weapon->GetChildActor())->Client_OnFire();
+			Mesh1P->GetAnimInstance()->Montage_Play(Cast<AWeapon>(Weapon->GetChildActor())->FireAnimationFP, 1.f); //clean up
+		}
 		--Ammo;
-		LastShot = FPlatformTime::Seconds();
+		LastShot = GetWorld()->GetTimeSeconds();
 	}
 }
 

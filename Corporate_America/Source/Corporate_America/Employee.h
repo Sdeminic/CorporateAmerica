@@ -29,6 +29,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 		float GetCameraRotation() { return CameraRotation.Pitch; }
 
+	/** Returns Mesh1P subobject **/
+	FORCEINLINE class USkeletalMeshComponent* GetMesh1P() const { return Mesh1P; }
+
 protected:
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
 	// Called when the game starts or when spawned
@@ -52,8 +55,8 @@ protected:
 	 */
 	void LookUpAtRate(float Rate);
 
-	UPROPERTY(EditDefaultsOnly, Category = "Setup")
-		TSubclassOf<class AWeapon> WeaponBP;
+	//UPROPERTY(EditDefaultsOnly, Category = "Setup")
+		//TSubclassOf<class AWeapon> WeaponBP;
 
 	UFUNCTION(BlueprintCallable, Category = "Weapon")
 		void PullTrigger();
@@ -86,5 +89,11 @@ private:
 	UPROPERTY(Replicated)
 		FRotator CameraRotation;
 
-	float Ammo, LastShot, ShotCooldown;
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+		float Ammo = 10;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+		float ShotCooldown = .5;
+	
+	float LastShot;
 };

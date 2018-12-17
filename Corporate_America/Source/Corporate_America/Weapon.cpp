@@ -11,16 +11,20 @@ AWeapon::AWeapon()
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+
 	// Create a gun mesh component
 	FP_Gun = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FP_Gun"));
 	FP_Gun->bCastDynamicShadow = false;
 	FP_Gun->CastShadow = false;
-	FP_Gun->SetupAttachment(Mesh1P, TEXT("GripPoint"));
-	FP_Gun->SetupAttachment(RootComponent);
 
 	FP_MuzzleLocation = CreateDefaultSubobject<USceneComponent>(TEXT("MuzzleLocation"));
 	FP_MuzzleLocation->SetupAttachment(FP_Gun);
 	FP_MuzzleLocation->SetRelativeLocation(FVector(0.2f, 48.4f, -10.6f));
+}
+
+void AWeapon::BeginPlay()
+{
+	Super::BeginPlay();
 }
 
 void AWeapon::OnFire()
@@ -41,7 +45,7 @@ void AWeapon::Client_OnFire()
 	// try and play a firing animation if specified
 	if (FireAnimationFP != NULL && AnimInstanceFP != NULL)
 	{
-		AnimInstanceFP->Montage_Play(FireAnimationFP, 1.f);	
+		//AnimInstanceFP->Montage_Play(FireAnimationFP, 1.f);	
 	}
 	// try and play the sound if specified
 	if (FireSound != NULL)
@@ -71,7 +75,6 @@ void AWeapon::Server_OnFire_Implementation(FVector Location, FRotator Rotation)
 	}
 
 }
-
 bool AWeapon::Server_OnFire_Validate(FVector Location, FRotator Rotation)
 {
 	return true;
@@ -82,4 +85,5 @@ void AWeapon::GetLifetimeReplicatedProps(TArray< FLifetimeProperty > & OutLifeti
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
 	DOREPLIFETIME(AWeapon, AnimInstanceFP);
+	DOREPLIFETIME(AWeapon, AnimInstanceTP);
 }
