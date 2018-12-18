@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 	CORPORATE_AMERICA_API UClass* Z_Construct_UClass_AWeapon();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_Corporate_America();
+	CORPORATE_AMERICA_API UFunction* Z_Construct_UFunction_AWeapon_Multi_ThirdPersonFire();
 	CORPORATE_AMERICA_API UFunction* Z_Construct_UFunction_AWeapon_OnFire();
 	CORPORATE_AMERICA_API UFunction* Z_Construct_UFunction_AWeapon_Server_OnFire();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
@@ -29,6 +30,11 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 // End Cross Module References
+	static FName NAME_AWeapon_Multi_ThirdPersonFire = FName(TEXT("Multi_ThirdPersonFire"));
+	void AWeapon::Multi_ThirdPersonFire()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_AWeapon_Multi_ThirdPersonFire),NULL);
+	}
 	static FName NAME_AWeapon_Server_OnFire = FName(TEXT("Server_OnFire"));
 	void AWeapon::Server_OnFire(FVector Location, FRotator Rotation)
 	{
@@ -41,10 +47,26 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 	{
 		UClass* Class = AWeapon::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "Multi_ThirdPersonFire", &AWeapon::execMulti_ThirdPersonFire },
 			{ "OnFire", &AWeapon::execOnFire },
 			{ "Server_OnFire", &AWeapon::execServer_OnFire },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	UFunction* Z_Construct_UFunction_AWeapon_Multi_ThirdPersonFire()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+				{ "ModuleRelativePath", "Weapon.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AWeapon, "Multi_ThirdPersonFire", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80024CC0, 0, nullptr, 0, 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UFunction* Z_Construct_UFunction_AWeapon_OnFire()
 	{
@@ -98,6 +120,7 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 				(UObject* (*)())Z_Construct_UPackage__Script_Corporate_America,
 			};
 			static const FClassFunctionLinkInfo FuncInfo[] = {
+				{ &Z_Construct_UFunction_AWeapon_Multi_ThirdPersonFire, "Multi_ThirdPersonFire" }, // 1621702762
 				{ &Z_Construct_UFunction_AWeapon_OnFire, "OnFire" }, // 3373082437
 				{ &Z_Construct_UFunction_AWeapon_Server_OnFire, "Server_OnFire" }, // 3545268893
 			};
@@ -246,7 +269,7 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AWeapon, 2871743453);
+	IMPLEMENT_CLASS(AWeapon, 887102714);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AWeapon(Z_Construct_UClass_AWeapon, &AWeapon::StaticClass, TEXT("/Script/Corporate_America"), TEXT("AWeapon"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AWeapon);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

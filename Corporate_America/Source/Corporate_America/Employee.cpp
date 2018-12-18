@@ -130,7 +130,8 @@ void AEmployee::PullTrigger()
 		else {
 			Server_OnFire();
 			Cast<AWeapon>(Weapon->GetChildActor())->Client_OnFire();
-			Mesh1P->GetAnimInstance()->Montage_Play(Cast<AWeapon>(Weapon->GetChildActor())->FireAnimationFP, 1.f); //clean up
+			Mesh1P->GetAnimInstance()->Montage_Play(Cast<AWeapon>(Weapon->GetChildActor())->FireAnimationFP, 1.f);
+			//clean up
 		}
 		--Ammo;
 		LastShot = GetWorld()->GetTimeSeconds();

@@ -52,6 +52,12 @@ void AWeapon::Client_OnFire()
 	{
 		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
 	}
+
+	// try and play a firing animation if specified
+	if (FireAnimationTP != NULL && AnimInstanceTP != NULL)
+	{
+		AnimInstanceTP->Montage_Play(FireAnimationTP, 1.f);
+	}
 }
 
 void AWeapon::Server_OnFire_Implementation(FVector Location, FRotator Rotation)
@@ -74,8 +80,24 @@ void AWeapon::Server_OnFire_Implementation(FVector Location, FRotator Rotation)
 		AnimInstanceTP->Montage_Play(FireAnimationTP, 1.f);
 	}
 
+	Multi_ThirdPersonFire();
 }
+
 bool AWeapon::Server_OnFire_Validate(FVector Location, FRotator Rotation)
+{
+	return true;
+}
+
+void AWeapon::Multi_ThirdPersonFire_Implementation()
+{
+	// try and play a firing animation if specified
+	if (FireAnimationTP != NULL && AnimInstanceTP != NULL)
+	{
+		AnimInstanceTP->Montage_Play(FireAnimationTP, 1.f);
+	}
+}
+
+bool AWeapon::Multi_ThirdPersonFire_Validate()
 {
 	return true;
 }
