@@ -10,6 +10,7 @@
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
 #include "Animation/AnimInstance.h"
+#include "DrawDebugHelpers.h"
 #include "GameFramework/InputSettings.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -70,6 +71,8 @@ void AEmployee::Tick(float DeltaTime)
 	}
 	
 	FirstPersonCameraComponent->SetWorldRotation(CameraRotation);
+
+	DrawDebugString(GetWorld(), FVector(0, 0, 100), FString::FromInt(WalletMoney), this, FColor::Blue, DeltaTime);
 }
 
 void AEmployee::MoveForward(float Value)
@@ -145,15 +148,26 @@ int32 AEmployee::GetAmmo()
 
 void AEmployee::SetAmmo(int32 AmmoToSet)
 {
-	Ammo = AmmoToSet;
+	WalletMoney += AmmoToSet;
 }
 
 void AEmployee::Server_OnFire_Implementation()
 {
 	Cast<AWeapon>(Weapon->GetChildActor())->OnFire();
+	Multi_ThirdPersonFire();
 }
 
 bool AEmployee::Server_OnFire_Validate()
+{
+	return true;
+}
+
+void AEmployee::Multi_ThirdPersonFire_Implementation()
+{
+	GetMesh()->GetAnimInstance()->Montage_Play(Cast<AWeapon>(Weapon->GetChildActor())->FireAnimationTP, 1.f);
+}
+
+bool AEmployee::Multi_ThirdPersonFire_Validate()
 {
 	return true;
 }

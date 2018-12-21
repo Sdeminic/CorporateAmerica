@@ -68,9 +68,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 		int32 Ammo = 10;
 
-	UFUNCTION(NetMulticast, Reliable, WithValidation)
-		void Multi_ThirdPersonFire();
-
 	/** Fires a projectile. */
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
 		void OnFire();

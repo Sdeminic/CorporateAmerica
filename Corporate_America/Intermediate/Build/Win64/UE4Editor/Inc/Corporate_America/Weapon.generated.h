@@ -18,8 +18,6 @@ struct FRotator;
 #define Corporate_America_Source_Corporate_America_Weapon_h_14_RPC_WRAPPERS \
 	virtual bool Server_OnFire_Validate(FVector , FRotator ); \
 	virtual void Server_OnFire_Implementation(FVector Location, FRotator Rotation); \
-	virtual bool Multi_ThirdPersonFire_Validate(); \
-	virtual void Multi_ThirdPersonFire_Implementation(); \
  \
 	DECLARE_FUNCTION(execServer_OnFire) \
 	{ \
@@ -41,19 +39,6 @@ struct FRotator;
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->OnFire(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execMulti_ThirdPersonFire) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->Multi_ThirdPersonFire_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("Multi_ThirdPersonFire_Validate")); \
-			return; \
-		} \
-		P_THIS->Multi_ThirdPersonFire_Implementation(); \
 		P_NATIVE_END; \
 	}
 
@@ -61,8 +46,6 @@ struct FRotator;
 #define Corporate_America_Source_Corporate_America_Weapon_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual bool Server_OnFire_Validate(FVector , FRotator ); \
 	virtual void Server_OnFire_Implementation(FVector Location, FRotator Rotation); \
-	virtual bool Multi_ThirdPersonFire_Validate(); \
-	virtual void Multi_ThirdPersonFire_Implementation(); \
  \
 	DECLARE_FUNCTION(execServer_OnFire) \
 	{ \
@@ -84,19 +67,6 @@ struct FRotator;
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->OnFire(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execMulti_ThirdPersonFire) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		if (!P_THIS->Multi_ThirdPersonFire_Validate()) \
-		{ \
-			RPC_ValidateFailed(TEXT("Multi_ThirdPersonFire_Validate")); \
-			return; \
-		} \
-		P_THIS->Multi_ThirdPersonFire_Implementation(); \
 		P_NATIVE_END; \
 	}
 

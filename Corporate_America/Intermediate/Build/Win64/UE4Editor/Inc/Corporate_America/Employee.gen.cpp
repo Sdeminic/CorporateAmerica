@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeEmployee() {}
 	UPackage* Z_Construct_UPackage__Script_Corporate_America();
 	CORPORATE_AMERICA_API UFunction* Z_Construct_UFunction_AEmployee_GetAmmo();
 	CORPORATE_AMERICA_API UFunction* Z_Construct_UFunction_AEmployee_GetCameraRotation();
+	CORPORATE_AMERICA_API UFunction* Z_Construct_UFunction_AEmployee_Multi_ThirdPersonFire();
 	CORPORATE_AMERICA_API UFunction* Z_Construct_UFunction_AEmployee_PullTrigger();
 	CORPORATE_AMERICA_API UFunction* Z_Construct_UFunction_AEmployee_Server_OnFire();
 	CORPORATE_AMERICA_API UFunction* Z_Construct_UFunction_AEmployee_Server_SendRotation();
@@ -28,6 +29,11 @@ void EmptyLinkFunctionForGeneratedCodeEmployee() {}
 	ENGINE_API UClass* Z_Construct_UClass_UChildActorComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 // End Cross Module References
+	static FName NAME_AEmployee_Multi_ThirdPersonFire = FName(TEXT("Multi_ThirdPersonFire"));
+	void AEmployee::Multi_ThirdPersonFire()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_AEmployee_Multi_ThirdPersonFire),NULL);
+	}
 	static FName NAME_AEmployee_Server_OnFire = FName(TEXT("Server_OnFire"));
 	void AEmployee::Server_OnFire()
 	{
@@ -46,6 +52,7 @@ void EmptyLinkFunctionForGeneratedCodeEmployee() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "GetAmmo", &AEmployee::execGetAmmo },
 			{ "GetCameraRotation", &AEmployee::execGetCameraRotation },
+			{ "Multi_ThirdPersonFire", &AEmployee::execMulti_ThirdPersonFire },
 			{ "PullTrigger", &AEmployee::execPullTrigger },
 			{ "Server_OnFire", &AEmployee::execServer_OnFire },
 			{ "Server_SendRotation", &AEmployee::execServer_SendRotation },
@@ -96,6 +103,21 @@ void EmptyLinkFunctionForGeneratedCodeEmployee() {}
 			};
 #endif
 			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AEmployee, "GetCameraRotation", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, sizeof(Employee_eventGetCameraRotation_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_AEmployee_Multi_ThirdPersonFire()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+				{ "ModuleRelativePath", "Employee.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AEmployee, "Multi_ThirdPersonFire", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x80084CC0, 0, nullptr, 0, 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 		}
 		return ReturnFunction;
@@ -191,6 +213,7 @@ void EmptyLinkFunctionForGeneratedCodeEmployee() {}
 			static const FClassFunctionLinkInfo FuncInfo[] = {
 				{ &Z_Construct_UFunction_AEmployee_GetAmmo, "GetAmmo" }, // 3828485126
 				{ &Z_Construct_UFunction_AEmployee_GetCameraRotation, "GetCameraRotation" }, // 984399353
+				{ &Z_Construct_UFunction_AEmployee_Multi_ThirdPersonFire, "Multi_ThirdPersonFire" }, // 3035656927
 				{ &Z_Construct_UFunction_AEmployee_PullTrigger, "PullTrigger" }, // 2435681941
 				{ &Z_Construct_UFunction_AEmployee_Server_OnFire, "Server_OnFire" }, // 1356047154
 				{ &Z_Construct_UFunction_AEmployee_Server_SendRotation, "Server_SendRotation" }, // 446258569
@@ -295,7 +318,7 @@ void EmptyLinkFunctionForGeneratedCodeEmployee() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEmployee, 3629097064);
+	IMPLEMENT_CLASS(AEmployee, 2226187443);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AEmployee(Z_Construct_UClass_AEmployee, &AEmployee::StaticClass, TEXT("/Script/Corporate_America"), TEXT("AEmployee"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AEmployee);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

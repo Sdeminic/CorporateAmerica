@@ -71,6 +71,9 @@ protected:
 	UFUNCTION(Server, Reliable, WithValidation)
 		void Server_SendRotation(FRotator Rotation);
 
+	UFUNCTION(NetMulticast, Reliable, WithValidation)
+		void Multi_ThirdPersonFire();
+
 	virtual void UnPossessed() override;
 
 private:
@@ -96,4 +99,6 @@ private:
 		float ShotCooldown = .5;
 	
 	float LastShot;
+	
+	int32 WalletMoney = 0;
 };
